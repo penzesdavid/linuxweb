@@ -2,7 +2,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: 'Gantari';
+	font-family: 'Gantari', sans-serif;
 }
 
 :root {
@@ -108,34 +108,6 @@ body {
 	z-index: 1;
 }
 
-.gradient-text {
-  font-size: 3rem;
-  font-weight: bold;
-
-  background: linear-gradient(
-    270deg,
-    #cfc316,
-    #33959c,
-    #2afadf,
-    #00c6ff
-  );
-  background-size: 600% 600%;
-
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-
-  animation: gradientMove 7s infinite alternate;
-}
-
-@keyframes gradientMove {
-  0%   { background-position: 0% 50%; }
-  50%  { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-
-
 /* Main Content Styling */
 .welcome {
 	font-size: 1.5rem;
@@ -147,6 +119,7 @@ body {
 
 #bytext {
 	font-size: smaller;
+	color: var(--glow-magenta);
 }
 
 #distro-finder {
