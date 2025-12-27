@@ -109,12 +109,29 @@ body {
 }
 
 /* Main Content Styling */
+
 .welcome {
 	font-size: 1.5rem;
 	position: relative;
 	z-index: 2;
 	text-align: center;
 	padding: 100px 20px;
+	button {
+		margin-top: 20px;
+		padding: 10px 20px;
+		font-size: 1rem;
+		background-color: rgba(255, 255, 255, 0.2);
+		color: #ffffff;
+		border: 3px solid var(--glow-cyan);
+		border-radius: 10px;
+		width: 170px;
+
+	}
+	button:hover {
+		background-color: var(--dark-1);
+		box-shadow: 0 0 15px var(--glow-cyan);
+		transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+	}
 }
 
 #bytext {
@@ -128,11 +145,12 @@ body {
 	background-color: rgba(255, 255, 255, 0.2);
 	border-radius: 10px;
 	margin-top: 50px;
-	text-align: left;
+	text-align: center;
 	padding: 20px;
 	img {
-		width: 50%;
+		width: 100%;
 		height: auto;
+		margin: auto;
 		border-radius: 10px;
 	}
 }
