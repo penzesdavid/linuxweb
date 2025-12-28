@@ -140,7 +140,7 @@ body {
 }
 
 #distro-finder {
-	width: 90%;
+	width: 80%;
 	margin: 0 auto;
 	background-color: rgba(255, 255, 255, 0.2);
 	border-radius: 10px;
@@ -148,10 +148,23 @@ body {
 	text-align: center;
 	padding: 20px;
 	img {
-		width: 100%;
+		width: 80%;
 		height: auto;
 		margin: auto;
 		border-radius: 10px;
+		margin-bottom: 3.5%;
+		transition: width 0.5s;
+		border: 3px solid var(--glow-cyan);
+	}
+	img:hover {
+		width: 90%;
+		margin-bottom: 1%;
+		transition: width 0.5s;
 	}
 }
 
+#distro-finder div {
+	font-size: 1.8rem;
+	text-align: justify;
+	padding: 5px;
+}
