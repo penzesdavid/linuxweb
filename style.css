@@ -110,28 +110,35 @@ body {
 
 /* Main Content Styling */
 
+button {
+	margin-top: 20px;
+	padding: 10px 20px;
+	font-size: 1rem;
+	background-color: rgba(255, 255, 255, 0.2);
+	color: var(--dark-1);
+	border: 3px solid var(--glow-cyan);
+	border-radius: 10px;
+	width: 170px;
+
+}
+button:hover {
+	background-color: alpha(--dark-1, 0.2);
+	box-shadow: 0 0 15px var(--glow-cyan);
+	transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .welcome {
 	font-size: 1.5rem;
 	position: relative;
 	z-index: 2;
 	text-align: center;
 	padding: 100px 20px;
-	button {
-		margin-top: 20px;
-		padding: 10px 20px;
-		font-size: 1rem;
-		background-color: rgba(255, 255, 255, 0.2);
-		color: #ffffff;
-		border: 3px solid var(--glow-cyan);
-		border-radius: 10px;
-		width: 170px;
-
-	}
 	button:hover {
 		background-color: var(--dark-1);
 		box-shadow: 0 0 15px var(--glow-cyan);
 		transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 	}
+	
 }
 
 #bytext {
@@ -167,4 +174,76 @@ body {
 	font-size: 1.8rem;
 	text-align: justify;
 	padding: 5px;
+}
+
+.row {
+	margin-top: 1%;
+	justify-content: center;
+}
+
+.card {
+	width: 80%;
+	margin: 1% 2%;
+	background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 10px;
+	text-align: center;
+	padding: 20px;
+}
+
+.anim {
+	opacity: 0;
+	transform: translateX(-30px);
+	animation: open 1s ease-out forwards;
+}
+
+.anim-1 {
+	opacity: 0;
+	transform: translateX(30px);
+	animation: open 1s ease-out forwards;
+	animation-delay: 0.6s;
+}
+
+.anim-y {
+	opacity: 0;
+	transform: translateY(30px);
+	animation: open 1s ease-out forwards;
+	animation-delay: 0.3s;
+}
+
+.anim-Y {
+	opacity: 0;
+	transform: translateY(-30px);
+	animation: open 1s ease-out forwards;
+	animation-delay: 0.3s;
+}
+
+@keyframes open {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#row-2 .anim {
+	animation-delay: 0.8s;
+}
+
+#row-2 .anim-y {
+	animation-delay: 1.1s;
+}
+
+#row-2 .anim-1 {
+	animation-delay: 1.4s;
+}
+
+#row-3 .anim {
+	animation-delay: 1.6s;
+}
+
+#row-3 .anim-y {
+	animation-delay: 1.9s;
+}
+
+#row-3 .anim-1 {
+	animation-delay: 2.2s;
 }
