@@ -176,7 +176,7 @@ button:hover {
 		width: 80%;
 		height: auto;
 		margin: auto;
-		border-radius: 10px;
+		border-radius: 50px;
 		margin-bottom: 3.5%;
 		transition: width 0.5s;
 		border: 3px solid var(--glow-cyan);
