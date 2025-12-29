@@ -2,7 +2,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: 'Gantari', sans-serif;
+	font-family: 'Gantari';
 }
 
 :root {
@@ -19,7 +19,6 @@
 }
 
 body {
-	font-family: 'Outfit', sans-serif;
 	background: var(--dark-1);
 	color: #ffffff;
 	overflow-x: hidden;
@@ -115,16 +114,16 @@ button {
 	padding: 10px 20px;
 	font-size: 1rem;
 	background-color: rgba(255, 255, 255, 0.2);
-	color: var(--dark-1);
+	color: #fff;
 	border: 3px solid var(--glow-cyan);
 	border-radius: 10px;
 	width: 170px;
 
 }
 button:hover {
-	background-color: alpha(--dark-1, 0.2);
+	background-color: var(--dark-1);
 	box-shadow: 0 0 15px var(--glow-cyan);
-	transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+	transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .welcome {
@@ -171,9 +170,12 @@ button:hover {
 }
 
 #distro-finder div {
-	font-size: 1.8rem;
-	text-align: justify;
-	padding: 5px;
+	font-size: 1.2rem;
+	text-align: left;
+	padding: 15px;
+	li {
+		margin: 15px 0;
+	}
 }
 
 .row {
