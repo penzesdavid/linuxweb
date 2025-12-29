@@ -115,15 +115,21 @@ button {
 	font-size: 1rem;
 	background-color: rgba(255, 255, 255, 0.2);
 	color: #fff;
-	border: 3px solid var(--glow-cyan);
-	border-radius: 10px;
+	border: 2px solid var(--glow-magenta);
+	border-radius: 50px;
 	width: 170px;
+	cursor: pointer;
 
+	transition:
+	background-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease ;
 }
 button:hover {
-	background-color: var(--dark-1);
-	box-shadow: 0 0 15px var(--glow-cyan);
-	transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+	background-color: var(--glow-magenta);
+	box-shadow: 0 0 15px var(--glow-magenta);
+	transition: all 0.25s ease;
+	transform: translateY(-2px);
 }
 
 .welcome {
@@ -132,17 +138,31 @@ button:hover {
 	z-index: 2;
 	text-align: center;
 	padding: 100px 20px;
-	button:hover {
-		background-color: var(--dark-1);
-		box-shadow: 0 0 15px var(--glow-cyan);
-		transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-	}
-	
 }
 
 #bytext {
 	font-size: smaller;
 	color: var(--glow-magenta);
+}
+
+.ability-cards {
+	width: 90%;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.ability-box {
+	background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 10px;
+	width: 300px;
+	padding: 20px;
+	text-align: center;
+	margin: 10px;
+	h3 {
+		color: var(--glow-magenta);
+	}
 }
 
 #distro-finder {
@@ -195,7 +215,7 @@ button:hover {
 .anim {
 	opacity: 0;
 	transform: translateX(-30px);
-	animation: open 1s ease-out forwards;
+	animation: open 1.2s ease-out forwards;
 }
 
 .anim-1 {
