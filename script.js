@@ -1,3 +1,4 @@
+// keresés funkció
 // ENTER-re és gombra is keres
 document.querySelector("form").addEventListener("submit", e => {
   e.preventDefault();
