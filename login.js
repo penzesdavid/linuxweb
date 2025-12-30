@@ -4,11 +4,8 @@ let username_list = JSON.parse(localStorage.getItem('users')) || [];
 function login() {
     const username = document.querySelector('#username_login').value;
 
-    if (username === 'admin') {
-        alert('Welcome, Admin!');
-    } 
     //A közös listában keressük a nevet
-    else if (username_list.includes(username)) {
+    if (username_list.includes(username)) {
         alert(`Welcome, ${username}!`);
     } 
     else {

@@ -1,0 +1,13 @@
+input {
+    margin: auto;
+    display: block;
+    margin-top: 3.5rem;
+    width: 15rem;
+    height: 2rem;
+}
+
+button {
+    margin: auto;
+    display: block;
+    margin-top: 2rem;
+}
