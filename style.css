@@ -293,3 +293,12 @@ body {
   font-weight: bold;
   font-size: 18px;
 }
+
+.card-title {
+	color: var(--glow-magenta);
+	font-family: 'Lexend Giga', sans-serif;
+}
+
+.card-text {
+	color: white;
+}

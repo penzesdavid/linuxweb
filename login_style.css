@@ -6,7 +6,7 @@ input {
     height: 2rem;
 }
 
-button {
+.button-style {
     margin: auto;
     display: block;
     margin-top: 2rem;
