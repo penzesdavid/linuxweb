@@ -8,7 +8,7 @@
   // Your web app's Firebase configuration
   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
   const firebaseConfig = {
-    apiKey: "AIzaSyB9qHY_q2xTWTLCIa4KsMxpom50Ly0X7OY",
+    apiKey: "AIzaSyA2n0rzNLqHYEEePxcab8XTgXGYvVQjan4",
     authDomain: "linuxatlas.firebaseapp.com",
     projectId: "linuxatlas",
     storageBucket: "linuxatlas.firebasestorage.app",
