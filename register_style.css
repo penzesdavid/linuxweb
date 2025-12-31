@@ -1,4 +1,4 @@
-input {
+.input-style {
     margin: auto;
     display: block;
     margin-top: 3.5rem;
@@ -19,7 +19,7 @@ h1 {
     color: var(--glow-magenta);
 }
 
-a {
+.link {
     display: block;
     text-align: center;
     margin-top: 1.5rem;
@@ -29,4 +29,14 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+.box {
+    width: 25rem;
+    margin: auto;
+    margin-top: 5rem;
+    padding: 2rem;
+    border: 1px solid var(--glow-magenta);
+    border-radius: 1rem;
+    background-color: rgba(0, 0, 0, 0.6);
 }
