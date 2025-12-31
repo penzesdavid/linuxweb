@@ -16,23 +16,30 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const auth = getAuth(app);
 
-// Globális változó a névnek
-window.userName = "Vendég";
+// Global variable
+window.userName = "Login/register";
 
-// Segédfüggvény: Lecseréli a szövegeket az oldalon
-const updateUI = (name) => {
+// UI Update with different logic for Title and Navbar
+const updateUI = (name, isLoggedIn) => {
     const title = document.getElementById('custom_name');
     const nav = document.getElementById('navUserName');
     
-    if (title) title.innerText = `Welcome back, ${name}!`;
-    if (nav) nav.innerText = `HI ${name}!`;
+    if (isLoggedIn && name !== "Login/register") {
+        // When logged in and has a name
+        if (title) title.innerText = "Welcome back " + name + "!";
+        if (nav) nav.innerText = "HI " + name + "!";
+    } else {
+        // Default state (Logged out or no name set)
+        if (title) title.innerText = "Welcome to LinuxAtlas";
+        if (nav) nav.innerText = "Login/register";
+    }
 };
 
-// MENTÉS FUNKCIÓ
+// SAVE FUNCTION
 window.saveUsername = async () => {
     const user = auth.currentUser;
-    const inputField = document.getElementById('usernameInput');
-    const newName = inputField.value.trim();
+    const input = document.getElementById('usernameInput');
+    const newName = input ? input.value.trim() : "";
 
     if (user && newName !== "") {
         try {
@@ -40,40 +47,34 @@ window.saveUsername = async () => {
                 username: newName 
             }, { merge: true });
 
-            window.userName = newName; // Változó frissítése
-            updateUI(newName);        // UI frissítése
-            inputField.value = "";     // Mező ürítése
-            alert("Név elmentve!");
+            window.userName = newName;
+            updateUI(newName, true);
+            input.value = ""; 
+            alert("Username updated!");
         } catch (e) {
-            console.error("Hiba a mentésnél:", e);
+            console.error("Save error:", e);
         }
     } else {
-        alert("Jelentkezz be és írj be egy nevet!");
+        alert("Please enter a valid name!");
     }
 };
 
-// BETÖLTÉS FUNKCIÓ
-window.loadUsername = async () => {
-    const user = auth.currentUser;
-    if (!user) return;
-
-    try {
-        const docSnap = await getDoc(doc(db, "users", user.uid));
-        if (docSnap.exists()) {
-            window.userName = docSnap.data().username;
-            updateUI(window.userName); // UI frissítése a betöltött névvel
-        }
-    } catch (e) {
-        console.error("Hiba a betöltésnél:", e);
-    }
-};
-
-// FIGYELŐ: Amint bejelentkezik valaki, lefut a betöltés
-onAuthStateChanged(auth, (user) => {
+// AUTH OBSERVER
+onAuthStateChanged(auth, async (user) => {
     if (user) {
-        loadUsername();
+        try {
+            const docSnap = await getDoc(doc(db, "users", user.uid));
+            if (docSnap.exists()) {
+                window.userName = docSnap.data().username;
+                updateUI(window.userName, true);
+            } else {
+                updateUI("No Name Set", true);
+            }
+        } catch (e) {
+            console.error("Load error:", e);
+        }
     } else {
-        window.userName = "Vendég";
-        updateUI("Vendég");
+        window.userName = "Login/register";
+        updateUI("Login/register", false);
     }
 });
