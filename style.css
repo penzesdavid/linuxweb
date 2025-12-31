@@ -108,8 +108,8 @@ body {
 
 /* Main Content Styling */
 
-button {
-	margin-top: 20px;
+.button-style {
+	margin: 20px;
 	padding: 10px 20px;
 	font-size: 1rem;
 	background-color: rgba(255, 255, 255, 0.2);
@@ -124,7 +124,7 @@ button {
     transform 0.25s ease,
     box-shadow 0.25s ease ;
 }
-button:hover {
+.button-style:hover {
 	background-color: var(--glow-magenta);
 	box-shadow: 0 0 15px var(--glow-magenta);
 	transition: all 0.25s ease;
