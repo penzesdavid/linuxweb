@@ -245,31 +245,6 @@ body {
   }
 }
 
-#row-2 .anim {
-	animation-delay: 0.8s;
-}
-
-#row-2 .anim-y {
-	animation-delay: 1.1s;
-}
-
-#row-2 .anim-1 {
-	animation-delay: 1.4s;
-}
-
-#row-3 .anim {
-	animation-delay: 1.6s;
-}
-
-#row-3 .anim-y {
-	animation-delay: 1.9s;
-}
-
-#row-3 .anim-1 {
-	animation-delay: 2.2s;
-}
-
-
 .highlight-box {
   position: fixed;
   top: 80px; /* navbar alatt */
@@ -301,4 +276,8 @@ body {
 
 .card-text {
 	color: white;
+}
+
+.logo-img {
+	max-height: 4.5%;
 }
