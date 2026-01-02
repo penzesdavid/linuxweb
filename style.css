@@ -281,3 +281,7 @@ body {
 .logo-img {
 	max-height: 4.5%;
 }
+
+a {
+	color: var(--glow-magenta);
+}
