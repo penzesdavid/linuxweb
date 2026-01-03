@@ -73,6 +73,43 @@
 
     <!-- Grid Overlay -->
     <div class="grid-overlay"></div>
+
+
+    <div class="row">
+        <div class="col-lg distrofinder-div">
+            <p>Choosing the right Linux distro can transform your computing experience, whether you're after stability, cutting-edge features, or gaming prowess. Below is a curated list of popular options we've discussed—select one from the dropdown menu, and I'll dive deeper with installation guides, pros/cons, hardware compatibility, and customization tips tailored to your needs.</p>
+
+            <label for="distro-select">Choose a distro:</label>
+            <select id="distro-select" name="distro-select" data-bs-theme="dark">
+                <option value="">Choose one...</option>
+                <option value="ubuntu">Ubuntu</option>
+                <option value="fedora">Fedora</option>
+                <option value="arch">Arch Linux</option>
+                <option value="debian">Debian</option>
+                <option value="popos">Pop!_OS</option>
+                <option value="mint">Linux Mint</option>
+                <option value="opensuse">openSUSE</option>
+                <option value="manjaro">Manjaro</option>
+                <option value="endeavouros">EndeavourOS</option>
+                <option value="garuda">Garuda Linux</option>
+                <option value="gentoo">Gentoo</option>
+                <option value="bazzite">Bazzite</option>
+                <option value="steamos">SteamOS</option>
+                <option value="chromeos">ChromeOS</option>
+            </select>
+            <button onclick="popOut()">Reveal</button>
+            
+        </div>
+        <div class="col-lg distrofinder-div" id="hyde">
+
+        </div>
+    </div>
+
+    <script src="./finder.js">
+        
+    </script>
+    
+</div>
     
 </body>
 </html>
