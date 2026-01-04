@@ -178,13 +178,13 @@ body {
 		margin: auto;
 		border-radius: 50px;
 		margin-bottom: 3.5%;
-		transition: width 0.5s;
+		transition: all 0.5s;
 		border: 3px solid var(--glow-cyan);
 	}
 	img:hover {
 		width: 90%;
 		margin-bottom: 1%;
-		transition: width 0.5s;
+		transition: all 0.5s;
 	}
 }
 
@@ -294,4 +294,28 @@ a {
 	margin-top: 50px;
 	text-align: justify;
 	padding: 20px;
+}
+
+#reveal-button {
+	margin: auto 1.5rem;
+	padding: 0.5rem 1.4rem;
+	font-size: 0.9rem;
+	background-color: rgba(255, 255, 255, 0.2);
+	color: #fff;
+	border: 2px solid var(--glow-magenta);
+	border-radius: 50px;
+	/* height: 3rem; */
+	/* width: 10rem; */
+	cursor: pointer;
+
+	transition:
+	background-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease ;
+}
+.reveal-button:hover {
+	background-color: var(--glow-magenta);
+	box-shadow: 0 0 15px var(--glow-magenta);
+	transition: all 0.25s ease;
+	transform: translateY(-2px);
 }
