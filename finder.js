@@ -1,5 +1,3 @@
-document.querySelector('#hyde').style.visibility = 'hidden';
-
 const distroText = {
     ubuntu: `<h3>Ubuntu</h3>
     <p>Ubuntu is the gateway to Linux for millions, boasting a massive software repository (over 60,000 packages) and Long Term Support (LTS) releases every two years for rock-solid stability. Pre-installed snaps and a polished GNOME desktop make it effortless for daily tasks, development, or servers. Perfect if you're switching from Windows/macOS.</p>
@@ -141,6 +139,8 @@ const distroText = {
         <li><strong>Cons:</strong></li>
     </ul>`
 };
+
+document.querySelector('#hyde').style.visibility = 'hidden';
 
 function popOut() {
     const pickedDistro = document.querySelector('#distro-select').value;
