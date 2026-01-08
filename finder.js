@@ -19,13 +19,13 @@ const distroText = {
         <li><strong>Cons:</strong> Hard to parse website; by default when asked for yes or no (y/n) in installs the no is selected</li>
     </ul>`,
 
-    arch: `<h3>Arch Linux</h3>
+    arch_btw: `<h3>Arch Linux</h3>
     <p>Arch is the minimalist's dream: a rolling-release base where you build your system via pacman and the Arch User Repository (AUR), guided by the legendary wiki. It's lightweight, always current, and fosters deep learning—KDE, GNOME, or i3, your call.</p>
     <ul>
         <li><strong>Best for:</strong> Tinkerers, power users</li>
         <li><strong>Package manager:</strong> Pacman + AUR</li>
         <li><strong>Release cycle:</strong> Rolling</li>
-        <li><strong>Pros:</strong> Powerfull and not too hard install with the archinstall script; you're in control of everything; one of the best wiki's; rolling release</li>
+        <li><strong>Pros:</strong> Powerful and not too hard install with the archinstall script; you're in control of everything; one of the best wiki's; rolling release</li>
         <li><strong>Cons:</strong> Your're in control of everything, so it has a deep learning curve; bleeding-edge rolling release makes it, that some software might brake from time-to-time on a new update</li>
     </ul>`,
 
@@ -36,7 +36,7 @@ const distroText = {
         <li><strong>Package manager:</strong> APT</li>
         <li><strong>Release cycle:</strong> Every 2-3 years</li>
         <li><strong>Pros:</strong> Stable, able to stay powerd on for months or even years</li>
-        <li><strong>Cons:</strong> One of the worst installs I have tried; long time between releases</li>
+        <li><strong>Cons:</strong> One of the worst installs I have tried; long time between releases, thus you have to rely on flatpaks</li>
     </ul>`,
 
     popos: `<h3>Pop!_OS</h3>
