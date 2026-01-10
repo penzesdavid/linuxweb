@@ -334,3 +334,12 @@ option:not(:checked) {
 	background-color: rgba(255, 255, 255, 0.2);
 	color: black;
 } */
+
+.card-text {
+	text-align: justify;
+}
+
+ul.card-text {
+	margin-left: 0;
+	padding-left: 1rem;
+}
