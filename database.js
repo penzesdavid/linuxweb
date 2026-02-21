@@ -78,3 +78,40 @@ onAuthStateChanged(auth, async (user) => {
         updateUI("Login/register", false);
     }
 });
+
+// database.js végéhez add hozzá:
+window.firebaseDb = db;
+window.firebaseAuth = auth;
+window.firebaseFirestore = { 
+    doc, 
+    setDoc, 
+    getDoc, 
+    onAuthStateChanged 
+};
+
+// Módosítsuk az onAuthStateChanged részt, hogy az avatart is betöltse:
+onAuthStateChanged(auth, async (user) => {
+    if (user) {
+        try {
+            const docSnap = await getDoc(doc(db, "users", user.uid));
+            if (docSnap.exists()) {
+                const data = docSnap.data();
+                window.userName = data.username || "Login/register";
+                updateUI(window.userName, true);
+
+                // AVATAR BETÖLTÉSE
+                if (data.avatarSeed) {
+                    const avatarImg = document.getElementById('avatar');
+                    if (avatarImg) {
+                        avatarImg.src = `https://api.dicebear.com/7.x/avataaars/svg?seed=${data.avatarSeed}`;
+                    }
+                }
+            }
+        } catch (e) {
+            console.error("Load error:", e);
+        }
+    } else {
+        updateUI("Login/register", false);
+    }
+});
+

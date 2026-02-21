@@ -72,3 +72,12 @@ onAuthStateChanged(auth, (user) => {
         
     }
 });
+
+onAuthStateChanged(auth, (user) => {
+    let profileSettingshide = document.getElementById("profile-settings-style");
+    if (user) {
+        profileSettingshide.style.display = "block";
+    } else {
+        profileSettingshide.style.display = "none";
+    }
+});

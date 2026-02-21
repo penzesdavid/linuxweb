@@ -43,3 +43,43 @@ a:hover {
     border-radius: 1rem;
     background-color: rgba(0, 0, 0, 0.6);
 }
+
+#profile-settings-style {
+    text-align: center;
+    width: 25rem;
+    margin: auto;
+    margin-top: 5rem;
+    padding: 2rem;
+    border: 1px solid var(--glow-magenta);
+    border-radius: 1rem;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#avatar-container {
+    text-align: center;
+    margin-top: 5rem;
+    
+}
+
+#avatar-container img {
+    border-radius: 50%;
+    border: 3px solid #ddd;
+    margin-bottom: 20px;
+    background: #eee;
+}
+
+#avatar-container button {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#username-style {
+    margin: 250px;
+    text-align: right;
+}
+
