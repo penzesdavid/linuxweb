@@ -19,19 +19,22 @@ const auth = getAuth(app);
 // Global variable
 window.userName = "Login/register";
 
-// UI Update with different logic for Title and Navbar
 const updateUI = (name, isLoggedIn) => {
     const title = document.getElementById('custom_name');
     const nav = document.getElementById('navUserName');
+    const inputField = document.getElementById('usernameInput');
     
-    if (isLoggedIn && name !== "Login/register") {
-        // When logged in and has a name
+    if (isLoggedIn && name && name !== "Login/register") {
         if (title) title.innerText = "Welcome back " + name + "!";
         if (nav) nav.innerText = "HI " + name + "!";
+        
+        if (inputField) {
+            inputField.value = name;
+        }
     } else {
-        // Default state (Logged out or no name set)
         if (title) title.innerText = "Welcome to LinuxAtlas";
         if (nav) nav.innerText = "Login/register";
+        if (inputField) inputField.value = "";
     }
 };
 
@@ -59,47 +62,37 @@ window.saveUsername = async () => {
     }
 };
 
-// AUTH OBSERVER
-onAuthStateChanged(auth, async (user) => {
-    if (user) {
-        try {
-            const docSnap = await getDoc(doc(db, "users", user.uid));
-            if (docSnap.exists()) {
-                window.userName = docSnap.data().username;
-                updateUI(window.userName, true);
-            } else {
-                updateUI("No Name Set", true);
-            }
-        } catch (e) {
-            console.error("Load error:", e);
+
+const lastUserUid = localStorage.getItem('last_uid');
+if (lastUserUid) {
+    const cachedData = localStorage.getItem(`user_${lastUserUid}`);
+    if (cachedData) {
+        const data = JSON.parse(cachedData);
+        window.userName = data.username || "Login/register";
+        
+        const nav = document.getElementById('navUserName');
+        if (nav && data.username) nav.innerText = "HI " + data.username + "!";
+        
+        const avatarImg = document.getElementById('avatar');
+        if (avatarImg && data.avatarSeed) {
+            avatarImg.src = `https://api.dicebear.com/7.x/avataaars/svg?seed=${data.avatarSeed}`;
         }
-    } else {
-        window.userName = "Login/register";
-        updateUI("Login/register", false);
     }
-});
+}
 
-// database.js végéhez add hozzá:
-window.firebaseDb = db;
-window.firebaseAuth = auth;
-window.firebaseFirestore = { 
-    doc, 
-    setDoc, 
-    getDoc, 
-    onAuthStateChanged 
-};
-
-// Módosítsuk az onAuthStateChanged részt, hogy az avatart is betöltse:
 onAuthStateChanged(auth, async (user) => {
     if (user) {
+        localStorage.setItem('last_uid', user.uid);
+        
         try {
             const docSnap = await getDoc(doc(db, "users", user.uid));
             if (docSnap.exists()) {
                 const data = docSnap.data();
+                localStorage.setItem(`user_${user.uid}`, JSON.stringify(data));
+                
                 window.userName = data.username || "Login/register";
                 updateUI(window.userName, true);
 
-                // AVATAR BETÖLTÉSE
                 if (data.avatarSeed) {
                     const avatarImg = document.getElementById('avatar');
                     if (avatarImg) {
@@ -107,11 +100,30 @@ onAuthStateChanged(auth, async (user) => {
                     }
                 }
             }
-        } catch (e) {
-            console.error("Load error:", e);
-        }
+        } catch (e) { console.error("Load error:", e); }
     } else {
+        localStorage.removeItem('last_uid');
         updateUI("Login/register", false);
     }
 });
+
+function fastLoadFromCache() {
+    const lastUserUid = localStorage.getItem('last_uid');
+    if (lastUserUid) {
+        const cachedData = localStorage.getItem(`user_${lastUserUid}`);
+        if (cachedData) {
+            const data = JSON.parse(cachedData);
+            updateUI(data.username, true);
+            
+            const avatarImg = document.getElementById('avatar');
+            if (avatarImg && data.avatarSeed) {
+                avatarImg.src = `https://api.dicebear.com/7.x/avataaars/svg?seed=${data.avatarSeed}`;
+            }
+        }
+    }
+}
+
+fastLoadFromCache();
+
+document.addEventListener('DOMContentLoaded', fastLoadFromCache);
 
