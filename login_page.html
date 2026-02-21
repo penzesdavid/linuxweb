@@ -21,6 +21,11 @@
         </a>
         <a class="navbar-brand" href="./index.html">LinuxAtlas</a>
          
+        <select onchange="changeLanguage(this.value)">
+            <option value="en">English</option>
+            <option value="hu">Magyar</option>
+        </select>
+         
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
@@ -42,18 +47,18 @@
             <a class="nav-link" href="./distrosummary.html">Distrosummary</a>
             </li>
             <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-key="nav.more">
                 More
             </a>
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="https://www.linuxtoday.com/">News</a></li>
-                <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Linux">About</a></li>
+                <li><a class="dropdown-item" href="https://www.linuxtoday.com/" data-key="nav.news">News</a></li>
+                <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Linux" data-key="nav.about">About</a></li>
             </ul>
             </li>
         </ul>
         <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="search" style="height: 40px; margin: auto;"/>
-            <button class="btn btn-outline-success" type="button" style="margin: auto;" onclick="searchText()">Search</button>
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="search" style="height: 40px; margin: auto;" data-key="nav.search_input"/>
+            <button class="btn btn-outline-success" type="button" style="margin: auto;" onclick="searchText()" data-key="nav.search_btn">Search</button>
         </form>
         </div>
     </div>
@@ -65,6 +70,7 @@
     <script type="module" src="./login.js" defer></script>
     <script type="module" src="./database.js" defer></script>
     <script src="./avatar.js" defer></script>
+    <script src="./lang.js"></script>
 
 <div class="content">
     <!-- Ambient Background -->
@@ -78,13 +84,13 @@
     <div class="grid-overlay"></div>
 
     <div class="box" id="login-show">
-    <h1>Login</h1>
+    <h1 data-key="login.login">Login</h1>
 
     <input type="email" id="email_login" placeholder="Email" class="input-style">
-    <input type="password" id="password_login" placeholder="Password" class="input-style">
-    <button id="login_button" class="button-style" type="submit">Login</button>
+    <input type="password" id="password_login" placeholder="Password" class="input-style" data-key="placeholder.passwd">
+    <button id="login_button" class="button-style" type="submit" data-key="login.login">Login</button>
 
-    <a href="./register_page.html" class="anim link" style="animation-delay: 0.1s;">Don't have an account? Register here.</a>
+    <a href="./register_page.html" class="anim link" style="animation-delay: 0.1s;" data-key="login.register_link">Don't have an account? Register here.</a>
     </div>
 
     
@@ -96,11 +102,11 @@
             <p id="CheckAvatarSaving"></p>
             <img id="avatar" src="https://api.dicebear.com/7.x/avataaars/svg?seed=start" width="200" height="200">
             <br>
-            <button onclick="newRandomAvatar()">New Random Avatar</button>
+            <button onclick="newRandomAvatar()" data-key="login.rand_avatar">New Random Avatar</button>
         </div>
          
         <input class="input-style" type="text" id="usernameInput" placeholder="Enter a new name" readonly onfocus="this.removeAttribute('readonly');">
-        <button class="button-style" onclick="saveUsername(); saveAvatar();">Save</button>
+        <button class="button-style" onclick="saveUsername(); saveAvatar();" data-key="login.save_btn">Save</button>
 </div>    
 </body>
 </html>

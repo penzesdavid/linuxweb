@@ -21,6 +21,11 @@
         </a>
         <a class="navbar-brand" href="./index.html">LinuxAtlas</a>
          
+        <select onchange="changeLanguage(this.value)">
+            <option value="en">English</option>
+            <option value="hu">Magyar</option>
+        </select>
+         
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
@@ -42,18 +47,18 @@
             <a class="nav-link" href="./distrosummary.html">Distrosummary</a>
             </li>
             <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-key="nav.more">
                 More
             </a>
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="https://www.linuxtoday.com/">News</a></li>
-                <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Linux">About</a></li>
+                <li><a class="dropdown-item" href="https://www.linuxtoday.com/" data-key="nav.news">News</a></li>
+                <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Linux" data-key="nav.about">About</a></li>
             </ul>
             </li>
         </ul>
         <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="search" style="height: 40px; margin: auto;"/>
-            <button class="btn btn-outline-success" type="button" style="margin: auto;" onclick="searchText()">Search</button>
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="search" style="height: 40px; margin: auto;" data-key="nav.search_input"/>
+            <button class="btn btn-outline-success" type="button" style="margin: auto;" onclick="searchText()" data-key="nav.search_btn">Search</button>
         </form>
         </div>
     </div>
@@ -62,6 +67,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script src="./script.js"></script>
+    <script src="./lang.js"></script>
     <script type="module" src="./register.js" defer></script>
     <script type="module" src="./database.js" defer></script>
 
@@ -80,13 +86,13 @@
 </head>
 <body>
     <div class="box">
-    <h1>Register</h1>
+    <h1 data-key="register.register">Register</h1>
 
     <input type="email" id="email_register" placeholder="Email" class="input-style">
-    <input type="password" id="password_register" placeholder="Password" class="input-style">
-    <button id="register_button" class="button-style" type="submit">Register</button>
+    <input type="password" id="password_register" placeholder="Password" class="input-style" data-key="placeholder.passwd">
+    <button id="register_button" class="button-style" type="submit" data-key="register.register">Register</button>
 
-    <a href="./login_page.html" class="anim link" style="animation-delay: 0.1s;">Already have an account? Login here.</a>
+    <a href="./login_page.html" class="anim link" style="animation-delay: 0.1s;" data-key="register.login_link">Already have an account? Login here.</a>
     </div>
 
 </body>

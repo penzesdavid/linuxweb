@@ -20,6 +20,11 @@
         </a>
         <a class="navbar-brand" href="./index.html">LinuxAtlas</a>
          
+        <select onchange="changeLanguage(this.value)">
+            <option value="en">English</option>
+            <option value="hu">Magyar</option>
+        </select>
+         
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
@@ -41,18 +46,18 @@
             <a class="nav-link" href="./distrosummary.html">Distrosummary</a>
             </li>
             <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-key="nav.more">
                 More
             </a>
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="https://www.linuxtoday.com/">News</a></li>
-                <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Linux">About</a></li>
+                <li><a class="dropdown-item" href="https://www.linuxtoday.com/" data-key="nav.news">News</a></li>
+                <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Linux" data-key="nav.about">About</a></li>
             </ul>
             </li>
         </ul>
         <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="search" style="height: 40px; margin: auto;"/>
-            <button class="btn btn-outline-success" type="button" style="margin: auto;" onclick="searchText()">Search</button>
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="search" style="height: 40px; margin: auto;" data-key="nav.search_input"/>
+            <button class="btn btn-outline-success" type="button" style="margin: auto;" onclick="searchText()" data-key="nav.search_btn">Search</button>
         </form>
         </div>
     </div>
@@ -62,6 +67,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script src="./script.js"></script>
     <script type="module" src="./database.js" defer></script>
+    <script src="./lang.js"></script>
 
 <div class="content">
     <!-- Ambient Background -->
@@ -79,49 +85,49 @@
         <div class="col-lg card anim" style="animation-duration: 1s;">
             <div class="card-body">
                 <h3 class="card-title">Ubuntu</h3>
-                <p class="card-text">Ubuntu is beginner-friendly with a massive software repository and long-term support (LTS) releases, making it ideal for new users transitioning from Windows—install it and get gaming, office work, and servers running smoothly out of the box.</p>
+                <p class="card-text" data-key="summary.ubuntu_desc">Ubuntu is beginner-friendly with a massive software repository and long-term support (LTS) releases, making it ideal for new users transitioning from Windows—install it and get gaming, office work, and servers running smoothly out of the box.</p>
                 <ul class="card-text">
-                    <li><strong>Best for:</strong> Beginners, servers, cloud</li>
-                    <li><strong>Base:</strong> Debian</li>
+                    <li><strong data-key="summary.label_best">Best for:</strong> <span data-key="summary.ubuntu_best">Beginners, servers, cloud</span></li>
+                    <li><strong data-key="summary.label_base">Base:</strong> Debian</li>
                     <li><strong>Package manager:</strong> APT</li>
-                    <li><strong>Release cycle:</strong> 6 months (LTS every 2 years)</li>
-                    <li><strong>Pros:</strong> Easy to use and lots of quides; stable, making it able to stay on for months or even years</li>
-                    <li><strong>Cons:</strong> Owned by a corporation; on the more bloated side of Linux distros</li>
+                    <li><strong data-key="summary.label_rel">Release cycle:</strong> <span data-key="summary.ubuntu_rel">6 months (LTS every 2 years)</li>
+                    <li><strong data-key="summary.label_pros">Pros:</strong> <span data-key="summary.ubuntu_pro">Easy to use and lots of quides; stable, making it able to stay on for months or even years</li>
+                    <li><strong data-key="summary.label_cons">Cons:</strong> <span data-key="summary.ubuntu_con">Owned by a corporation; on the more bloated side of Linux distros</li>
                 </ul>
-                <a href="https://ubuntu.com/"><button class="button-style">Official Website</button></a>
+                <a href="https://ubuntu.com/"><button class="button-style" data-key="summary.web_btn">Official Website</button></a>
                 <a href="https://wiki.ubuntu.com/"><button class="button-style">Wiki</button></a>
             </div>
         </div>
         <div class="col-lg card anim-Y">
             <div class="card-body">
                 <h3 class="card-title">Linux Mint</h3>
-                <p class="card-text">Linux Mint feels like Windows with its Cinnamon desktop, multimedia codecs pre-installed, and user-friendly tools; it's stable, lightweight, and perfect for everyday productivity. The Cinnamon UI is a little more like Windows 10 or 7 rather than Windows 11.</p>
+                <p class="card-text" data-key="summary.mint_desc">Linux Mint feels like Windows with its Cinnamon desktop, multimedia codecs pre-installed, and user-friendly tools; it's stable, lightweight, and perfect for everyday productivity. The Cinnamon UI is a little more like Windows 10 or 7 rather than Windows 11.</p>
                 <ul class="card-text">
-                    <li><strong>Best for:</strong> Windows switchers, everyday desktops, offices</li>
-                    <li><strong>Base:</strong> Ubuntu</li>
+                    <li><strong data-key="summary.label_best">Best for:</strong> <span data-key="summary.mint_best">Windows switchers, everyday desktops, offices</span></li>
+                    <li><strong data-key="summary.label_base">Base:</strong> Ubuntu</li>
                     <li><strong>Package manager:</strong> APT</li>
-                    <li><strong>Release cycle:</strong> Every 6 months</li>
-                    <li><strong>Pros:</strong> familiar DE if you have used Windows 7(or older) and/or 10; Ubuntu based, so a lot of guides available</li>
-                    <li><strong>Cons:</strong> It's Cinnamon desktop feels a little out-dated with it's looks; a little bloated compared to something like Arch Linux or Fedora</li>
+                    <li><strong data-key="summary.label_rel">Release cycle:</strong> <span data-key="summary.mint_rel">Every 6 months</span></li>
+                    <li><strong data-key="summary.label_pros">Pros:</strong> <span data-key="summary.mint_pro">familiar DE if you have used Windows 7(or older) and/or 10; Ubuntu based, so a lot of guides available</span> </li>
+                    <li><strong data-key="summary.label_cons">Cons:</strong> <span data-key="summary.mint_con">It's Cinnamon desktop feels a little out-dated with it's looks; a little bloated compared to something like Arch Linux or Fedora</span></li>
                 </ul>
-                <p class="card-text">It's based on Ubuntu, so for help you can search the <a href="https://wiki.ubuntu.com">Ubuntu wiki</a>. </p>
-                <a href="https://linuxmint.com/"><button class="button-style">Official Website</button></a>
+                <p class="card-text" data-key="summary.mint_plus">It's based on Ubuntu, so for help you can search the <a href="https://wiki.ubuntu.com">Ubuntu wiki</a>.</p>
+                <a href="https://linuxmint.com/"><button class="button-style" data-key="summary.web_btn">Official Website</button></a>
             </div>
         </div>
         <div class="col-lg card anim-1">
             <div class="card-body">
                 <h3 class="card-title">Pop!_OS</h3>
-                <p class="card-text">Pop!_OS from System76 shines for gamers and creators with NVIDIA drivers baked in, a customized GNOME COSMIC desktop, and easy tiling—great for hardware-heavy workflows.</p>
+                <p class="card-text" data-key="summary.pop_desc">Pop!_OS from System76 shines for gamers and creators with NVIDIA drivers baked in, a customized GNOME COSMIC desktop, and easy tiling—great for hardware-heavy workflows.</p>
                 <ul class="card-text">
-                    <li><strong>Best for:</strong> Gaming, NVIDIA users, productivity, beginners</li>
-                    <li><strong>Base:</strong> Ubuntu</li>
+                    <li><strong data-key="summary.label_best">Best for:</strong> <span data-key="summary.pop_best">Gaming, NVIDIA users, productivity, beginners</span></li>
+                    <li><strong data-key="summary.label_base">Base:</strong> Ubuntu</li>
                     <li><strong>Package manager:</strong> APT + Pop Shop</li>
-                    <li><strong>Release cycle:</strong> Matches Ubuntu LTS</li>
-                    <li><strong>Pros:</strong> A lot of guides available, because it's based on Ubuntu, without the same corporation overlord</li>
-                    <li><strong>Cons:</strong> Long release cycles, so you have to rely on flatpaks</li>
+                    <li><strong data-key="summary.label_rel">Release cycle:</strong> <span data-key="summary.pop_rel">Matches Ubuntu LTS</span></li>
+                    <li><strong data-key="summary.label_pros">Pros:</strong> <span data-key="summary.pop_pro">A lot of guides available, because it's based on Ubuntu, without the same corporation overlord</span></li>
+                    <li><strong data-key="summary.label_cons">Cons:</strong> <span data-key="summary.pop_con">Long release cycles, so you have to rely on flatpaks</li>
                 </ul>
-                <p class="card-text">It's based on Ubuntu, so for help you can search the <a href="https://wiki.ubuntu.com">Ubuntu wiki</a> and it's forums.</p>
-                <a href="https://system76.com/pop/"><button class="button-style">Official Website</button></a>
+                <p class="card-text" data-key="summary.pop_plus">It's based on Ubuntu, so for help you can search the <a href="https://wiki.ubuntu.com">Ubuntu wiki</a> and it's forums.</p>
+                <a href="https://system76.com/pop/"><button class="button-style" data-key="summary.web_btn">Official Website</button></a>
             </div>
         </div>
     </div>
@@ -129,32 +135,32 @@
         <div class="col-lg card anim" style="animation-duration: 1s; animation-delay: 0.7s;">
             <div class="card-body">
                 <h3 class="card-title">Debian</h3>
-                <p class="card-text">Debian prioritizes rock-solid stability and free software purity, serving as the base for Ubuntu; it's a server powerhouse with conservative updates that just work for years.</p>
+                <p class="card-text" data-key="summary.deb_desc">Debian prioritizes rock-solid stability and free software purity, serving as the base for Ubuntu; it's a server powerhouse with conservative updates that just work for years.</p>
                 <ul class="card-text">
-                    <li><strong>Best for:</strong> Servers, stability seekers</li>
-                    <li><strong>Base:</strong> This is a standalone distribution</li>
+                    <li><strong data-key="summary.label_best">Best for:</strong> <span data-key="summary.deb_best">Servers, stability seekers</span></li>
+                    <li><strong data-key="summary.label_base">Base:</strong> <span data-key="summary.label_standalone">This is a standalone distribution</span></li>
                     <li><strong>Package manager:</strong> APT</li>
-                    <li><strong>Release cycle:</strong> Every 2-3 years</li>
-                    <li><strong>Pros:</strong> Stable, able to stay powerd on for months or even years</li>
-                    <li><strong>Cons:</strong> One of the worst installs I have tried; long time between releases, thus you have to rely on flatpaks</li>
+                    <li><strong data-key="summary.label_rel">Release cycle:</strong> <span data-key="summary.deb_rel">Every 2-3 years</span></li>
+                    <li><strong data-key="summary.label_pros">Pros:</strong> <span data-key="summary.deb_pro">Stable, able to stay powerd on for months or even years</span></li>
+                    <li><strong data-key="summary.label_cons">Cons:</strong> <span data-key="summary.deb_con">One of the worst installs I have tried; long time between releases, thus you have to rely on flatpaks</span></li>
                 </ul>
-                <a href="https://www.debian.org/"><button class="button-style">Official Website</button></a>
+                <a href="https://www.debian.org/"><button class="button-style" data-key="summary.web_btn">Official Website</button></a>
                 <a href="https://wiki.debian.org/"><button class="button-style">Wiki</button></a>
             </div>
         </div>
         <div class="col-lg card anim-y" style="animation-delay: 0.9s;">
             <div class="card-body">
                 <h3 class="card-title">Fedora</h3>
-                <p class="card-text">Fedora delivers cutting-edge features from Red Hat's labs, perfect for developers who want the latest kernels, GNOME tweaks, and RPM packages without Arch-level hassle.</p>
+                <p class="card-text" data-key="summary.fedora_desc">Fedora delivers cutting-edge features from Red Hat's labs, perfect for developers who want the latest kernels, GNOME tweaks, and RPM packages without Arch-level hassle.</p>
                 <ul class="card-text">
-                    <li><strong>Best for:</strong> Developers, cutting-edge features</li>
-                    <li><strong>Base:</strong> This is a standalone distribution, although it has some ties with RHEL (Red Hat Enterprise Linux)</li>
+                    <li><strong data-key="summary.label_best">Best for:</strong> <span data-key="summary.fedora_best">Developers, cutting-edge features</span></li>
+                    <li><strong data-key="summary.label_base">Base:</strong> <span data-key="summary.fedora_base">This is a standalone distribution, although it has some ties with RHEL (Red Hat Enterprise Linux)</span></li>
                     <li><strong>Package manager:</strong> DNF</li>
-                    <li><strong>Release cycle:</strong> Every 6 months</li>
-                    <li><strong>Pros:</strong> Easy and powerful install</li>
-                    <li><strong>Cons:</strong> Hard to parse website; by default when asked for yes or no (y/n) in installs the no is selected</li>
+                    <li><strong data-key="summary.label_rel">Release cycle:</strong> <span data-key="summary.fedora_rel">Every 6 months</span></li>
+                    <li><strong data-key="summary.label_pros">Pros:</strong> <span data-key="summary.fedora_pro">Easy and powerful install</span></li>
+                    <li><strong data-key="summary.label_cons">Cons:</strong> <span data-key="summary.fedora_con">Hard to parse website; by default when asked for yes or no (y/n) in installs the no is selected</span></li>
                 </ul>
-                <a href="https://www.fedoraproject.org/"><button class="button-style">Official Website</button></a>
+                <a href="https://www.fedoraproject.org/"><button class="button-style" data-key="summary.web_btn">Official Website</button></a>
                 <a href="https://docs.fedoraproject.org/en-US/docs/"><button class="button-style">Documentation</button></a>
                 
             </div>
@@ -162,16 +168,16 @@
         <div class="col-lg card anim-1" style="animation-delay: 1.1s;">
             <div class="card-body">
                 <h3 class="card-title">Bazzite</h3>
-                <p class="card-text">Bazzite transforms Fedora into a SteamOS clone for gaming handhelds and desktops, with immutable design, pre-tuned kernels for controllers, HDR, and NVIDIA/AMD support—perfect for couch gaming or HTPCs without tinkering.</p>
+                <p class="card-text" data-key="summary.bazzite_desc">Bazzite transforms Fedora into a SteamOS clone for gaming handhelds and desktops, with immutable design, pre-tuned kernels for controllers, HDR, and NVIDIA/AMD support—perfect for couch gaming or HTPCs without tinkering.</p>
                 <ul class="card-text">
-                    <li><strong>Best for:</strong> Handheld gaming, HTPCs</li>
-                    <li><strong>Base:</strong> Fedora</li>
+                    <li><strong data-key="summary.label_best">Best for:</strong> <span data-key="summary.bazzite_best">Handheld gaming, HTPCs</span></li>
+                    <li><strong data-key="summary.label_base">Base:</strong> Fedora</li>
                     <li><strong>Package manager:</strong> rpm-ostree + Distrobox</li>
-                    <li><strong>Release cycle:</strong> Rolling atomic</li>
-                    <li><strong>Pros:</strong> Easy and powerful install, matching the base Fedora one; immutable system, so beginners can't accidentally break it; console-like experience very similar to the SteamOS</li>
-                    <li><strong>Cons:</strong> The installtion media is somewhat hardware specific; the Steam Gaming Mode is not available for all hardware</li>
+                    <li><strong data-key="summary.label_rel">Release cycle:</strong> <span data-key="summary.bazzite_rel">Rolling atomic</span></li>
+                    <li><strong data-key="summary.label_pros">Pros:</strong> <span data-key="summary.bazzite_pro">Easy and powerful install, matching the base Fedora one; immutable system, so beginners can't accidentally break it; console-like experience very similar to the SteamOS</span></li>
+                    <li><strong data-key="summary.label_cons">Cons:</strong> <span data-key="summary.bazzite_con">The installtion media is somewhat hardware specific; the Steam Gaming Mode is not available for all hardware</span></li>
                 </ul>
-                <a href="https://bazzite.gg/"><button class="button-style">Official Website</button></a>
+                <a href="https://bazzite.gg/"><button class="button-style" data-key="summary.web_btn">Official Website</button></a>
                 <a href="https://docs.bazzite.gg/"><button class="button-style">Documentation</button></a>
             </div>
         </div>
@@ -180,16 +186,16 @@
         <div class="col-lg card anim" style="animation-duration: 1s; animation-delay: 1.2s;">
             <div class="card-body">
                 <h3 class="card-title">Arch Linux</h3>
-                <p class="card-text">Arch Linux empowers tinkerers with a rolling-release model and the AUR for endless customization. It's a no-bloat, very lightweight and fast distro. Use the archinstall script for quick installation, or do a manual install via the wiki's help and build your system from the ground up.</p>
+                <p class="card-text" data-key="summary.arch_desc">Arch Linux empowers tinkerers with a rolling-release model and the AUR for endless customization. It's a no-bloat, very lightweight and fast distro. Use the archinstall script for quick installation, or do a manual install via the wiki's help and build your system from the ground up.</p>
                 <ul class="card-text">
-                    <li><strong>Best for:</strong> Tinkerers, power users</li>
-                    <li><strong>Base:</strong> This is a standalone distribution</li>
+                    <li><strong data-key="summary.label_best">Best for:</strong> <span data-key="summary.arch_best">Tinkerers, power users</span></li>
+                    <li><strong data-key="summary.label_base">Base:</strong> <span data-key="summary.label_standalone">This is a standalone distribution</span></li>
                     <li><strong>Package manager:</strong> Pacman + AUR</li>
-                    <li><strong>Release cycle:</strong> Rolling</li>
-                    <li><strong>Pros:</strong> Powerful and not too hard install with the archinstall script; you're in control of everything; one of the best wiki's; rolling release</li>
-                    <li><strong>Cons:</strong> Your're in control of everything, so it has a deep learning curve; bleeding-edge rolling release makes it, that some software might brake from time-to-time on a new update</li>
+                    <li><strong data-key="summary.label_rel">Release cycle:</strong> <span data-key="summary.arch_rel">Rolling</span></li>
+                    <li><strong data-key="summary.label_pros">Pros:</strong> <span data-key="summary.arch_pro">Powerful and not too hard install with the archinstall script; you're in control of everything; one of the best wiki's; rolling release</span></li>
+                    <li><strong data-key="summary.label_cons">Cons:</strong> <span data-key="summary.arch_con">Your're in control of everything, so it has a deep learning curve; bleeding-edge rolling release makes it, that some software might brake from time-to-time on a new update</span></li>
                 </ul>
-                <a href="https://archlinux.org"><button class="button-style">Official Website</button></a>
+                <a href="https://archlinux.org"><button class="button-style" data-key="summary.web_btn">Official Website</button></a>
                 <a href="https://wiki.archlinux.org"><button class="button-style">Wiki</button></a>
                 <p style="text-align: left; font-size: 1rem; margin:-1rem; padding:0; color: rgba(255, 255, 255, 0.02)">I use Arch btw</p>
             </div>
@@ -197,32 +203,32 @@
         <div class="col-lg card anim-y" style="animation-delay: 1.35s;">
             <div class="card-body">
                 <h3 class="card-title">EndeavourOS</h3>
-                <p class="card-text">EndeavourOS simplifies Arch installation with a graphical wizard, Calamares, and themed desktops. It has rolling releases with community support for easy power-user setups.</p>
+                <p class="card-text" data-key="summary.endeav_desc">EndeavourOS simplifies Arch installation with a graphical wizard, Calamares, and themed desktops. It has rolling releases with community support for easy power-user setups.</p>
                 <ul class="card-text">
-                    <li><strong>Best for:</strong> Easy Arch entry</li>
-                    <li><strong>Base:</strong> Arch</li>
+                    <li><strong data-key="summary.label_best">Best for:</strong> <span data-key="summary.endeav_best">Easy Arch entry</span></li>
+                    <li><strong data-key="summary.label_base">Base:</strong> Arch</li>
                     <li><strong>Package manager:</strong> Pacman + AUR</li>
-                    <li><strong>Release cycle:</strong> Rolling</li>
-                    <li><strong>Pros:</strong> Easy to use GUI network install; it uses pacman, and also has the option of using the AUR</li>
-                    <li><strong>Cons:</strong> Even tough it's installtion is very easy, it is not immutable so some beginners might brake some aspects of the system</li>
+                    <li><strong data-key="summary.label_rel">Release cycle:</strong> <span data-key="summary.endeav_rel">Rolling</span></li>
+                    <li><strong data-key="summary.label_pros">Pros:</strong> <span data-key="summary.endeav_pro">Easy to use GUI network install; it uses pacman, and also has the option of using the AUR</span></li>
+                    <li><strong data-key="summary.label_cons">Cons:</strong> <span data-key="summary.endeav_con">Even tough it's installtion is very easy, it is not immutable so some beginners might brake some aspects of the system</span></li>
                 </ul>
-                <a href="https://endeavouros.com/"><button class="button-style">Official Website</button></a>
+                <a href="https://endeavouros.com/"><button class="button-style" data-key="summary.web_btn">Official Website</button></a>
                 <a href="https://discovery.endeavouros.com/"><button class="button-style">Wiki</button></a>
             </div>
         </div>
         <div class="col-lg card anim-1" style="animation-delay: 1.5s;">
             <div class="card-body">
                 <h3 class="card-title">Manjaro</h3>
-                <p class="card-text">Manjaro makes Arch accessible with pre-configured ISOs, hardware detection, and a delay on updates for stability, plus the Pamac GUI for AUR packages.</p>
+                <p class="card-text" data-key="summary.manj_desc">Manjaro makes Arch accessible with pre-configured ISOs, hardware detection, and a delay on updates for stability, plus the Pamac GUI for AUR packages.</p>
                 <ul class="card-text">
-                    <li><strong>Best for:</strong> Arch without hassle, gamers</li>
-                    <li><strong>Base:</strong> Arch</li>
+                    <li><strong data-key="summary.label_best">Best for:</strong> <span data-key="summary.manj_best">Arch without hassle, gamers</span></li>
+                    <li><strong data-key="summary.label_base">Base:</strong> Arch</li>
                     <li><strong>Package manager:</strong> Pacman + Pamac</li>
-                    <li><strong>Release cycle:</strong> Rolling (delayed)</li>
-                    <li><strong>Pros:</strong> It has pacman the package manager of Arch Linux and also has the AUR preconfigured with the Pamac GUI</li>
-                    <li><strong>Cons:</strong> It's install isn't as powerful as the Arch Linux installation</li>
+                    <li><strong data-key="summary.label_rel">Release cycle:</strong> <span data-key="summary.manj_rel">Rolling (delayed)</span></li>
+                    <li><strong data-key="summary.label_pros">Pros:</strong> <span data-key="summary.manj_pro">It has pacman the package manager of Arch Linux and also has the AUR preconfigured with the Pamac GUI</span></li>
+                    <li><strong data-key="summary.label_cons">Cons:</strong> <span data-key="summary.manj_con">It's install isn't as powerful as the Arch Linux installation</span></li>
                 </ul>
-                <a href="https://manjaro.org/"><button class="button-style">Official Website</button></a>
+                <a href="https://manjaro.org/"><button class="button-style" data-key="summary.web_btn">Official Website</button></a>
                 <a href="https://wiki.archlinux.org"><button class="button-style">Arch Wiki</button></a>
             </div>
         </div>
@@ -231,48 +237,48 @@
         <div class="col-lg card anim" style="animation-duration: 1s; animation-delay: 1.55s;">
             <div class="card-body">
                 <h3 class="card-title">Garuda Linux</h3>
-                <p class="card-text">Garuda Linux is an Arch-based speed demon optimized for gaming and multimedia, with aggressive kernels, BTRFS snapshots, and a flashy KDE Dragonized edition out of the box.</p>
+                <p class="card-text" data-key="summary.garuda_desc">Garuda Linux is an Arch-based speed demon optimized for gaming and multimedia, with aggressive kernels, BTRFS snapshots, and a flashy KDE Dragonized edition out of the box.</p>
                 <ul class="card-text">
-                    <li><strong>Best for:</strong> Gaming, visual flair</li>
-                    <li><strong>Base:</strong> Arch</li>
+                    <li><strong data-key="summary.label_best">Best for:</strong> <span data-key="summary.garuda_best">Gaming, visual flair</span></li>
+                    <li><strong data-key="summary.label_base">Base:</strong> Arch</li>
                     <li><strong>Package manager:</strong> Pacman + Chaotic-AUR</li>
-                    <li><strong>Release cycle:</strong> Rolling</li>
-                    <li><strong>Pros:</strong> One of the fastest and most optimized kernels for gaming, is installed out of the box; snapshots make it easier to recover the system if something breaks</li>
-                    <li><strong>Cons:</strong> Might be a bit too much flair for some; also the snapshot might eat up some valuable storage space</li>
+                    <li><strong data-key="summary.label_rel">Release cycle:</strong> <span data-key="summary.garuda_rel">Rolling</span></li>
+                    <li><strong data-key="summary.label_pros">Pros:</strong> <span data-key="summary.garuda_pro">One of the fastest and most optimized kernels for gaming, is installed out of the box; snapshots make it easier to recover the system if something breaks</span></li>
+                    <li><strong data-key="summary.label_cons">Cons:</strong> <span data-key="summary.garuda_con">Might be a bit too much flair for some; also the snapshot might eat up some valuable storage space</span></li>
                 </ul>
-                <a href="https://garudalinux.org/"><button class="button-style">Official Website</button></a>
+                <a href="https://garudalinux.org/"><button class="button-style" data-key="summary.web_btn">Official Website</button></a>
                 <a href="https://wiki.garudalinux.org/en/home"><button class="button-style">Wiki</button></a>
             </div>
         </div>
         <div class="col-lg card anim-y" style="animation-delay: 1.65s;">
             <div class="card-body">
                 <h3 class="card-title">openSUSE</h3>
-                <p class="card-text">OpenSUSE offers flexible Leap (stable) or Tumbleweed (rolling) editions, with YaST for easy config management—ideal for sysadmins who love RPMs and Btrfs snapshots.</p>
+                <p class="card-text" data-key="summary.suse_desc">OpenSUSE offers flexible Leap (stable) or Tumbleweed (rolling) editions, with YaST for easy config management—ideal for sysadmins who love RPMs and Btrfs snapshots.</p>
                 <ul class="card-text">
-                    <li><strong>Best for:</strong> Sysadmins, KDE lovers</li>
-                    <li><strong>Base:</strong> This is a standalone distribution</li>
+                    <li><strong data-key="summary.label_best">Best for:</strong> <span data-key="summary.suse_best">Sysadmins, KDE lovers</span></li>
+                    <li><strong data-key="summary.label_base">Base:</strong> <span data-key="summary.label_standalone">This is a standalone distribution</span></li>
                     <li><strong>Package manager:</strong> Zypper</li>
-                    <li><strong>Release cycle:</strong> Leap (2-3 yrs), Tumbleweed (rolling)</li>
-                    <li><strong>Pros:</strong> It has stable release for the ones wanting stability, and rolling release, who want the latest updates for software</li>
-                    <li><strong>Cons:</strong> It doesn't have as many tutorials and guides specific to this distro compared to Arch Linux and Ubuntu</li>
+                    <li><strong data-key="summary.label_rel">Release cycle:</strong> <span data-key="summary.suse_rel">Leap (2-3 yrs), Tumbleweed (rolling)</span></li>
+                    <li><strong data-key="summary.label_pros">Pros:</strong> <span data-key="summary.suse_pro">It has stable release for the ones wanting stability, and rolling release, who want the latest updates for software</span></li>
+                    <li><strong data-key="summary.label_cons">Cons:</strong> <span data-key="summary.suse_con">It doesn't have as many tutorials and guides specific to this distro compared to Arch Linux and Ubuntu</span></li>
                 </ul>
-                <a href="https://www.opensuse.org/"><button class="button-style">Official Website</button></a>
+                <a href="https://www.opensuse.org/"><button class="button-style" data-key="summary.web_btn">Official Website</button></a>
                 <a href="https://en.opensuse.org/Main_Page"><button class="button-style">Wiki</button></a>
             </div>
         </div>
         <div class="col-lg card anim-1" style="animation-delay: 1.75s;">
             <div class="card-body">
                 <h3 class="card-title">Gentoo Linux</h3>
-                <p class="card-text">Gentoo is the ultimate source-based distro for optimization obsessives. Compile everything from source with USE flags to squeeze max performance tailored to your exact hardware, though it demands patience and knowledge for the rolling-release journey.</p>
+                <p class="card-text" data-key="summary.gentoo_desc">Gentoo is the ultimate source-based distro for optimization obsessives. Compile everything from source with USE flags to squeeze max performance tailored to your exact hardware, though it demands patience and knowledge for the rolling-release journey.</p>
                 <ul class="card-text">
-                    <li><strong>Best for:</strong> Optimization geeks</li>
-                    <li><strong>Base:</strong> This is a standalone distribution</li>
+                    <li><strong data-key="summary.label_best">Best for:</strong> <span data-key="summary.gentoo_best">Optimization geeks</span></li>
+                    <li><strong data-key="summary.label_base">Base:</strong> This is a standalone distribution</span></li>
                     <li><strong>Package manager:</strong> Portage</li>
-                    <li><strong>Release cycle:</strong> Rolling</li>
-                    <li><strong>Pros:</strong> It has outstanding hardware compatibility, better than any other OS; you control everything that is installed</li>
-                    <li><strong>Cons:</strong> It has one of the steepest learning curve of any Linux distro; you have to compile everything</li>
+                    <li><strong data-key="summary.label_rel">Release cycle:</strong> <span data-key="summary.gentoo_rel">Rolling</span></li>
+                    <li><strong data-key="summary.label_pros">Pros:</strong> <span data-key="summary.gentoo_pro">It has outstanding hardware compatibility, better than any other OS; you control everything that is installed</span></li>
+                    <li><strong data-key="summary.label_cons">Cons:</strong> <span data-key="summary.gentoo_con">It has one of the steepest learning curve of any Linux distro; you have to compile everything</span></li>
                 </ul>
-                <a href="https://www.gentoo.org/"><button class="button-style">Official Website</button></a>
+                <a href="https://www.gentoo.org/"><button class="button-style" data-key="summary.web_btn">Official Website</button></a>
                 <a href="https://wiki.gentoo.org/wiki/Main_Page"><button class="button-style">Wiki</button></a>
             </div>
         </div>
@@ -284,25 +290,25 @@
         <div class="col-lg card anim" style="animation-duration: 1s; animation-delay: 1.9s;">
             <div class="card-body">
                 <h3 class="card-title">Android</h3>
-                <p class="card-text">Android rules mobiles with a Linux kernel, vast app ecosystem, and customization via ROMs; it's touch-optimized for phones/tablets, emphasizing privacy, gaming, and always-on connectivity. This is the OS that powers most of our phones.</p>
+                <p class="card-text" data-key="summary.android_desc">Android rules mobiles with a Linux kernel, vast app ecosystem, and customization via ROMs; it's touch-optimized for phones/tablets, emphasizing privacy, gaming, and always-on connectivity. This is the OS that powers most of our phones.</p>
             </div>
         </div>
         <div class="col-lg card anim-y" style="animation-delay: 2s;">
             <div class="card-body">
                 <h3 class="card-title">ChromeOS</h3>
-                <p class="card-text">ChromeOS is a lightweight, secure web-centric OS from Google, auto-updating with Android app support and Linux containerization. This is the default OS that can be found on Chromebooks.</p>
+                <p class="card-text" data-key="summary.chromeos_desc">ChromeOS is a lightweight, secure web-centric OS from Google, auto-updating with Android app support and Linux containerization. This is the default OS that can be found on Chromebooks.</p>
             </div>
         </div>
         <div class="col-lg card anim-1" style="animation-delay: 2.1s;">
             <div class="card-body">
                 <h3 class="card-title">SteamOS</h3>
-                <p class="card-text">SteamOS powers the Steam Deck with a console-like feel. It has an Arch foundation, optimized for gaming via Proton, seamless controller integration, and Big Picture mode. It's immutable and auto-updating for plug-and-play couch-to-desktop play. It will also be the default OS for the soon arriving Steam Machine and the Steam Frame (VR).</p>
+                <p class="card-text" data-key="summary.steamos_desc">SteamOS powers the Steam Deck with a console-like feel. It has an Arch foundation, optimized for gaming via Proton, seamless controller integration, and Big Picture mode. It's immutable and auto-updating for plug-and-play couch-to-desktop play. It will also be the default OS for the soon arriving Steam Machine and the Steam Frame (VR).</p>
                 <ul class="card-text">
-                    <li><strong>Best for:</strong> Gaming handhelds, couches</li>
+                    <li><strong data-key="summary.label_best">Best for:</strong> <span data-key="summary.steamos_best">Gaming handhelds, couches</span></li>
                     <li><strong>Package manager:</strong> Pacman (internal)</li>
-                    <li><strong>Release cycle:</strong> Rolling</li>
-                    <li><strong>Pros:</strong> It is an Arch based immutable distro so the average consumer can't break it; it's the lowest system overhead console OS that's installed by any manufacturer; even tough it was made for handheld consoles in the first place, it has a full desktop experience powered by KDE</li>
-                    <li><strong>Cons:</strong> It's desktop computer hardware support is not great yet, but it most likely will get better in the future</li>
+                    <li><strong data-key="summary.label_rel">Release cycle:</strong> <span data-key="summary.steamos_rel">Rolling</span></li>
+                    <li><strong data-key="summary.label_pros">Pros:</strong> <span data-key="summary.steamos_pro">It is an Arch based immutable distro so the average consumer can't break it; it's the lowest system overhead console OS that's installed by any manufacturer; even tough it was made for handheld consoles in the first place, it has a full desktop experience powered by KDE</span></li>
+                    <li><strong data-key="summary.label_cons">Cons:</strong> <span data-key="summary.steamos_con">It's desktop computer hardware support is not great yet, but it most likely will get better in the future</span></li>
                 </ul>
             </div>
         </div>
