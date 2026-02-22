@@ -34,7 +34,7 @@ if (login_button) {
         signInWithEmailAndPassword(auth, email_login, password_login)
             .then((userCredential) => {
                 alert("User logged in successfully");
-                window.location.href = "success_page.html";
+                window.location.href = "./success_page.html";
             })
             .catch((error) => {
                 alert("Error: " + error.message);
