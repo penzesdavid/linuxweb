@@ -23,10 +23,12 @@ const updateUI = (name, isLoggedIn) => {
     const title = document.getElementById('custom_name');
     const nav = document.getElementById('navUserName');
     const inputField = document.getElementById('usernameInput');
+    const UserMenu = document.getElementById('NavLinkEdit');
     
     if (isLoggedIn && name && name !== "Login/register") {
         if (title) title.innerText = "Welcome back " + name + "!";
         if (nav) nav.innerText = "HI " + name + "!";
+        if (UserMenu) UserMenu.href = "./profile_page.html";
         
         if (inputField) {
             inputField.value = name;
@@ -35,6 +37,7 @@ const updateUI = (name, isLoggedIn) => {
         if (title) title.innerText = "Welcome to LinuxAtlas";
         if (nav) nav.innerText = "Login/register";
         if (inputField) inputField.value = "";
+        if (UserMenu) UserMenu.href = "./login_page.html";
     }
 };
 
@@ -126,4 +129,3 @@ function fastLoadFromCache() {
 fastLoadFromCache();
 
 document.addEventListener('DOMContentLoaded', fastLoadFromCache);
-

@@ -77,16 +77,19 @@
     <!-- Grid Overlay -->
     <div class="grid-overlay"></div>
 
-    <div class="box" id="login-show">
-    <h1>Login</h1>
 
-    <input type="email" id="email_login" placeholder="Email" class="input-style">
-    <input type="password" id="password_login" placeholder="Password" class="input-style">
-    <button id="login_button" class="button-style" type="submit">Login</button>
-
-    <a href="./register_page.html" class="anim link" style="animation-delay: 0.1s;">Don't have an account? Register here.</a>
-    </div>
-
-
+<div id="profile-settings-style">
+    <h4>Profil settings <button onclick="logout()" class="button-style" style="background-color: rgb(80, 15, 15);" id="logout-show">Logout</button></h4>
+    
+        <div id="avatar-container">
+            <p id="CheckAvatarSaving"></p>
+            <img id="avatar" src="https://api.dicebear.com/7.x/avataaars/svg?seed=start" width="200" height="200">
+            <br>
+            <button onclick="newRandomAvatar()">New Random Avatar</button>
+        </div>
+         
+        <input class="input-style" type="text" id="usernameInput" placeholder="Enter a new name" readonly onfocus="this.removeAttribute('readonly');">
+        <button class="button-style" onclick="saveUsername(); saveAvatar();">Save</button>
+</div>    
 </body>
 </html>

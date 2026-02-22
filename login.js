@@ -57,27 +57,3 @@ window.logout = async () => {
         alert("Error during logout: " + e.message);
     }
 };
-
-// --- ÁLLAPOT FIGYELŐ (Ez segít látni, ha változik a login állapot) ---
-// Ez a rész automatikusan kezeli az UI változásokat be- és kijelentkezéskor
-onAuthStateChanged(auth, (user) => {
-    if (user) {
-        console.log("Login:", user.email);
-        let hide = document.getElementById("login-show");
-        hide.style.display = "none";
-    } else {
-        console.log("Logout.");
-        let hide = document.getElementById("login-show");
-        hide.style.display = "block";
-        
-    }
-});
-
-onAuthStateChanged(auth, (user) => {
-    let profileSettingshide = document.getElementById("profile-settings-style");
-    if (user) {
-        profileSettingshide.style.display = "block";
-    } else {
-        profileSettingshide.style.display = "none";
-    }
-});
