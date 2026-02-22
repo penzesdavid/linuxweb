@@ -200,6 +200,16 @@ body {
     background-color: rgba(255, 255, 255, 0.15);
 }
 
+#SmartSuggestion {
+	width: 80%;
+	margin: 0 auto;
+	background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 10px;
+	margin-top: 50px;
+	text-align: center;
+	padding: 20px;
+}
+
 #distro-finder {
 	width: 80%;
 	margin: 0 auto;
