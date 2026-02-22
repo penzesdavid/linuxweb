@@ -14,29 +14,40 @@ function newRandomAvatar() {
     }
 }
 
-// 3. Mentés funkció (Ezt hívja meg a Save gombod)
+// avatar.js
+
 async function saveAvatar() {
-    // Használjuk a database.js-ben window-hoz kötött auth-ot és db-t
     const user = window.firebaseAuth.currentUser; 
     const usernameInput = document.getElementById('usernameInput');
     const newName = usernameInput ? usernameInput.value.trim() : "";
 
     if (!user) {
-        alert("Error: No user is currently logged in.");
+        alert("Hiba: Nem vagy bejelentkezve!");
         return;
     }
 
     try {
-        // A v10-es Modular szintaxist kell használnunk a database.js miatt
-        await window.firebaseFirestore.setDoc(window.firebaseFirestore.doc(window.firebaseDb, "users", user.uid), {
-            avatarSeed: currentAvatarSeed,
-            username: newName
-        }, { merge: true });
+        const profileData = {
+            avatarSeed: currentAvatarSeed, // Az aktuális kép kódja
+            username: newName             // A beírt név
+        };
 
-        alert("Avatar is saved successfully!");
-        
+        // 1. Mentés a Firebase-be (Firestore)
+        const userDocRef = window.firebaseFirestore.doc(window.firebaseDb, "users", user.uid);
+        await window.firebaseFirestore.setDoc(userDocRef, profileData, { merge: true });
+
+        // 2. Mentés a LocalStorage-ba az azonnali betöltéshez
+        localStorage.setItem(`user_${user.uid}`, JSON.stringify(profileData));
+        localStorage.setItem('last_uid', user.uid);
+
+        // 3. Azonnali UI frissítés a navigációban és máshol
+        if (typeof updateUI === 'function') {
+            updateUI(newName, true);
+        }
+
+        alert("Profil (név és avatar) sikeresen elmentve!");
     } catch (error) {
-        console.error("Firebase save error:", error);
-        alert("Error occurred while saving the avatar.");
+        console.error("Mentési hiba:", error);
+        alert("Hiba történt a mentés során: " + error.message);
     }
 }

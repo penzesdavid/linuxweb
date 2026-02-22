@@ -41,31 +41,6 @@ const updateUI = (name, isLoggedIn) => {
     }
 };
 
-// SAVE FUNCTION
-window.saveUsername = async () => {
-    const user = auth.currentUser;
-    const input = document.getElementById('usernameInput');
-    const newName = input ? input.value.trim() : "";
-
-    if (user && newName !== "") {
-        try {
-            await setDoc(doc(db, "users", user.uid), { 
-                username: newName 
-            }, { merge: true });
-
-            window.userName = newName;
-            updateUI(newName, true);
-            input.value = ""; 
-            alert("Username updated!");
-        } catch (e) {
-            console.error("Save error:", e);
-        }
-    } else {
-        alert("Please enter a valid name!");
-    }
-};
-
-
 const lastUserUid = localStorage.getItem('last_uid');
 if (lastUserUid) {
     const cachedData = localStorage.getItem(`user_${lastUserUid}`);
@@ -129,3 +104,14 @@ function fastLoadFromCache() {
 fastLoadFromCache();
 
 document.addEventListener('DOMContentLoaded', fastLoadFromCache);
+
+
+// database.js legalja
+window.firebaseDb = db;
+window.firebaseAuth = auth;
+window.firebaseFirestore = { 
+    doc, 
+    setDoc, 
+    getDoc, 
+    onAuthStateChanged 
+};
