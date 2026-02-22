@@ -1,6 +1,7 @@
- import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-    import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
-    import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+console.log("database.js loaded");
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+import { getAuth, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
 
   const firebaseConfig = {
     apiKey: "AIzaSyA2n0rzNLqHYEEePxcab8XTgXGYvVQjan4",
@@ -48,6 +49,11 @@ if (lastUserUid) {
         const data = JSON.parse(cachedData);
         window.userName = data.username || "Login/register";
         
+        // Set avatar seed for avatar.js
+        if (data.avatarSeed) {
+            window.currentAvatarSeed = data.avatarSeed;
+        }
+        
         const nav = document.getElementById('navUserName');
         if (nav && data.username) nav.innerText = "HI " + data.username + "!";
         
@@ -72,6 +78,7 @@ onAuthStateChanged(auth, async (user) => {
                 updateUI(window.userName, true);
 
                 if (data.avatarSeed) {
+                    window.currentAvatarSeed = data.avatarSeed; // Update global variable
                     const avatarImg = document.getElementById('avatar');
                     if (avatarImg) {
                         avatarImg.src = `https://api.dicebear.com/7.x/avataaars/svg?seed=${data.avatarSeed}`;
@@ -93,6 +100,11 @@ function fastLoadFromCache() {
             const data = JSON.parse(cachedData);
             updateUI(data.username, true);
             
+            // Set avatar seed for avatar.js
+            if (data.avatarSeed) {
+                window.currentAvatarSeed = data.avatarSeed;
+            }
+            
             const avatarImg = document.getElementById('avatar');
             if (avatarImg && data.avatarSeed) {
                 avatarImg.src = `https://api.dicebear.com/7.x/avataaars/svg?seed=${data.avatarSeed}`;
@@ -105,8 +117,19 @@ fastLoadFromCache();
 
 document.addEventListener('DOMContentLoaded', fastLoadFromCache);
 
+// Global logout function
+window.logout = async () => {
+    try {
+        await signOut(auth);
+        alert("Successfully logged out!");
+        window.location.href = "./index.html";
+    } catch (e) {
+        console.error("Error during logout:", e);
+        alert("Error during logout: " + e.message);
+    }
+};
 
-// database.js legalja
+// Export Firebase instances for global use
 window.firebaseDb = db;
 window.firebaseAuth = auth;
 window.firebaseFirestore = { 

@@ -1,28 +1,23 @@
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-app.js";
-  import { getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-auth.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-app.js";
+import { getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-auth.js";
 
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-    apiKey: "AIzaSyA2n0rzNLqHYEEePxcab8XTgXGYvVQjan4",
-    authDomain: "linuxatlas.firebaseapp.com",
-    projectId: "linuxatlas",
-    storageBucket: "linuxatlas.firebasestorage.app",
-    messagingSenderId: "395652638024",
-    appId: "1:395652638024:web:291936d4d391933a2d3f7d",
-    measurementId: "G-2FL022QKGK"
-  };
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyA2n0rzNLqHYEEePxcab8XTgXGYvVQjan4",
+  authDomain: "linuxatlas.firebaseapp.com",
+  projectId: "linuxatlas",
+  storageBucket: "linuxatlas.firebasestorage.app",
+  messagingSenderId: "395652638024",
+  appId: "1:395652638024:web:291936d4d391933a2d3f7d",
+  measurementId: "G-2FL022QKGK"
+};
 
-  // Initialize Firebase
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-
 const auth = getAuth(app);
 
-
-// --- LOGIN FOLYAMAT ---
+// --- LOGIN PROCESS ---
 const login_button = document.getElementById('login_button');
 if (login_button) {
     login_button.addEventListener('click', function(event) {
@@ -43,15 +38,12 @@ if (login_button) {
 }
 
 
-
-// --- KIJELENTKEZÉS JAVÍTÁSA ---
-// A window.logout-ot használjuk, hogy a HTML-ből is elérhető legyen
+// --- LOGOUT PROCESS ---
 window.logout = async () => {
     try {
-        await signOut(auth); // Meghívjuk a Firebase kijelentkezést
+        await signOut(auth);
         alert("Successfully logged out!");
-        // A kijelentkezés után visszairányítunk a főoldalra
-        window.location.href = "index.html"; 
+        window.location.href = "index.html";
     } catch (e) {
         console.error("Error during logout:", e);
         alert("Error during logout: " + e.message);
