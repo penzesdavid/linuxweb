@@ -1,0 +1,193 @@
+{
+  "nav": {
+    "more": "More",
+    "news": "News",
+    "about": "About",
+    "search_input": "Search",
+    "search_btn": "Search"
+  },
+  "index": {
+    "welcome_title": "Welcome to LinuxAtlas",
+    "welcome_subtitle": "Your comprehensive guide to the Linux ecosystem.",
+    "by_team": "By LinuxMind Team",
+    "start_btn": "Start",
+    "card1_title": "Customizable",
+    "card1_text": "Linux offers unparalleled customization options, allowing users to tailor their operating system to their specific needs and preferences.",
+    "card2_title": "Stable & Reliable",
+    "card2_text": "Linux is known for its stability and reliability, making it a preferred choice for servers and critical systems worldwide.",
+    "card3_title": "Security & Permissions",
+    "card3_text": "Linux provides robust security features, including user permissions and regular updates, making it a secure choice for users and organizations.",
+    "why_title": "Why Linux?",
+    "why_text1": "Linux offers unmatched customization, letting you tailor every aspect from the kernel to the desktop without bloatware or restrictions.",
+    "why_text2": "It's free, open-source, and backed by a vast community, ensuring constant updates, tools, and support at zero cost.",
+    "why_text3": "Superior stability powers over 90% of the world's top servers, handling heavy loads without crashes.",
+    "why_text4": "Built-in security features like SELinux and rapid patching minimize vulnerabilities far better than proprietary OSes.",
+    "why_text5": "Perfect for developers with native support for scripting, containers, and virtualization in a lightweight, efficient environment.",
+    "summary_title": "Linux summary",
+    "summary_subtitle": "Find the right distro for you:"
+  },
+  "finder": {
+    "description": "Choosing the right Linux distro can transform your computing experience, whether you're after stability, cutting-edge features, or gaming prowess. Below is a curated list of popular options we've discussed—select one from the dropdown menu, and I'll dive deeper with installation guides, pros/cons, hardware compatibility, and customization tips tailored to your needs.",
+    "label": "Choose a distro:",
+    "defa_select": "Choose one...",
+    "button": "Reveal"
+  },
+  "login": {
+    "title": "Login",
+    "register_link": "Don't have an account? Register here.",
+    "passwd": "Password",
+    "logout_btn": "Logout",
+    "prof_set_title": "Profile settings",
+    "rand_avatar": "New Random Avatar",
+    "username_input": "Enter a new name",
+    "save_btn": "Save"
+  },
+  "register": {
+    "title": "Register",
+    "passwd": "Password",
+    "login_link": "Already have an account? Login here."
+  },
+  "success": {
+    "title": "Success!",
+    "text": "Your action was completed successfully.",
+    "home_link": "Return to Home"
+  },
+  "summary": {
+    "label_best": "Best for:",
+    "label_base": "Base:",
+    "label_rel": "Release cycle:",
+    "label_pros": "Pros:",
+    "label_cons": "Cons:",
+    "label_standalone": "This is a standalone distribution",
+    "web_btn": "Official Website",
+    "ubuntu_desc": "Ubuntu is beginner-friendly with a massive software repository and long-term support (LTS) releases, making it ideal for new users transitioning from Windows—install it and get gaming, office work, and servers running smoothly out of the box.",
+    "ubuntu_best": "Beginners, servers, cloud",
+    "ubuntu_rel": "6 months (LTS every 2 years)",
+    "ubuntu_pro": "Easy to use and lots of quides; stable, making it able to stay on for months or even years",
+    "ubuntu_con": "Owned by a corporation; on the more bloated side of Linux distros",
+    "mint_desc": "Linux Mint feels like Windows with its Cinnamon desktop, multimedia codecs pre-installed, and user-friendly tools; it's stable, lightweight, and perfect for everyday productivity. The Cinnamon UI is a little more like Windows 10 or 7 rather than Windows 11.",
+    "mint_best": "Windows switchers, everyday desktops, offices",
+    "mint_rel": "Every 6 months",
+    "mint_pro": "familiar DE if you have used Windows 7(or older) and/or 10; Ubuntu based, so a lot of guides available",
+    "mint_con": "It's Cinnamon desktop feels a little out-dated with it's looks; a little bloated compared to something like Arch Linux or Fedora",
+    "mint_plus": "It's based on Ubuntu, so for help you can search the Ubuntu wiki.",
+    "pop_desc": "Pop!_OS from System76 shines for gamers and creators with NVIDIA drivers baked in, a customized GNOME COSMIC desktop, and easy tiling—great for hardware-heavy workflows.",
+    "pop_best": "Gaming, NVIDIA users, productivity, beginners",
+    "pop_rel": "Matches Ubuntu LTS",
+    "pop_pro": "A lot of guides available, because it's based on Ubuntu, without the same corporation overlord",
+    "pop_con": "Long release cycles, so you have to rely on flatpaks",
+    "pop_plus": "It's based on Ubuntu, so for help you can search the Ubuntu wiki and it's forums.",
+    "deb_desc": "Debian prioritizes rock-solid stability and free software purity, serving as the base for Ubuntu; it's a server powerhouse with conservative updates that just work for years.",
+    "deb_best": "Servers, stability seekers",
+    "deb_rel": "Every 2-3 years",
+    "deb_pro": "Stable, able to stay powerd on for months or even years",
+    "deb_con": "One of the worst installs I have tried; long time between releases, thus you have to rely on flatpaks",
+    "fedora_desc": "Fedora delivers cutting-edge features from Red Hat's labs, perfect for developers who want the latest kernels, GNOME tweaks, and RPM packages without Arch-level hassle.",
+    "fedora_best": "Developers, cutting-edge features",
+    "fedora_base": "This is a standalone distribution, although it has some ties with RHEL (Red Hat Enterprise Linux)",
+    "fedora_rel": "Every 6 months",
+    "fedora_pro": "Easy and powerful install",
+    "fedora_con": "Hard to parse website; by default when asked for yes or no (y/n) in installs the no is selected",
+    "bazzite_desc": "Bazzite transforms Fedora into a SteamOS clone for gaming handhelds and desktops, with immutable design, pre-tuned kernels for controllers, HDR, and NVIDIA/AMD support—perfect for couch gaming or HTPCs without tinkering.",
+    "bazzite_best": "Handheld gaming, HTPCs",
+    "bazzite_rel": "Rolling atomic",
+    "bazzite_pro": "Easy and powerful install, matching the base Fedora one; immutable system, so beginners can't accidentally break it; console-like experience very similar to the SteamOS",
+    "bazzite_con": "The installtion media is somewhat hardware specific; the Steam Gaming Mode is not available for all hardware",
+    "arch_desc": "Arch Linux empowers tinkerers with a rolling-release model and the AUR for endless customization. It's a no-bloat, very lightweight and fast distro. Use the archinstall script for quick installation, or do a manual install via the wiki's help and build your system from the ground up.",
+    "arch_best": "Tinkerers, power users",
+    "arch_rel": "Rolling",
+    "arch_pro": "Powerful and not too hard install with the archinstall script; you're in control of everything; one of the best wiki's; rolling release",
+    "arch_con": "Your're in control of everything, so it has a deep learning curve; bleeding-edge rolling release makes it, that some software might brake from time-to-time on a new update",
+    "endeav_desc": "EndeavourOS simplifies Arch installation with a graphical wizard, Calamares, and themed desktops. It has rolling releases with community support for easy power-user setups.",
+    "endeav_best": "Easy Arch entry",
+    "endeav_rel": "Rolling",
+    "endeav_pro": "Easy to use GUI network install; it uses pacman, and also has the option of using the AUR",
+    "endeav_con": "Even tough it's installtion is very easy, it is not immutable so some beginners might brake some aspects of the system",
+    "manj_desc": "Manjaro makes Arch accessible with pre-configured ISOs, hardware detection, and a delay on updates for stability, plus the Pamac GUI for AUR packages.",
+    "manj_best": "Arch without hassle, gamers",
+    "manj_rel": "Rolling (delayed)",
+    "manj_pro": "It has pacman the package manager of Arch Linux and also has the AUR preconfigured with the Pamac GUI",
+    "manj_con": "It's install isn't as powerful as the Arch Linux installation",
+    "garuda_desc": "Garuda Linux is an Arch-based speed demon optimized for gaming and multimedia, with aggressive kernels, BTRFS snapshots, and a flashy KDE Dragonized edition out of the box.",
+    "garuda_best": "Gaming, visual flair",
+    "garuda_rel": "Rolling",
+    "garuda_pro": "One of the fastest and most optimized kernels for gaming, is installed out of the box; snapshots make it easier to recover the system if something breaks",
+    "garuda_con": "Might be a bit too much flair for some; also the snapshot might eat up some valuable storage space",
+    "suse_desc": "OpenSUSE offers flexible Leap (stable) or Tumbleweed (rolling) editions, with YaST for easy config management—ideal for sysadmins who love RPMs and Btrfs snapshots.",
+    "suse_best": "Sysadmins, KDE lovers",
+    "suse_rel": "Leap (2-3 yrs), Tumbleweed (rolling)",
+    "suse_pro": "It has stable release for the ones wanting stability, and rolling release, who want the latest updates for software",
+    "suse_con": "It doesn't have as many tutorials and guides specific to this distro compared to Arch Linux and Ubuntu",
+    "gentoo_desc": "Gentoo is the ultimate source-based distro for optimization obsessives. Compile everything from source with USE flags to squeeze max performance tailored to your exact hardware, though it demands patience and knowledge for the rolling-release journey.",
+    "gentoo_best": "Optimization geeks",
+    "gentoo_rel": "Rolling",
+    "gentoo_pro": "It has outstanding hardware compatibility, better than any other OS; you control everything that is installed",
+    "gentoo_con": "It has one of the steepest learning curve of any Linux distro; you have to compile everything",
+    "android_desc": "Android rules mobiles with a Linux kernel, vast app ecosystem, and customization via ROMs; it's touch-optimized for phones/tablets, emphasizing privacy, gaming, and always-on connectivity. This is the OS that powers most of our phones.",
+    "chromeos_desc": "ChromeOS is a lightweight, secure web-centric OS from Google, auto-updating with Android app support and Linux containerization. This is the default OS that can be found on Chromebooks.",
+    "steamos_desc": "SteamOS powers the Steam Deck with a console-like feel. It has an Arch foundation, optimized for gaming via Proton, seamless controller integration, and Big Picture mode. It's immutable and auto-updating for plug-and-play couch-to-desktop play. It will also be the default OS for the soon arriving Steam Machine and the Steam Frame (VR).",
+    "steamos_best": "Gaming handhelds, couches",
+    "steamos_rel": "Rolling",
+    "steamos_pro": "It is an Arch based immutable distro so the average consumer can't break it; it's the lowest system overhead console OS that's installed by any manufacturer; even tough it was made for handheld consoles in the first place, it has a full desktop experience powered by KDE",
+    "steamos_con": "It's desktop computer hardware support is not great yet, but it most likely will get better in the future"
+  },
+  "finder_details": {
+    "ubuntu": {
+      "title": "Ubuntu",
+      "desc": "Ubuntu is the gateway to Linux for millions, boasting a massive software repository (over 60,000 packages) and Long Term Support (LTS) releases every two years for rock-solid stability. Pre-installed snaps and a polished GNOME desktop make it effortless for daily tasks, development, or servers. Perfect if you're switching from Windows/macOS."
+    },
+    "mint": {
+      "title": "Linux Mint",
+      "desc": "Linux Mint mimics Windows familiarity with Cinnamon desktop, Timeshift backups, and out-of-box multimedia. Ubuntu-based but bloat-free. It's the 'it just works' choice for office work, media, and casual use."
+    },
+    "popos": {
+      "title": "Pop!_OS",
+      "desc": "System76's Pop!_OS supercharges Ubuntu for creators and gamers with NVIDIA ISO options, tiled window management via Pop Shell, and auto hardware detection. Rust-based COSMIC desktop incoming for even snappier performance."
+    },
+    "debian": {
+      "title": "Debian",
+      "desc": "Debian's mantra is 'free software, done right'. Ultra-stable with testing/unstable branches, powering countless derivatives like Ubuntu. It's server gold with minimalism and vast repos, though desktops need some polish post-install."
+    },
+    "fedora": {
+      "title": "Fedora",
+      "desc": "Fedora Workstation brings Red Hat's enterprise innovation to your desktop with the latest GNOME, kernels, and Wayland support straight from upstream—ideal for developers testing future tech. It's spin-heavy (KDE, XFCE options) and spins packages into Flatpaks for sandboxed apps."
+    },
+    "bazzite": {
+      "title": "Bazzite",
+      "desc": "Bazzite turns Fedora Atomic into SteamOS 3 vibes for handhelds/desktops, with HDR, VRR, and controller firmware. Immutable for reliability in gaming marathons and ease of use for beginners."
+    },
+    "arch_btw": {
+      "title": "Arch Linux",
+      "desc": "Arch is the minimalist's dream: a rolling-release base where you build your system via pacman and the Arch User Repository (AUR), guided by the legendary wiki. It's lightweight, always current, and fosters deep learning—KDE, GNOME, or i3, your call."
+    },
+    "endeavouros": {
+      "title": "EndeavourOS",
+      "desc": "EndeavourOS is Arch 'the easy way' with Calamares installer, online repos during setup, and welcome app for tweaks. Pure Arch experience minus manual partitioning pain."
+    },
+    "manjaro": {
+      "title": "Manjaro",
+      "desc": "Manjaro tames Arch with hardware detection, stable branch delays, and MHWD for drivers. KDE, XFCE, or GNOME editions ready to roll. Pamac GUI simplifies AUR access for noobs-to-pros."
+    },
+    "garuda": {
+      "title": "Garuda Linux",
+      "desc": "Garuda Linux amps Arch for speed with Zen kernels, BTRFS snapshots, and gaming optimizations. Dragonized KDE edition dazzles with effects and tools like Garuda Gamer."
+    },
+    "opensuse": {
+      "title": "openSUSE",
+      "desc": "openSUSE balances Leap's Debian-like stability with Tumbleweed's rolling atomic updates. Powered by YaST's wizard for configs and BTRFS snapshots for easy rollbacks. KDE shines here for plasma fans."
+    },
+    "gentoo": {
+      "title": "Gentoo",
+      "desc": "Gentoo compiles from source with USE flags for hyper-optimized binaries matched to your CPU. Portage shines, but expect hours-long emerges for true minimalism."
+    },
+    "steamos": {
+      "title": "SteamOS",
+      "desc": "Valve's SteamOS (Arch-based) fuels Steam Deck with Proton for Windows games, Gamescope compositor, and Deck UI. In some cases you can install on PCs for console-like Linux gaming."
+    },
+    "chromeos": {
+      "title": "ChromeOS (ChromiumOS / ChromeOS Flex)",
+      "desc": "ChromeOS delivers Google's cloud-first ecosystem with instant auto-updates, Android app integration via ARCVM, and Linux Crostini for dev tools—all in a secure, verified boot environment. ChromeOS Flex revives old PCs as managed kiosks or browsers, emphasizing web apps over traditional desktops.",
+      "extra": "<ul><li><strong>Best for:</strong> Web browsing, education, enterprise</li><li><strong>Package manager:</strong> Portage (internal) + deb for Linux apps</li><li><strong>Release cycle:</strong> Continuous auto-updates</li></ul>"
+    }
+  }
+}

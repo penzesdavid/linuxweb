@@ -13,10 +13,16 @@ async function loadTranslations(lang) {
 function applyTranslations() {
 	document.querySelectorAll('[data-key]').forEach(el => {
     	const key = el.getAttribute('data-key');
-    	if (el.tagName === 'INPUT' && el.placeholder) {
-    		el.placeholder = translations[key];
-    	} else if (translations[key]) {
-			el.innerHTML = translations[key]; 
+		const translation = key.split('.').reduce((obj, i) => (obj ? obj[i] : null), translations);
+
+		if (translation) {
+			if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+				el.placeholder = translation;
+			} else {
+				el.innerHTML = translation; 
+			}
+		} else {
+			console.warn(`Translation missing for key: ${key}`);
 		}
   });
 }

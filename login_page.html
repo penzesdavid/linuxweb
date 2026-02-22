@@ -84,11 +84,11 @@
     <div class="grid-overlay"></div>
 
     <div class="box" id="login-show">
-    <h1 data-key="login.login">Login</h1>
+    <h1 data-key="login.title">Login</h1>
 
     <input type="email" id="email_login" placeholder="Email" class="input-style">
-    <input type="password" id="password_login" placeholder="Password" class="input-style" data-key="placeholder.passwd">
-    <button id="login_button" class="button-style" type="submit" data-key="login.login">Login</button>
+    <input type="password" id="password_login" placeholder="Password" class="input-style" data-key="login.passwd">
+    <button id="login_button" class="button-style" type="submit" data-key="login.title">Login</button>
 
     <a href="./register_page.html" class="anim link" style="animation-delay: 0.1s;" data-key="login.register_link">Don't have an account? Register here.</a>
     </div>
@@ -96,7 +96,7 @@
     
 
 <div id="profile-settings-style">
-    <h4>Profil settings <button onclick="logout()" class="button-style" style="background-color: rgb(80, 15, 15);" id="logout-show">Logout</button></h4>
+    <h4><span data-key="login.prof_set_title">Profile settings</span> <button onclick="logout()" class="button-style" style="background-color: rgb(80, 15, 15);" id="logout-show" data-key="login.logout_btn">Logout</button></h4>
     
         <div id="avatar-container">
             <p id="CheckAvatarSaving"></p>
@@ -105,7 +105,7 @@
             <button onclick="newRandomAvatar()" data-key="login.rand_avatar">New Random Avatar</button>
         </div>
          
-        <input class="input-style" type="text" id="usernameInput" placeholder="Enter a new name" readonly onfocus="this.removeAttribute('readonly');">
+        <input class="input-style" type="text" id="usernameInput" placeholder="Enter a new name" readonly onfocus="this.removeAttribute('readonly');" data-key="login.username_input">
         <button class="button-style" onclick="saveUsername(); saveAvatar();" data-key="login.save_btn">Save</button>
 </div>    
 </body>

@@ -1,0 +1,193 @@
+{
+  "nav": {
+    "more": "Több",
+    "news": "Hírek",
+    "about": "Névjegy",
+    "search_input": "Keresés",
+    "search_btn": "Keresés"
+  },
+  "index": {
+    "welcome_title": "Üdvözöljük a LinuxAtlas-on",
+    "welcome_subtitle": "Az Ön átfogó útmutatója a Linux ökoszisztémához.",
+    "by_team": "Készítette a LinuxMind csapata",
+    "start_btn": "Indítás",
+    "card1_title": "Testreszabható",
+    "card1_text": "A Linux páratlan testreszabási lehetőségeket kínál, lehetővé téve a felhasználók számára, hogy operációs rendszerüket saját igényeikre szabják.",
+    "card2_title": "Stabil és Megbízható",
+    "card2_text": "A Linux híres a stabilitásáról és megbízhatóságáról, ami miatt világszerte az elsődleges választás szerverek és kritikus rendszerek számára.",
+    "card3_title": "Biztonság és Jogosultságok",
+    "card3_text": "A Linux robusztus biztonsági funkciókat kínál, beleértve a felhasználói jogosultságokat és a rendszeres frissítéseket.",
+    "why_title": "Miért a Linux?",
+    "why_text1": "A Linux páratlan testreszabhatóságot nyújt, lehetővé téve, hogy a kerneltől az asztali környezetig mindent felesleges szoftverek és korlátozások nélkül alakítson.",
+    "why_text2": "Ingyenes, nyílt forráskódú, és egy hatalmas közösség áll mögötte, amely biztosítja a folyamatos frissítéseket és támogatást.",
+    "why_text3": "Kiemelkedő stabilitása hajtja a világ vezető szervereinek több mint 90%-át, hiba nélkül kezelve a nagy terhelést.",
+    "why_text4": "A beépített biztonsági funkciók, mint az SELinux és a gyors javítások, sokkal hatékonyabban minimalizálják a sebezhetőségeket, mint a zárt rendszerek.",
+    "why_text5": "Tökéletes fejlesztőknek a szkriptelés, konténerek és virtualizáció natív támogatásával, könnyű és hatékony környezetben.",
+    "summary_title": "Linux összefoglaló",
+    "summary_subtitle": "Találja meg az Önnek megfelelő disztribúciót:"
+  },
+  "finder": {
+    "description": "A megfelelő Linux disztribúció kiválasztása átalakítheti a számítógépes élményt. Válasszon egyet a legördülő menüből, és részletes útmutatót kap a telepítésről, előnyökről/hátrányokról és hardverkompatibilitásról.",
+    "label": "Válasszon disztribúciót:",
+    "defa_select": "Válasszon egyet...",
+    "button": "Megjelenítés"
+  },
+	"login": {
+    "title": "Bejelentkezés",
+    "register_link": "Nincs még fiókod? Regisztrálj itt.",
+    "passwd": "Jelszó",
+    "logout_btn": "Kijelentkezés",
+    "prof_set_title": "Profilbeállítások",
+    "rand_avatar": "Új véletlenszerű profilkép",
+    "username_input": "Adj meg egy új nevet",
+    "save_btn": "Mentés"
+  },
+  "register": {
+    "title": "Regisztráció",
+    "passwd": "Jelszó",
+    "login_link": "Már van fiókod? Jelentkezz be itt."
+  },
+  "success": {
+    "title": "Siker!",
+    "text": "A művelet sikeresen befejeződött.",
+    "home_link": "Vissza a főoldalra"
+  },
+  "summary": {
+    "label_best": "Legjobb:",
+    "label_base": "Alap:",
+    "label_rel": "Kiadási ciklus:",
+    "label_pros": "Előnyök:",
+    "label_cons": "Hátrányok:",
+    "label_standalone": "Ez egy önálló disztribúció",
+    "web_btn": "Hivatalos Weboldal",
+    "ubuntu_desc": "Az Ubuntu kezdőbarát, hatalmas szoftvertárral és hosszú távú támogatással (LTS), így ideális a Windowstól váltóknak – a telepítés után a játékok, irodai munka és szerverek azonnal és zökkenőmentesen futnak.",
+    "ubuntu_best": "Kezdőknek, szervereknek, felhő alapú szolgáltatásokhoz",
+    "ubuntu_rel": "6 havonta (LTS 2 évente)",
+    "ubuntu_pro": "Könnyen kezelhető, sok útmutató érhető el hozzá; stabil, hónapokig vagy akár évekig futhat újraindítás nélkül",
+    "ubuntu_con": "Egy vállalat tulajdonában van; a Linux disztribúciók között a több felesleges szoftvert tartalmazó (bloated) oldalon áll",
+    "mint_desc": "A Linux Mint a Cinnamon asztali környezetével a Windows-hoz hasonló élményt nyújt, előre telepített multimédiás kodekekkel és felhasználóbarát eszközökkel; stabil, könnyű és tökéletes a mindennapi munkához.",
+    "mint_best": "Windows-ról váltóknak, mindennapi használatra, irodába",
+    "mint_rel": "6 havonta",
+    "mint_pro": "Ismerős asztali környezet a Windows 7/10 felhasználóknak; Ubuntu alapú, így rengeteg segédlet érhető el",
+    "mint_con": "A Cinnamon felülete kissé elavultnak tűnhet; némi felesleges szoftvert tartalmaz az Arch-hoz vagy Fedorához képest",
+    "mint_plus": "Ubuntu alapú, így segítségért az Ubuntu wiki-t is böngészheti.",
+    "pop_desc": "A System76 által fejlesztett Pop!_OS kiváló a játékosok és tartalomkészítők számára, beépített NVIDIA illesztőprogramokkal és testreszabott GNOME COSMIC felülettel.",
+    "pop_best": "Játékra, NVIDIA felhasználóknak, produktivitásra, kezdőknek",
+    "pop_rel": "Az Ubuntu LTS ciklusát követi",
+    "pop_pro": "Rengeteg útmutató elérhető az Ubuntu alapok miatt, de vállalati kontroll nélkül",
+    "pop_con": "Hosszú kiadási ciklusok, így gyakran a Flatpak-okra kell hagyatkozni",
+    "pop_plus": "Ubuntu alapú, így az Ubuntu wiki és fórumok is hasznosak hozzá.",
+    "deb_desc": "A Debian a sziklaszilárd stabilitást és a szabad szoftverek tisztaságát helyezi előtérbe; a szerverek igáslova, konzervatív frissítésekkel, amelyek évekig hiba nélkül működnek.",
+    "deb_best": "Szervereknek, a stabilitás kedvelőinek",
+    "deb_rel": "2-3 évente",
+    "deb_pro": "Rendkívül stabil, hónapokig vagy akár évekig bekapcsolva maradhat",
+    "deb_con": "Az egyik legnehézkesebb telepítő, amivel találkoztam; a kiadások között hosszú idő telik el",
+    "fedora_desc": "A Fedora a Red Hat laboratóriumaiból származó legújabb funkciókat kínálja, tökéletes azoknak a fejlesztőknek, akik a legfrissebb kernelekre és GNOME újdonságokra vágynak.",
+    "fedora_best": "Fejlesztőknek, élvonalbeli funkciók kedvelőinek",
+    "fedora_base": "Önálló disztribúció, bár szoros szálak fűzik az RHEL-hez (Red Hat Enterprise Linux)",
+    "fedora_rel": "6 havonta",
+    "fedora_pro": "Egyszerű és hatékony telepítési folyamat",
+    "fedora_con": "Nehezen átlátható weboldal; a telepítés során alapértelmezetten a 'Nem' (n) opció van kiválasztva",
+    "bazzite_desc": "A Bazzite a Fedorát alakítja át egy SteamOS klónná kézi konzolokra és asztali gépekre; immutábilis felépítéssel, HDR támogatással és előre konfigurált kontrollerekkel.",
+    "bazzite_best": "Kézi konzolokra, házimozi PC-khez (HTPC)",
+    "bazzite_rel": "Rolling atomic",
+    "bazzite_pro": "Kezdők nem tudják véletlenül elrontani az immutábilis rendszer miatt; konzolszerű élmény, nagyon hasonló a SteamOS-hez",
+    "bazzite_con": "A telepítő média hardverspecifikus lehet; a Steam Gaming Mode nem minden hardveren érhető el",
+    "arch_desc": "Az Arch Linux a bütykölők választása, rolling-release modellel és az AUR-ral a végtelen testreszabhatóságért. Gyors, sallangmentes rendszer.",
+    "arch_best": "Bütykölőknek, profi felhasználóknak",
+    "arch_rel": "Gördülő (Rolling)",
+    "arch_pro": "Az archinstall szkripttel egyszerűbb a telepítés; teljes kontroll minden felett; az egyik legjobb wiki a világon",
+    "arch_con": "Mély tanulási görbe; a legfrissebb csomagok miatt néha előfordulhatnak kisebb hibák egy-egy frissítés után",
+    "endeav_desc": "Az EndeavourOS leegyszerűsíti az Arch telepítését egy grafikus varázslóval (Calamares) és előre témázott asztali környezetekkel.",
+    "endeav_best": "Könnyű belépő az Arch világába",
+    "endeav_rel": "Gördülő (Rolling)",
+    "endeav_pro": "Egyszerű grafikus telepítő; használja a pacman-t és az AUR-t is",
+    "endeav_con": "Bár a telepítés egyszerű, nem immutábilis, így a kezdők még mindig elronthatják a rendszert",
+    "manj_desc": "A Manjaro elérhetővé teszi az Arch-ot előre konfigurált ISO-kkal, hardverfelismeréssel és némi késleltetéssel a frissítésekben a stabilitás érdekében.",
+    "manj_best": "Arch bonyodalmak nélkül, játékosoknak",
+    "manj_rel": "Gördülő (késleltetett)",
+    "manj_pro": "Tartalmazza a Pamac GUI-t az AUR csomagok egyszerű kezeléséhez",
+    "manj_con": "A telepítője nem annyira rugalmas, mint az eredeti Arch Linuxé",
+    "garuda_desc": "A Garuda Linux egy Arch-alapú sebesség megszállott, játékra és multimédiára optimalizálva, agresszív kernelekkel és látványos KDE Dragonized kiadással.",
+    "garuda_best": "Játékra, vizuális stílus kedvelőinek",
+    "garuda_rel": "Gördülő (Rolling)",
+    "garuda_pro": "Az egyik leggyorsabb, játékra optimalizált kernel; a pillanatképek (snapshots) megkönnyítik a rendszer visszaállítását",
+    "garuda_con": "A látványvilág valakinek túl sok lehet; a pillanatképek sok tárhelyet foglalhatnak",
+    "suse_desc": "Az openSUSE rugalmas Leap (stabil) vagy Tumbleweed (gördülő) kiadásokat kínál a YaST rendszerkezelővel – ideális rendszergazdáknak.",
+    "suse_best": "Rendszergazdáknak, KDE kedvelőknek",
+    "suse_rel": "Leap (2-3 év), Tumbleweed (gördülő)",
+    "suse_pro": "Választható stabilitás vagy legfrissebb szoftverek; kiváló rendszerkezelő eszközök",
+    "suse_con": "Kevesebb specifikus útmutató érhető el hozzá, mint az Arch-hoz vagy Ubuntuhoz",
+    "gentoo_desc": "A Gentoo a forráskód-alapú optimalizáció csúcsa. Mindent forrásból fordít, hogy a maximumot hozza ki a hardverből, de türelmet és tudást igényel.",
+    "gentoo_best": "Optimalizáció-mániásoknak",
+    "gentoo_rel": "Gördülő (Rolling)",
+    "gentoo_pro": "Kiemelkedő hardverkompatibilitás; teljes körű kontroll a telepített összetevők felett",
+    "gentoo_con": "Az egyik legnehezebb tanulási görbe; minden szoftvert fordítani kell, ami időigényes",
+    "android_desc": "Az Android uralja a mobilokat Linux kernellel; érintésre optimalizált, hatalmas alkalmazás-ökoszisztémával. Ez az OS hajtja a legtöbb telefonunkat.",
+    "chromeos_desc": "A ChromeOS egy könnyű, web-központú rendszer a Google-től, automatikus frissítésekkel és Android alkalmazás támogatással. Chromebookokon található meg.",
+    "steamos_desc": "A SteamOS hajtja a Steam Decket konzolszerű élménnyel. Arch alapú, Proton-nal játékra optimalizálva, immutábilis és könnyen kezelhető.",
+    "steamos_best": "Kézi konzolokra, nappaliba",
+    "steamos_rel": "Gördülő (Rolling)",
+    "steamos_pro": "Immutábilis rendszer, így az átlagfelhasználó nem tudja véletlenül elrontani; teljes KDE asztali környezetet is kínál",
+    "steamos_con": "Az asztali hardverek támogatása még nem tökéletes, de folyamatosan javul"
+  },
+  "finder_details": {
+    "ubuntu": {
+      "title": "Ubuntu",
+      "desc": "Az Ubuntu több millió felhasználó kapuja a Linuxhoz, hatalmas szoftvertárral (több mint 60 000 csomaggal) és kétévente megjelenő hosszú távú támogatási (LTS) kiadásokkal a sziklaszilárd stabilitásért. Az előre telepített snap-ek és a csiszolt GNOME asztali környezet megkönnyítik a napi feladatokat, a fejlesztést vagy a szerverek üzemeltetését. Tökéletes, ha Windows-ról vagy macOS-ről vált."
+    },
+    "mint": {
+      "title": "Linux Mint",
+      "desc": "A Linux Mint a Windows ismerősségét másolja a Cinnamon asztali környezettel, Timeshift biztonsági mentésekkel és azonnal használható multimédiás támogatással. Ubuntu-alapú, de felesleges sallangok nélkül. Ez az 'egyszerűen működik' választás irodai munkához, médiához és általános használathoz."
+    },
+    "popos": {
+      "title": "Pop!_OS",
+      "desc": "A System76 Pop!_OS-e felturbózza az Ubuntut az alkotók és játékosok számára NVIDIA ISO opciókkal, a Pop Shell segítségével megvalósított ablakrendezéssel és automatikus hardverfelismeréssel. A Rust-alapú COSMIC asztali környezet érkezése még gyorsabb teljesítményt ígér."
+    },
+    "debian": {
+      "title": "Debian",
+      "desc": "A Debian mottója: 'szabad szoftver, jól csinálva'. Rendkívül stabil, testing és unstable ágakkal, amelyek számtalan származékot, például az Ubuntut is hajtják. Szerverekhez kiváló minimalizmusa és hatalmas tárolói miatt, bár az asztali használathoz a telepítés után némi finomhangolásra van szükség."
+    },
+    "fedora": {
+      "title": "Fedora",
+      "desc": "A Fedora Workstation a Red Hat vállalati innovációit hozza el az asztali számítógépre a legújabb GNOME-mal, kernelekkel és Wayland támogatással közvetlenül a fejlesztőktől – ideális a jövő technológiáit tesztelő fejlesztők számára. Számos változata (spin) létezik (KDE, XFCE opciók), és a csomagokat Flatpak-okba különíti el a biztonságos alkalmazásfuttatáshoz."
+    },
+    "bazzite": {
+      "title": "Bazzite",
+      "desc": "A Bazzite a Fedora Atomic-ot alakítja át SteamOS 3 életérzéssé kézi konzolokhoz és asztali gépekhez, HDR, VRR és kontroller firmware támogatással. Immutábilis felépítése megbízhatóságot nyújt a játékmaratonok alatt, és egyszerű használatot biztosít a kezdőknek."
+    },
+    "arch_btw": {
+      "title": "Arch Linux",
+      "desc": "Az Arch a minimalisták álma: egy gördülő kiadású alap, ahol a rendszert a pacman és az Arch User Repository (AUR) segítségével építheti fel, a legendás wiki útmutatásával. Könnyű, mindig naprakész, és mély tanulásra ösztönöz – legyen az KDE, GNOME vagy i3, Ön dönt."
+    },
+    "endeavouros": {
+      "title": "EndeavourOS",
+      "desc": "Az EndeavourOS az Arch 'egyszerű módon': Calamares telepítővel, a telepítés alatt elérhető online tárolókkal és egy üdvözlő alkalmazással a finomhangoláshoz. Tiszta Arch élmény a manuális particionálás nehézségei nélkül."
+    },
+    "manjaro": {
+      "title": "Manjaro",
+      "desc": "A Manjaro megszelídíti az Arch-ot hardverfelismeréssel, a stabil ág késleltetett frissítéseivel és az MHWD-vel az illesztőprogramokhoz. KDE, XFCE vagy GNOME kiadások állnak készen a használatra. A Pamac GUI egyszerűvé teszi az AUR elérését a kezdők és profik számára egyaránt."
+    },
+    "garuda": {
+      "title": "Garuda Linux",
+      "desc": "A Garuda Linux a sebességre fókuszál Zen kernelekkel, BTRFS pillanatképekkel és játékoptimalizálásokkal. A Dragonized KDE kiadás látványos effektekkel és olyan eszközökkel nyűgöz le, mint a Garuda Gamer."
+    },
+    "opensuse": {
+      "title": "openSUSE",
+      "desc": "Az openSUSE egyensúlyt teremt a Leap Debian-szerű stabilitása és a Tumbleweed gördülő atomi frissítései között. A YaST varázslója segíti a konfigurációt, a BTRFS pillanatképek pedig az egyszerű visszaállítást. A KDE itt különösen ragyog a Plasma rajongók számára."
+    },
+    "gentoo": {
+      "title": "Gentoo",
+      "desc": "A Gentoo forráskódból fordít USE flagekkel, hogy a binárisokat pontosan a processzorához optimalizálja. A Portage kiváló, de a valódi minimalizmus érdekében számítson több órás fordítási időkre."
+    },
+    "steamos": {
+      "title": "SteamOS",
+      "desc": "A Valve (Arch-alapú) SteamOS-e hajtja a Steam Decket Proton-nal a Windowsos játékokhoz, Gamescope kompozitorral és Deck felülettel. Bizonyos esetekben PC-re is telepíthető a konzolszerű Linuxos játékélményért."
+    },
+    "chromeos": {
+      "title": "ChromeOS (ChromiumOS / ChromeOS Flex)",
+      "desc": "A ChromeOS a Google felhő-központú ökoszisztémáját kínálja azonnali automatikus frissítésekkel, Android alkalmazás-integrációval és Linux Crostini fejlesztői eszközökkel – mindezt biztonságos, ellenőrzött rendszerkörnyezetben. A ChromeOS Flex régi PC-ket kelt életre böngésző-alapú eszközként.",
+      "extra": "<ul><li><strong>Legjobb:</strong> Böngészés, oktatás, vállalati felhasználás</li><li><strong>Csomagkezelő:</strong> Portage (belső) + deb a Linux alkalmazásokhoz</li><li><strong>Kiadási ciklus:</strong> Folyamatos automatikus frissítések</li></ul>"
+    }
+	}
+}
