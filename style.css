@@ -183,15 +183,6 @@ body {
     animation: textPulse 7s ease-in-out infinite;
 }
 
-/* --- KEYFRAMES --- */
-
-/* 1. The Floating Motion */
-@keyframes floating {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0px); }
-}
-
 /* 2. The Magenta Glow Pulse */
 @keyframes textPulse {
     10%, 100% { text-shadow: 0 0 5px rgba(255, 0, 255, 0.2); }
