@@ -142,6 +142,7 @@ body {
 #bytext {
 	font-size: smaller;
 	color: var(--glow-magenta);
+	animation: textPulse 2s ease-in-out infinite;
 }
 
 .ability-cards {
@@ -150,18 +151,63 @@ body {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+	perspective: 1000px;
 }
 
 .ability-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    margin: 15px; /* Increased margin for the "float" room */
+    backdrop-filter: blur(5px);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+
+    /* --- THE ALWAYS-ON ANIMATION --- */
+    /* This makes the box slowly bob up and down */
+    animation: floating 4s ease-in-out infinite;
+}
+
+/* Offset the animation for every second box so they don't move in perfect sync */
+.ability-box:nth-child(even) {
+    animation-delay: 1s;
+}
+
+.ability-box h3 {
+    color: var(--glow-magenta);
+    /* Subtle neon pulse for the text */
+    animation: textPulse 7s ease-in-out infinite;
+}
+
+/* 2. The Magenta Glow Pulse */
+@keyframes textPulse {
+    10%, 100% { text-shadow: 0 0 5px rgba(255, 0, 255, 0.2); }
+    50% { text-shadow: 0 0 15px rgba(238, 148, 13, 0.8), 0 0 20px rgba(255, 0, 255, 0.4); }
+}
+
+/* --- HOVER OVERRIDE --- */
+/* We pause the float animation on hover so it doesn't fight the user's mouse */
+.ability-box:hover {
+    animation-play-state: paused; 
+    transform: translateY(-15px) scale(1.05); /* Slightly stronger lift on hover */
+    border-color: var(--glow-magenta);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 
+                0 0 20px rgba(255, 166, 0, 0.4);
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+#SmartSuggestion {
+	width: 80%;
+	margin: 0 auto;
 	background-color: rgba(255, 255, 255, 0.2);
 	border-radius: 10px;
-	width: 300px;
-	padding: 20px;
+	margin-top: 50px;
 	text-align: center;
-	margin: 10px;
-	h3 {
-		color: var(--glow-magenta);
-	}
+	padding: 20px;
 }
 
 #distro-finder {
