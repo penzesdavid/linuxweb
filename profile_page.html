@@ -64,35 +64,7 @@
     <script src="./js/script.js"></script>
     <script type="module" src="./js/database.js" defer></script>
     <script src="./js/avatar.js" defer></script>
-    <script>
-        // Check if user is logged in, with retry logic
-        let authCheckAttempts = 0;
-        const maxAttempts = 20; // Try for up to 10 seconds
-        
-        function checkAuth() {
-            // Check if Firebase has been initialized
-            if (typeof window.firebaseAuth === 'undefined') {
-                authCheckAttempts++;
-                if (authCheckAttempts < maxAttempts) {
-                    setTimeout(checkAuth, 500);
-                } else {
-                    // Firebase didn't load, redirect to login
-                    window.location.href = "./login_page.html";
-                }
-                return;
-            }
-            
-            // Check if user is authenticated
-            const user = window.firebaseAuth.currentUser;
-            if (!user) {
-                // User not logged in, redirect to login
-                window.location.href = "./login_page.html";
-            }
-        }
-        
-        // Start auth check
-        checkAuth();
-    </script>
+
 
 <div class="content">
     <!-- Ambient Background -->

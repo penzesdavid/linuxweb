@@ -50,7 +50,7 @@
   "success": {
     "title": "Success!",
     "text": "Your action was completed successfully.",
-    "home_link": "Return to Home"
+    "home_link": "Go to profile settings"
   },
   "summary": {
     "label_best": "Best for:",
