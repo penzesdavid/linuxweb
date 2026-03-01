@@ -24,10 +24,10 @@
                     <img src="./pictures/penguinlogo-transparent.png" alt="Penguin Logo" width="35" height="45">
                 </a>
                 <a class="navbar-brand" href="./index.html">LinuxAtlas</a>
-        <select onchange="changeLanguage(this.value)">
-            <option value="en">English</option>
-            <option value="hu">Magyar</option>
-        </select>
+                <select onchange="changeLanguage(this.value)">
+                    <option value="en">English</option>
+                    <option value="hu">Magyar</option>
+                </select>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -60,8 +60,10 @@
                                 More
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="https://www.linuxtoday.com/" data-key="nav.news">News</a></li>
-                                <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Linux" data-key="nav.about">About</a></li>
+                                <li><a class="dropdown-item" href="https://www.linuxtoday.com/"
+                                        data-key="nav.news">News</a></li>
+                                <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Linux"
+                                        data-key="nav.about">About</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -76,7 +78,9 @@
         </nav>
     </header>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
     <script src="./js/script.js"></script>
     <script type="module" src="./js/database.js" defer></script>
     <script src="./js/lang.js"></script>
@@ -92,78 +96,126 @@
         <!-- Grid Overlay -->
         <div class="grid-overlay"></div>
 
-    <div class="welcome anim">
-        <h1 id="custom_name" data-key="index.welcome_title">Welcome to LinuxAtlas</h1>
-        <p data-key="index.welcome_subtitle">Your comprehensive guide to the Linux ecosystem.</p>
-        <p id="bytext" data-key="index.by_team">By LinuxMind Team</p>
-        <a href="./distrofinder.html"><button class="button-style" data-key="index.start_btn">Start</button></a>
-    </div>
-
-    <div class="ability-cards">
-        <div class="row">
-            <div class="col-md ability-box anim">
-                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-wrench-adjustable" viewBox="0 0 16 16">
-                <path d="M16 4.5a4.5 4.5 0 0 1-1.703 3.526L13 5l2.959-1.11q.04.3.041.61"/>
-                <path d="M11.5 9c.653 0 1.273-.139 1.833-.39L12 5.5 11 3l3.826-1.53A4.5 4.5 0 0 0 7.29 6.092l-6.116 5.096a2.583 2.583 0 1 0 3.638 3.638L9.908 8.71A4.5 4.5 0 0 0 11.5 9m-1.292-4.361-.596.893.809-.27a.25.25 0 0 1 .287.377l-.596.893.809-.27.158.475-1.5.5a.25.25 0 0 1-.287-.376l.596-.893-.809.27a.25.25 0 0 1-.287-.377l.596-.893-.809.27-.158-.475 1.5-.5a.25.25 0 0 1 .287.376M3 14a1 1 0 1 1 0-2 1 1 0 0 1 0 2"/>
-                </svg>
-                <h3 data-key="index.card1_title">Customizable</h3>
-                <p data-key="index.card1_text">Linux offers unparalleled customization options, allowing users to tailor their operating system to their specific needs and preferences.</p>
-            </div>
-            <div class="col-md ability-box anim-y">
-                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-activity" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M6 2a.5.5 0 0 1 .47.33L10 12.036l1.53-4.208A.5.5 0 0 1 12 7.5h3.5a.5.5 0 0 1 0 1h-3.15l-1.88 5.17a.5.5 0 0 1-.94 0L6 3.964 4.47 8.171A.5.5 0 0 1 4 8.5H.5a.5.5 0 0 1 0-1h3.15l1.88-5.17A.5.5 0 0 1 6 2"/>
-                </svg>
-                <h3 data-key="index.card2_title">Stable & Reliable</h3>
-                <p data-key="index.card2_text">Linux is known for its stability and reliability, making it a preferred choice for servers and critical systems worldwide.</p>
-            </div>
-            <div class="col-md ability-box anim-1">
-                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-shield-lock" viewBox="0 0 16 16">
-                <path d="M5.338 1.59a61 61 0 0 0-2.837.856.48.48 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.7 10.7 0 0 0 2.287 2.233c.346.244.652.42.893.533q.18.085.293.118a1 1 0 0 0 .101.025 1 1 0 0 0 .1-.025q.114-.034.294-.118c.24-.113.547-.29.893-.533a10.7 10.7 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.8 11.8 0 0 1-2.517 2.453 7 7 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7 7 0 0 1-1.048-.625 11.8 11.8 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 63 63 0 0 1 5.072.56"/>
-                <path d="M9.5 6.5a1.5 1.5 0 0 1-1 1.415l.385 1.99a.5.5 0 0 1-.491.595h-.788a.5.5 0 0 1-.49-.595l.384-1.99a1.5 1.5 0 1 1 2-1.415"/>
-                </svg>
-                <h3 data-key="index.card3_title">Security & Permissions</h3>
-                <p data-key="index.card3_text">Linux provides robust security features, including user permissions and regular updates, making it a secure choice for users and organizations.</p>
-            </div>
-        </div>
-    </div>
-
-    <div id="SmartSuggestion" class="anim-y" style="animation-delay: 0.7s; text-align: center;">
-            <h2>Smart Suggestion <img src="./pictures/ai.png" width="60" height="60" alt="ai" style="border-radius: 20px; border: 2px solid var(--glow-magenta);"></h2>
-            <img src="./pictures/penguinlogo-transparent.png" alt="Penguin Logo" width="100" height="130">
-
-        </div>
-    
-
-    <div id="distro-finder" class="anim-y" style="animation-delay: 1.3s;">
-        <div>
-        <h2 style="text-align: center; color: var(--glow-magenta); text-decoration: underline;" data-key="index.why_title">Why Linux?</h2>
-        <ul>
-            <li data-key="index.why_text1">Linux offers unmatched customization, letting you tailor every aspect from the kernel to the desktop without bloatware or restrictions.</li>
-
-            <li data-key="index.why_text2">It's free, open-source, and backed by a vast community, ensuring constant updates, tools, and support at zero cost.</li>
-
-            <li data-key="index.why_text3">Superior stability powers over 90% of the world's top servers, handling heavy loads without crashes.</li>
-
-            <li data-key="index.why_text4">Built-in security features like SELinux and rapid patching minimize vulnerabilities far better than proprietary OSes.</li>
-
-            <li data-key="index.why_text5">Perfect for developers with native support for scripting, containers, and virtualization in a lightweight, efficient environment.</li>
-        </ul>
+        <div class="welcome anim">
+            <h1 id="custom_name" data-key="index.welcome_title">Welcome to LinuxAtlas</h1>
+            <p data-key="index.welcome_subtitle">Your comprehensive guide to the Linux ecosystem.</p>
+            <p id="bytext" data-key="index.by_team">By LinuxMind Team</p>
+            <a href="./distrofinder.html"><button class="button-style" data-key="index.start_btn">Start</button></a>
         </div>
 
-        <h4 data-key="index.summary_title">Linux summary <span class="badge text-bg-secondary">New</span></h4>
-        <h2 data-key="index.summary_subtitle">Find the right distro for you:</h2>
-        <a href="./distrosummary.html"><img src="./pictures/logo2.png" alt="linuxfinder"></a>
-    </div>
+        <div class="ability-cards">
+            <div class="row">
+                <div class="col-md ability-box anim">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                        class="bi bi-wrench-adjustable" viewBox="0 0 16 16">
+                        <path d="M16 4.5a4.5 4.5 0 0 1-1.703 3.526L13 5l2.959-1.11q.04.3.041.61" />
+                        <path
+                            d="M11.5 9c.653 0 1.273-.139 1.833-.39L12 5.5 11 3l3.826-1.53A4.5 4.5 0 0 0 7.29 6.092l-6.116 5.096a2.583 2.583 0 1 0 3.638 3.638L9.908 8.71A4.5 4.5 0 0 0 11.5 9m-1.292-4.361-.596.893.809-.27a.25.25 0 0 1 .287.377l-.596.893.809-.27.158.475-1.5.5a.25.25 0 0 1-.287-.376l.596-.893-.809.27a.25.25 0 0 1-.287-.377l.596-.893-.809.27-.158-.475 1.5-.5a.25.25 0 0 1 .287.376M3 14a1 1 0 1 1 0-2 1 1 0 0 1 0 2" />
+                    </svg>
+                    <h3 data-key="index.card1_title">Customizable</h3>
+                    <p data-key="index.card1_text">Linux offers unparalleled customization options, allowing users to
+                        tailor their operating system to their specific needs and preferences.</p>
+                </div>
+                <div class="col-md ability-box anim-y">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                        class="bi bi-activity" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M6 2a.5.5 0 0 1 .47.33L10 12.036l1.53-4.208A.5.5 0 0 1 12 7.5h3.5a.5.5 0 0 1 0 1h-3.15l-1.88 5.17a.5.5 0 0 1-.94 0L6 3.964 4.47 8.171A.5.5 0 0 1 4 8.5H.5a.5.5 0 0 1 0-1h3.15l1.88-5.17A.5.5 0 0 1 6 2" />
+                    </svg>
+                    <h3 data-key="index.card2_title">Stable & Reliable</h3>
+                    <p data-key="index.card2_text">Linux is known for its stability and reliability, making it a
+                        preferred choice for servers and critical systems worldwide.</p>
+                </div>
+                <div class="col-md ability-box anim-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                        class="bi bi-shield-lock" viewBox="0 0 16 16">
+                        <path
+                            d="M5.338 1.59a61 61 0 0 0-2.837.856.48.48 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.7 10.7 0 0 0 2.287 2.233c.346.244.652.42.893.533q.18.085.293.118a1 1 0 0 0 .101.025 1 1 0 0 0 .1-.025q.114-.034.294-.118c.24-.113.547-.29.893-.533a10.7 10.7 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.8 11.8 0 0 1-2.517 2.453 7 7 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7 7 0 0 1-1.048-.625 11.8 11.8 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 63 63 0 0 1 5.072.56" />
+                        <path
+                            d="M9.5 6.5a1.5 1.5 0 0 1-1 1.415l.385 1.99a.5.5 0 0 1-.491.595h-.788a.5.5 0 0 1-.49-.595l.384-1.99a1.5 1.5 0 1 1 2-1.415" />
+                    </svg>
+                    <h3 data-key="index.card3_title">Security & Permissions</h3>
+                    <p data-key="index.card3_text">Linux provides robust security features, including user permissions
+                        and regular updates, making it a secure choice for users and organizations.</p>
+                </div>
+            </div>
+        </div>
 
-</div>
+        <div id="SmartSuggestion" class="anim-y" style="animation-delay: 0.7s; text-align: center;">
+            <h2>Smart Suggestion <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                    class="bi bi-stars" viewBox="0 0 16 16">
+                    <path
+                        d="M7.657 6.247c.11-.33.576-.33.686 0l.645 1.937a2.89 2.89 0 0 0 1.829 1.828l1.936.645c.33.11.33.576 0 .686l-1.937.645a2.89 2.89 0 0 0-1.828 1.829l-.645 1.936a.361.361 0 0 1-.686 0l-.645-1.937a2.89 2.89 0 0 0-1.828-1.828l-1.937-.645a.361.361 0 0 1 0-.686l1.937-.645a2.89 2.89 0 0 0 1.828-1.828zM3.794 1.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387A1.73 1.73 0 0 0 4.593 5.69l-.387 1.162a.217.217 0 0 1-.412 0L3.407 5.69A1.73 1.73 0 0 0 2.31 4.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387A1.73 1.73 0 0 0 3.407 2.31zM10.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732L9.1 2.137a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z" />
+                </svg></h2>
+
+            <p data-key="index.smartsuggestion_text">Answer a few questions and get a personalized Linux distro recommendation!</p>
+
+            <form action="">
+                <div class="mb-3">
+                    <label for="usage" class="form-label" data-key="index.smartsuggestion_q1">What will you primarily use Linux for?</label>
+                    <select class="form-select" id="usage">
+                        <option value="general" data-key="index.smartsuggestion_q1_option1">General Use</option>
+                        <option value="gaming" data-key="index.smartsuggestion_q1_option2">Gaming</option>
+                        <option value="development" data-key="index.smartsuggestion_q1_option3">Development</option>
+                        <option value="privacy" data-key="index.smartsuggestion_q1_option4">Privacy & Security</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="experience" class="form-label" data-key="index.smartsuggestion_q2">What's your Linux experience level?</label>
+                    <select class="form-select" id="experience">
+                        <option value="beginner" data-key="index.smartsuggestion_q2_option1">Beginner</option>
+                        <option value="intermediate" data-key="index.smartsuggestion_q2_option2">Intermediate</option>
+                        <option value="advanced" data-key="index.smartsuggestion_q2_option3">Advanced</option>
+                    </select>
+                </div>
+
+                <button type="button" class="btn btn-primary" onclick="getSuggestion()" data-key="index.smartsuggestion_btn">Get Suggestion</button>
+
+                <div id="suggestion-result"></div>
+            </form>
+            
+
+        </div>
+
+
+        <div id="distro-finder" class="anim-y" style="animation-delay: 1.3s;">
+            <div>
+                <h2 style="text-align: center; color: var(--glow-magenta); text-decoration: underline;"
+                    data-key="index.why_title">Why Linux?</h2>
+                <ul>
+                    <li data-key="index.why_text1">Linux offers unmatched customization, letting you tailor every aspect
+                        from the kernel to the desktop without bloatware or restrictions.</li>
+
+                    <li data-key="index.why_text2">It's free, open-source, and backed by a vast community, ensuring
+                        constant updates, tools, and support at zero cost.</li>
+
+                    <li data-key="index.why_text3">Superior stability powers over 90% of the world's top servers,
+                        handling heavy loads without crashes.</li>
+
+                    <li data-key="index.why_text4">Built-in security features like SELinux and rapid patching minimize
+                        vulnerabilities far better than proprietary OSes.</li>
+
+                    <li data-key="index.why_text5">Perfect for developers with native support for scripting, containers,
+                        and virtualization in a lightweight, efficient environment.</li>
+                </ul>
+            </div>
+
+            <h4 data-key="index.summary_title">Linux summary <span class="badge text-bg-secondary">New</span></h4>
+            <h2 data-key="index.summary_subtitle">Find the right distro for you:</h2>
+            <a href="./distrosummary.html"><img src="./pictures/logo2.png" alt="linuxfinder"></a>
+        </div>
+
+    </div>
 
     <footer>
         <div class="footer-content">
             <h2 style="text-align: center; color: var(--glow-magenta);" data-key="index.contact_title">Contact Us</h2>
-            <p style="text-align: center;" data-key="index.contact_text">Have questions or feedback? Reach out to us at <a href="mailto:contact@linuxatlas.com">contact@linuxatlas.com</a></p>
-        
-        <p style="text-align: center;">© 2026 LinuxAtlas. All rights reserved.</p>
-        </div>  
+            <p style="text-align: center;" data-key="index.contact_text">Have questions or feedback? Reach out to us at
+                <a href="mailto:contact@linuxatlas.com">contact@linuxatlas.com</a></p>
+
+            <p style="text-align: center;">© 2026 LinuxAtlas. All rights reserved.</p>
+        </div>
     </footer>
 
 </body>
