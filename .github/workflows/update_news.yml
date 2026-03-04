@@ -1,0 +1,30 @@
+name: Frissítsük a Linux híreket
+on:
+  schedule:
+    - cron: '0 */6 * * *' # 6 óránként lefut automatikusan
+  workflow_dispatch:      # Manuálisan is elindíthatod gombnyomásra
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Kód letöltése
+        uses: actions/checkout@v3
+
+      - name: Node.js telepítése
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Hírek lekérése
+        run: node fetch_news.js
+        env:
+          WORLD_NEWS_API_KEY: ${{ secrets.WORLD_NEWS_API_KEY }}
+
+      - name: Adatok feltöltése a tárolóba
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+          git add data.json
+          git commit -m "Automata hírfrissítés" || exit 0
+          git push
