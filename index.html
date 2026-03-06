@@ -80,6 +80,7 @@
     <script src="./js/script.js"></script>
     <script type="module" src="./js/database.js" defer></script>
     <script src="./js/lang.js"></script>
+    <script type="module" src="./js/ai.js" defer></script>
 
     <div class="content">
         <!-- Ambient Background -->
@@ -131,6 +132,23 @@
             <h2>Smart Suggestion <img src="./pictures/ai.png" width="60" height="60" alt="ai" style="border-radius: 20px; border: 2px solid var(--glow-magenta);"></h2>
             <img src="./pictures/penguinlogo-transparent.png" alt="Penguin Logo" width="100" height="130">
 
+            <div class="container" style="max-width: 700px; margin: 1.5rem auto 0;">
+                <div class="smart-input-wrap">
+                    <input
+                        id="ai-input"
+                        type="text"
+                        class="form-control"
+                        placeholder="Tell us your needs (gaming, old PC, beginner, privacy, etc.)"
+                        aria-label="Linux distro preferences" />
+                    <button class="btn btn-outline-info" type="button" id="ai-generate-btn">
+                        Generate suggestion
+                    </button>
+                </div>
+            </div>
+
+            <p id="ai-story" style="max-width: 600px; margin: 0 auto 1.5rem; color: var(--glow-magenta);">
+                Enter what you need and click Generate to get a short Linux distro suggestion.
+            </p>
         </div>
     
 

@@ -210,23 +210,185 @@ body {
 }
 
 #SmartSuggestion {
-	width: 80%;
+	width: min(92%, 980px);
+	margin: 60px auto 0;
+	padding: 28px 22px 22px;
+	border-radius: 18px;
+	position: relative;
+	z-index: 2;
+	overflow: hidden;
+
+	/* Glass card */
+	background: linear-gradient(
+		135deg,
+		rgba(255, 255, 255, 0.07),
+		rgba(255, 255, 255, 0.03)
+	);
+	backdrop-filter: blur(12px);
+	border: 1px solid rgba(255, 255, 255, 0.09);
+	box-shadow:
+		0 18px 55px rgba(0, 0, 0, 0.45),
+		0 0 0 1px rgba(255, 255, 255, 0.03) inset;
+}
+
+/* Subtle animated glow */
+#SmartSuggestion::before {
+	content: "";
+	position: absolute;
+	inset: -2px;
+	background: radial-gradient(
+		circle at 20% 10%,
+		rgba(0, 240, 255, 0.16),
+		transparent 55%
+	),
+	radial-gradient(
+		circle at 80% 70%,
+		rgba(216, 169, 82, 0.18),
+		transparent 60%
+	);
+	filter: blur(14px);
+	opacity: 0.9;
+	pointer-events: none;
+}
+
+#SmartSuggestion > * {
+	position: relative;
+}
+
+#SmartSuggestion h2 {
+	margin: 0;
+	font-family: "Lexend Giga", sans-serif;
+	letter-spacing: 0.4px;
+	color: #fff;
+	text-shadow: 0 0 18px rgba(216, 169, 82, 0.25);
+}
+
+#SmartSuggestion h2 img {
+	transform: translateY(-2px);
+}
+
+#SmartSuggestion img[alt="Penguin Logo"] {
+	margin: 10px auto 6px;
+	filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.35));
+	opacity: 0.95;
+}
+
+/* Input + button */
+#SmartSuggestion .smart-input-wrap {
+	max-width: 520px;
 	margin: 0 auto;
-	background-color: rgba(255, 255, 255, 0.2);
-	border-radius: 10px;
-	margin-top: 50px;
-	text-align: center;
-	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+	align-items: stretch;
+}
+
+#ai-input.form-control {
+	background: rgba(10, 10, 18, 0.55);
+	color: #fff;
+	border: 1px solid rgba(255, 255, 255, 0.10);
+	border-radius: 999px;
+	padding: 1.1rem 1.25rem;
+	font-size: 1.05rem;
+}
+
+#ai-input.form-control::placeholder {
+	color: rgba(255, 255, 255, 0.55);
+}
+
+#ai-input.form-control:focus {
+	background: rgba(10, 10, 18, 0.65);
+	color: #fff;
+	border-color: rgba(216, 169, 82, 0.45);
+	box-shadow: 0 0 0 0.2rem rgba(216, 169, 82, 0.18);
+}
+
+#ai-generate-btn {
+	border: 1px solid rgba(216, 169, 82, 0.55);
+	color: #fff;
+	font-weight: 600;
+	padding: 0.9rem 1.1rem;
+	border-radius: 999px;
+	align-self: center;
+	min-width: 190px;
+	background: linear-gradient(
+		135deg,
+		rgba(216, 169, 82, 0.25),
+		rgba(157, 78, 221, 0.18)
+	);
+}
+
+#ai-generate-btn:hover {
+	border-color: rgba(216, 169, 82, 0.8);
+	background: linear-gradient(
+		135deg,
+		rgba(216, 169, 82, 0.38),
+		rgba(157, 78, 221, 0.22)
+	);
+	box-shadow: 0 0 20px rgba(216, 169, 82, 0.18);
+}
+
+#ai-generate-btn:active {
+	transform: translateY(1px);
+}
+
+/* Output bubble - AI message style */
+#ai-story {
+	position: relative;
+	background: radial-gradient(circle at 0 0, rgba(216, 169, 82, 0.22), transparent 55%),
+	            rgba(10, 10, 18, 0.52);
+	border: 1px solid rgba(255, 255, 255, 0.12);
+	border-radius: 18px;
+	padding: 18px 18px 18px 60px;
+	line-height: 1.5;
+	color: rgba(255, 255, 255, 0.94) !important;
+	box-shadow: 0 14px 32px rgba(0, 0, 0, 0.35);
+	text-align: left;
+	min-height: 110px; /* make it look like a high AI box */
+	margin: 1.1rem auto 2rem !important; /* extra spacing around suggested text */
+	display: flex;
+	align-items: center;
+}
+
+#ai-story::before {
+	content: "AI";
+	position: absolute;
+	left: 16px;
+	top: 16px;
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	background: linear-gradient(135deg, rgba(216, 169, 82, 0.9), rgba(157, 78, 221, 0.9));
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 0.8rem;
+	font-weight: 700;
+	color: #0b0b13;
+	box-shadow: 0 0 18px rgba(216, 169, 82, 0.6);
 }
 
 #distro-finder {
-	width: 80%;
-	margin: 0 auto;
-	background-color: rgba(255, 255, 255, 0.2);
-	border-radius: 10px;
-	margin-top: 50px;
+	width: min(92%, 980px);
+	margin: 60px auto 0;
+	padding: 28px 22px 22px;
+	border-radius: 18px;
 	text-align: center;
-	padding: 20px;
+	position: relative;
+	z-index: 2;
+	overflow: hidden;
+
+	/* Match SmartSuggestion glass background */
+	background: linear-gradient(
+		135deg,
+		rgba(255, 255, 255, 0.07),
+		rgba(255, 255, 255, 0.03)
+	);
+	backdrop-filter: blur(12px);
+	border: 1px solid rgba(255, 255, 255, 0.09);
+	box-shadow:
+		0 18px 55px rgba(0, 0, 0, 0.45),
+		0 0 0 1px rgba(255, 255, 255, 0.03) inset;
 	img {
 		width: 60%;
 		height: auto;

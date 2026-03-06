@@ -1,9 +1,9 @@
 console.log("database.js loaded");
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
-import { getAuth, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
+import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-firestore.js";
+import { getAuth, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-auth.js";
 
-  const firebaseConfig = {
+export const firebaseConfig = {
     apiKey: "AIzaSyA2n0rzNLqHYEEePxcab8XTgXGYvVQjan4",
     authDomain: "linuxatlas.firebaseapp.com",
     projectId: "linuxatlas",
@@ -13,7 +13,7 @@ import { getAuth, signOut, onAuthStateChanged } from "https://www.gstatic.com/fi
     measurementId: "G-2FL022QKGK"
   };
 
-const app = initializeApp(firebaseConfig);
+export const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const auth = getAuth(app);
 
