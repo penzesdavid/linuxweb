@@ -40,10 +40,29 @@ async function generateLinuxSuggestion() {
   }
 }
 
-// Wire up the Generate button after DOM is ready (script is loaded with defer)
+// Wire up the Generate / Clear buttons after DOM is ready (script is loaded with defer)
 const generateBtn = document.getElementById("ai-generate-btn");
+const aiInputEl = document.getElementById("ai-input");
+const clearBtn = document.getElementById("ai-clear-btn");
+
 if (generateBtn) {
   generateBtn.addEventListener("click", () => {
     generateLinuxSuggestion();
+  });
+}
+
+if (aiInputEl) {
+  aiInputEl.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      generateLinuxSuggestion();
+    }
+  });
+}
+
+if (clearBtn && aiInputEl) {
+  clearBtn.addEventListener("click", () => {
+    aiInputEl.value = "";
+    aiInputEl.focus();
   });
 }

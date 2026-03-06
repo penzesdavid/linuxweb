@@ -134,12 +134,17 @@
 
             <div class="container" style="max-width: 700px; margin: 1.5rem auto 0;">
                 <div class="smart-input-wrap">
-                    <input
-                        id="ai-input"
-                        type="text"
-                        class="form-control"
-                        placeholder="Tell us your needs (gaming, old PC, beginner, privacy, etc.)"
-                        aria-label="Linux distro preferences" />
+                    <div class="ai-input-wrapper">
+                        <input
+                            id="ai-input"
+                            type="text"
+                            class="form-control"
+                            placeholder="Tell us your needs (gaming, old PC, beginner, privacy, etc.)"
+                            aria-label="Linux distro preferences" />
+                        <button class="ai-clear-btn" type="button" id="ai-clear-btn" aria-label="Clear input">
+                            &times;
+                        </button>
+                    </div>
                     <button class="btn btn-outline-info" type="button" id="ai-generate-btn">
                         Generate suggestion
                     </button>
