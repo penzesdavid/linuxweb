@@ -92,39 +92,41 @@
         <!-- Grid Overlay -->
         <div class="grid-overlay"></div>
 
-        <div class="row">
-            <div class="col-md-4">
-                <div id="profilestatus">
-                    <h4>Status</h4>
-                    <p>Your email: <span id="profilepageemail"></span></p>
-                    <button onclick="window.logout()" class="btn btn-danger" style="border-radius: 50px;" id="logout-show">Logout</button>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div id="profile-settings-style">
-                    <h4>Profil settings</h4>
-
-                    <div id="avatar-container">
-                        <p id="CheckAvatarSaving" style="color: greenyellow;"></p>
-                        <img id="avatar" src="https://api.dicebear.com/7.x/avataaars/svg?seed=start" width="200"
-                            height="200">
-                        <br>
-                        <button class="ai-generate-btn" onclick="newRandomAvatar()">New Random Avatar</button>
+        <div class="container">
+            <div class="row gx-0">
+                <div class="col-md-4">
+                    <div id="profilestatus">
+                        <h4>Status</h4>
+                        <p>Your email: <span id="profilepageemail"></span></p>
+                        <button onclick="window.logout()" class="btn btn-danger" style="border-radius: 50px;" id="logout-show">Logout</button>
                     </div>
-
-                    <input class="input-style" type="text" id="usernameInput" placeholder="Enter a new name" readonly
-                        onfocus="this.removeAttribute('readonly');">
-                    <button class="button-style" onclick="saveAvatar()">Save</button>
                 </div>
-            </div>
 
-            <div class="col-md-4">
-                <div id="profiledatas">
-                    <h4>Profile Data</h4>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam magnam modi nam consectetur
-                        impedit repudiandae sapiente laudantium quis accusamus. Quo hic sunt consequatur accusantium
-                        quidem expedita possimus cumque. Rerum, reprehenderit?</p>
+                <div class="col-md-4">
+                    <div id="profile-settings-style">
+                        <h4>Profil settings</h4>
+
+                        <div id="avatar-container">
+                            <p id="CheckAvatarSaving" style="color: greenyellow;"></p>
+                            <img id="avatar" src="https://api.dicebear.com/7.x/avataaars/svg?seed=start" width="200"
+                                height="200">
+                            <br>
+                            <button class="ai-generate-btn" onclick="newRandomAvatar()">New Random Avatar</button>
+                        </div>
+
+                        <input class="input-style" type="text" id="usernameInput" placeholder="Enter a new name" readonly
+                            onfocus="this.removeAttribute('readonly');">
+                        <button class="button-style" onclick="saveAvatar()">Save</button>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div id="profiledatas">
+                        <h4>Profile Data</h4>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam magnam modi nam consectetur
+                            impedit repudiandae sapiente laudantium quis accusamus. Quo hic sunt consequatur accusantium
+                            quidem expedita possimus cumque. Rerum, reprehenderit?</p>
+                    </div>
                 </div>
             </div>
         </div>
