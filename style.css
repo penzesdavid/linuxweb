@@ -296,7 +296,7 @@ body {
 	font-size: 1.05rem;
 }
 
-.ai-clear-btn {
+#ai-clear-btn {
 	position: absolute;
 	right: 14px;
 	top: 50%;
@@ -316,7 +316,7 @@ body {
 	padding: 0;
 }
 
-.ai-clear-btn:hover {
+#ai-clear-btn:hover {
 	background: rgba(255, 255, 255, 0.16);
 	color: #fff;
 }
@@ -332,7 +332,7 @@ body {
 	box-shadow: 0 0 0 0.2rem rgba(216, 169, 82, 0.18);
 }
 
-#ai-generate-btn {
+.ai-generate-btn {
 	border: 1px solid rgba(216, 169, 82, 0.55);
 	color: #fff;
 	font-weight: 600;
@@ -347,7 +347,7 @@ body {
 	);
 }
 
-#ai-generate-btn:hover {
+.ai-generate-btn:hover {
 	border-color: rgba(216, 169, 82, 0.8);
 	background: linear-gradient(
 		135deg,
@@ -357,7 +357,7 @@ body {
 	box-shadow: 0 0 20px rgba(216, 169, 82, 0.18);
 }
 
-#ai-generate-btn:active {
+.ai-generate-btn:active {
 	transform: translateY(1px);
 }
 

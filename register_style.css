@@ -124,16 +124,6 @@ a:hover {
     background: #eee;
 }
 
-#avatar-container button {
-    background: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
 #username-style {
     margin: 250px;
     text-align: right;

@@ -66,6 +66,8 @@ if (lastUserUid) {
 
 onAuthStateChanged(auth, async (user) => {
     if (user) {
+        const profilepageemail = user.email;
+        document.getElementById('profilepageemail').innerText = profilepageemail;
         localStorage.setItem('last_uid', user.uid);
         
         try {

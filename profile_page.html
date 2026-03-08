@@ -96,7 +96,8 @@
             <div class="col-md-4">
                 <div id="profilestatus">
                     <h4>Status</h4>
-                    <button onclick="window.logout()" class="button-style" style="background-color: rgb(80, 15, 15);" id="logout-show">Logout</button>
+                    <p>Your email: <span id="profilepageemail"></span></p>
+                    <button onclick="window.logout()" class="btn btn-danger" style="border-radius: 50px;" id="logout-show">Logout</button>
                 </div>
             </div>
 
@@ -109,7 +110,7 @@
                         <img id="avatar" src="https://api.dicebear.com/7.x/avataaars/svg?seed=start" width="200"
                             height="200">
                         <br>
-                        <button onclick="newRandomAvatar()">New Random Avatar</button>
+                        <button class="ai-generate-btn" onclick="newRandomAvatar()">New Random Avatar</button>
                     </div>
 
                     <input class="input-style" type="text" id="usernameInput" placeholder="Enter a new name" readonly
