@@ -608,6 +608,24 @@ select {
 	text-align: center;
 	border: 2px solid var(--glow-magenta);
 }
+
+/* Default state for the display area */
+#hyde {
+    opacity: 0;
+    visibility: hidden;
+    /* A slight downward shift for a nice reveal effect */
+    transform: translateX(10px); 
+    /* Transition opacity, visibility, and transform smoothly */
+    transition: opacity 0.5s ease-out, visibility 0.3s ease-out, transform 0.5s ease-out;
+}
+
+/* Active state triggered by JavaScript */
+#hyde.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0); /* Moves it back to its original position */
+}
+
 /* 
 option:not(:checked) {
 	background-color: rgba(255, 255, 255, 0.2);
