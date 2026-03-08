@@ -466,18 +466,12 @@ body {
 }
 
 #laptopbatterylife a {
-	padding: 10px 15px;
-	border-radius: 10px;
-	font-size: 1.2rem;
-	background-color: rgba(255, 255, 255, 0.2);
-	text-decoration: none;
-	transition: all 0.3s ease;
+	text-align: center;
 }
 
 #laptopbatterylife a:hover {
 	transition: all 0.3s ease;
-	background-color: rgba(255, 255, 255, 0.3);
-	text-decoration: underline;
+	color: var(--accent);
 }
 
 .row {
@@ -595,6 +589,8 @@ a {
 	background-color 0.25s ease,
     transform 0.25s ease,
     box-shadow 0.25s ease ;
+
+	margin-top: 10px;
 }
 #reveal-button:hover {
 	background-color: var(--glow-magenta);
