@@ -442,6 +442,44 @@ body {
 	}
 }
 
+#laptopbatterylife {
+	width: min(92%, 980px);
+	margin: 60px auto 0;
+	padding: 28px 22px 22px;
+	border-radius: 18px;
+	text-align: justify;
+	position: relative;
+	z-index: 2;
+	overflow: hidden;
+
+	/* Match SmartSuggestion glass background */
+	background: linear-gradient(
+		135deg,
+		rgba(255, 255, 255, 0.07),
+		rgba(255, 255, 255, 0.03)
+	);
+	backdrop-filter: blur(12px);
+	border: 1px solid rgba(255, 255, 255, 0.09);
+	box-shadow:
+		0 18px 55px rgba(0, 0, 0, 0.45),
+		0 0 0 1px rgba(255, 255, 255, 0.03) inset;
+}
+
+#laptopbatterylife a {
+	padding: 10px 15px;
+	border-radius: 10px;
+	font-size: 1.2rem;
+	background-color: rgba(255, 255, 255, 0.2);
+	text-decoration: none;
+	transition: all 0.3s ease;
+}
+
+#laptopbatterylife a:hover {
+	transition: all 0.3s ease;
+	background-color: rgba(255, 255, 255, 0.3);
+	text-decoration: underline;
+}
+
 .row {
 	margin-top: 1%;
 	justify-content: center;
