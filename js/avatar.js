@@ -57,8 +57,9 @@ async function saveAvatar() {
         if (typeof updateUI === 'function') {
             updateUI(newName, true);
         }
-
+       
         alert("Profile (name and avatar) saved successfully!");
+         document.getElementById('CheckAvatarSaving').innerHTML = "Profile saved successfully!";
     } catch (error) {
         console.error("Save error:", error);
         alert("Error saving profile: " + error.message);
