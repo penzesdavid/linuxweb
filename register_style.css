@@ -45,20 +45,76 @@ a:hover {
 }
 
 #profile-settings-style {
+    width: min(92%, 25rem);
     text-align: center;
-    width: 25rem;
-    margin: auto;
-    margin-top: 5rem;
+    margin: 5rem auto 2rem auto;
     padding: 2rem;
-    border: 1px solid var(--glow-magenta);
-    border-radius: 1rem;
-    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 18px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+
+
+    /* Match SmartSuggestion glass background */
+    background: linear-gradient(135deg,
+            rgba(255, 255, 255, 0.07),
+            rgba(255, 255, 255, 0.03));
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    box-shadow:
+        0 18px 55px rgba(0, 0, 0, 0.45),
+        0 0 0 1px rgba(255, 255, 255, 0.03) inset;
+}
+
+#profiledatas {
+    width: min(92%, 25rem);
+    text-align: center;
+    margin: 5rem auto 2rem auto;
+    padding: 2rem;
+    border-radius: 18px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+
+
+    /* Match SmartSuggestion glass background */
+    background: linear-gradient(135deg,
+            rgba(255, 255, 255, 0.07),
+            rgba(255, 255, 255, 0.03));
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    box-shadow:
+        0 18px 55px rgba(0, 0, 0, 0.45),
+        0 0 0 1px rgba(255, 255, 255, 0.03) inset;
+
+}
+
+#profilestatus {
+    width: min(92%, 25rem);
+    text-align: center;
+    margin: 5rem auto 2rem auto;
+    padding: 2rem;
+    border-radius: 18px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+
+
+    /* Match SmartSuggestion glass background */
+    background: linear-gradient(135deg,
+            rgba(255, 255, 255, 0.07),
+            rgba(255, 255, 255, 0.03));
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    box-shadow:
+        0 18px 55px rgba(0, 0, 0, 0.45),
+        0 0 0 1px rgba(255, 255, 255, 0.03) inset;
+
 }
 
 #avatar-container {
     text-align: center;
-    margin-top: 5rem;
-    
+
 }
 
 #avatar-container img {
@@ -82,4 +138,3 @@ a:hover {
     margin: 250px;
     text-align: right;
 }
-
