@@ -20,8 +20,8 @@ const db = firebase.firestore();
 const contentEl = document.getElementById("suggest-div");
 
 // --- When user state changes, show suggestion form if logged in ---
-auth.onAuthStateChanged(username => {
-if (username) {
+auth.onAuthStateChanged(user => {
+if (user) {
     // Show suggestion form instead of "Hello world"
     contentEl.innerHTML = `
     <h2>Submit a suggestion</h2>
