@@ -4,7 +4,8 @@
     "news": "News",
     "about": "About",
     "search_input": "Search",
-    "search_btn": "Search"
+    "search_btn": "Search",
+    "lang_select": "<option value='en'>English</option> <option value='hu'>Magyar</option>"
   },
   "welcome_title": "Welcome to LinuxAtlas",
   "index": {
@@ -23,7 +24,7 @@
     "why_text3": "Superior stability powers over 90% of the world's top servers, handling heavy loads without crashes.",
     "why_text4": "Built-in security features like SELinux and rapid patching minimize vulnerabilities far better than proprietary OSes.",
     "why_text5": "Perfect for developers with native support for scripting, containers, and virtualization in a lightweight, efficient environment.",
-    "summary_title": "Linux summary",
+    "summary_title": "Linux summary <span class='badge text-bg-secondary'>New</span>",
     "summary_subtitle": "Find the right distro for you:"
   },
   "finder": {

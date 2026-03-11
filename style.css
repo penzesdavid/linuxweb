@@ -399,6 +399,7 @@ body {
 
 #distro-finder {
 	img {
+		display: block;
 		width: 60%;
 		height: auto;
 		margin: auto;

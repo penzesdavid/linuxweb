@@ -4,7 +4,8 @@
     "news": "Hírek",
     "about": "Névjegy",
     "search_input": "Keresés",
-    "search_btn": "Keresés"
+    "search_btn": "Keresés",
+    "lang_select": "<option value='hu'>Magyar</option> <option value='en'>English</option>"
   },
   "welcome_title": "Üdvözöljük a LinuxAtlas-on",
   "index": {
@@ -23,7 +24,7 @@
     "why_text3": "Kiemelkedő stabilitása hajtja a világ vezető szervereinek több mint 90%-át, hiba nélkül kezelve a nagy terhelést.",
     "why_text4": "A beépített biztonsági funkciók, mint az SELinux és a gyors javítások, sokkal hatékonyabban minimalizálják a sebezhetőségeket, mint a zárt rendszerek.",
     "why_text5": "Tökéletes fejlesztőknek a szkriptelés, konténerek és virtualizáció natív támogatásával, könnyű és hatékony környezetben.",
-    "summary_title": "Linux összefoglaló",
+    "summary_title": "Linux összefoglaló  <span class='badge text-bg-secondary'>Új</span>",
     "summary_subtitle": "Találja meg az Önnek megfelelő disztribúciót:"
   },
   "finder": {
