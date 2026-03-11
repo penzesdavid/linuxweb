@@ -1,5 +1,6 @@
 // Gemini Developer API via Firebase AI Logic
 import { app } from "./database.js";
+import { auth } from "./database.js";
 import { getAI, getGenerativeModel, GoogleAIBackend } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-ai.js";
 
 // Initialize Gemini Developer API backend (uses API key from Firebase Console - do NOT add key to code)
@@ -13,12 +14,20 @@ const model = getGenerativeModel(ai, { model: "gemini-3-flash-preview" });
 //gemini-2.5-flash-lite
 
 const generateTimestamps = [];
-const requestWindowMs = 20 * 60 * 1000; // 20 perc
+const requestWindowMs = 30 * 60 * 1000; // 30 minutes
 const maxRequestsPerWindow = 3;
 
 async function generateLinuxSuggestion() {
-  const now = Date.now();
+  // require user presence in localStorage
+  if (!isUserStored()) {
+    const outputEl = document.getElementById("ai-story");
+    if (outputEl) {
+      outputEl.innerText = "You must be logged in to generate suggestions.";
+    }
+    return;
+  }
 
+  const now = Date.now();
 
   while (generateTimestamps.length > 0 && now - generateTimestamps[0] > requestWindowMs) {
     generateTimestamps.shift();
@@ -51,7 +60,7 @@ async function generateLinuxSuggestion() {
     : `${basePrompt}\nUser needs: beginner-friendly general-purpose desktop.`;
 
   try {
-    outputEl.innerText = "Generating suggestion for you!";
+    outputEl.innerText = "Generating suggestion for you...";
 
     const result = await model.generateContent(prompt);
     const response = result.response;
@@ -66,11 +75,32 @@ async function generateLinuxSuggestion() {
 }
 
 // Wire up the Generate / Clear buttons after DOM is ready (script is loaded with defer)
+// helpers to check login state
+function isUserStored() {
+  // we treat presence of last_uid as indication of logged-in user
+  return !!localStorage.getItem('last_uid');
+}
+
+// disable/enable controls based on login state
+function updateAIControls() {
+  const loggedIn = isUserStored();
+  if (generateBtn) generateBtn.disabled = !loggedIn;
+  if (aiInputEl) aiInputEl.disabled = !loggedIn;
+  if (clearBtn) clearBtn.disabled = !loggedIn;
+  const outputEl = document.getElementById("ai-story");
+  if (outputEl && !loggedIn) {
+    outputEl.innerText = "Please login to use the AI suggestion feature.";
+  }
+}
+
 const generateBtn = document.getElementById("ai-generate-btn");
 const aiInputEl = document.getElementById("ai-input");
 const clearBtn = document.getElementById("ai-clear-btn");
 
-if (generateBtn) {
+// run initial state
+updateAIControls();
+
+definition_wrapper: if (generateBtn) {
   generateBtn.addEventListener("click", () => {
     generateLinuxSuggestion();
   });
@@ -91,3 +121,8 @@ if (clearBtn && aiInputEl) {
     aiInputEl.focus();
   });
 }
+
+// watch for changes to localStorage (login/logout) so we can update controls
+window.addEventListener('storage', () => {
+  updateAIControls();
+});
