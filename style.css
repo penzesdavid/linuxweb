@@ -632,3 +632,28 @@ ul.card-text {
     border-radius: 10px;
     text-align: center;
 }
+
+#suggestion-form input{
+	display: block;
+	margin-top: 1.5rem;
+	/* margin-bottom: 1rem; */
+	width: 20rem;
+    max-width: 100%;
+    height: 2rem;
+    border: none;
+    border-radius: 10px;
+	padding: 0.5rem;
+}
+
+#suggestion-form textarea {
+	display: block;
+	width: 100%;
+    border: none;
+    border-radius: 10px;
+	padding: 0.5rem;
+}
+
+#suggestion-form button {
+	display: block;
+	margin: auto;
+}
