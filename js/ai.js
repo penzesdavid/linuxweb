@@ -19,14 +19,14 @@ async function generateLinuxSuggestion() {
   // Base instruction: only talk about Linux distros, be short
   const basePrompt =
     "You recommend Linux distributions. Only answer with Linux distro suggestions and maybe 1–2 reasons. " +
-    "Keep the answer very short (maximum 2 short sentences).";
+    "Keep the answer very short (maximum 2 short sentences). If the user ask for something that is not linux never answear.";
 
   const prompt = userText
     ? `${basePrompt}\nUser needs: ${userText}`
     : `${basePrompt}\nUser needs: beginner-friendly general-purpose desktop.`;
 
   try {
-    outputEl.innerText = "Generating suggestion...";
+    outputEl.innerText = "Generating suggestion for you!";
 
     const result = await model.generateContent(prompt);
     const response = result.response;
