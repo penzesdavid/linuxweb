@@ -24,13 +24,13 @@ auth.onAuthStateChanged(user => {
 if (user) {
     // Show suggestion form instead of "Hello world"
     contentEl.innerHTML = `
-    <h2>Submit a suggestion</h2>
-    <form id="suggestion-form">
-        <input type="text" id="title" placeholder="Title" required class="input-style" /><br />
-        <textarea id="long-text" placeholder="Your long suggestion text..." rows="6" required></textarea><br />
-        <button type="submit" class="button-style">Send</button>
+    <h2 style='text-align: center; color: var(--glow-magenta);'>Submit a suggestion</h2>
+    <form id='suggestion-form'>
+        <input type='text' id='title' placeholder='Title' required /><br />
+        <textarea id='long-text' placeholder='Your long suggestion text...' rows='6' required></textarea><br />
+        <button type='submit' class='button-style'>Send</button>
     </form>
-    <div id="status"></div>
+    <div id='status'></div>
     `;
 
     const form = document.getElementById("suggestion-form");
