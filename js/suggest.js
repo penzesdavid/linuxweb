@@ -26,9 +26,9 @@ if (user) {
     contentEl.innerHTML = `
     <h2>Submit a suggestion</h2>
     <form id="suggestion-form">
-        <input type="text" id="title" placeholder="Title" required /><br />
+        <input type="text" id="title" placeholder="Title" required class="input-style" /><br />
         <textarea id="long-text" placeholder="Your long suggestion text..." rows="6" required></textarea><br />
-        <button type="submit">Send</button>
+        <button type="submit" class="button-style">Send</button>
     </form>
     <div id="status"></div>
     `;
@@ -52,7 +52,7 @@ if (user) {
         createdAt: firebase.firestore.FieldValue.serverTimestamp()
         });
 
-        status.textContent = "Suggestion saved!";
+        status.textContent = "Suggestion sent successfully!";
         form.reset();
     } catch (error) {
         status.textContent = "Error: " + error.message;

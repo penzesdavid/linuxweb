@@ -398,26 +398,6 @@ body {
 }
 
 #distro-finder {
-	width: min(92%, 980px);
-	margin: 60px auto 0;
-	padding: 28px 22px 22px;
-	border-radius: 18px;
-	text-align: center;
-	position: relative;
-	z-index: 2;
-	overflow: hidden;
-
-	/* Match SmartSuggestion glass background */
-	background: linear-gradient(
-		135deg,
-		rgba(255, 255, 255, 0.07),
-		rgba(255, 255, 255, 0.03)
-	);
-	backdrop-filter: blur(12px);
-	border: 1px solid rgba(255, 255, 255, 0.09);
-	box-shadow:
-		0 18px 55px rgba(0, 0, 0, 0.45),
-		0 0 0 1px rgba(255, 255, 255, 0.03) inset;
 	img {
 		width: 60%;
 		height: auto;
@@ -442,28 +422,6 @@ body {
 	}
 }
 
-#laptopbatterylife {
-	width: min(92%, 980px);
-	margin: 60px auto 0;
-	padding: 28px 22px 22px;
-	border-radius: 18px;
-	text-align: justify;
-	position: relative;
-	z-index: 2;
-	overflow: hidden;
-
-	/* Match SmartSuggestion glass background */
-	background: linear-gradient(
-		135deg,
-		rgba(255, 255, 255, 0.07),
-		rgba(255, 255, 255, 0.03)
-	);
-	backdrop-filter: blur(12px);
-	border: 1px solid rgba(255, 255, 255, 0.09);
-	box-shadow:
-		0 18px 55px rgba(0, 0, 0, 0.45),
-		0 0 0 1px rgba(255, 255, 255, 0.03) inset;
-}
 
 #laptopbatterylife a {
 	text-align: center;
@@ -639,4 +597,38 @@ option:not(:checked) {
 ul.card-text {
 	margin-left: 0;
 	padding-left: 1rem;
+}
+
+.drk-bg {
+	width: min(92%, 980px);
+	margin: 60px auto 0;
+	padding: 28px 22px 22px;
+	border-radius: 18px;
+	text-align: justify;
+	position: relative;
+	z-index: 2;
+	overflow: hidden;
+
+	/* Match SmartSuggestion glass background */
+	background: linear-gradient(
+		135deg,
+		rgba(255, 255, 255, 0.07),
+		rgba(255, 255, 255, 0.03)
+	);
+	backdrop-filter: blur(12px);
+	border: 1px solid rgba(255, 255, 255, 0.09);
+	box-shadow:
+		0 18px 55px rgba(0, 0, 0, 0.45),
+		0 0 0 1px rgba(255, 255, 255, 0.03) inset;
+}
+
+.input-style {
+    margin: auto;
+    display: block;
+    margin-top: 3.5rem;
+    width: 15rem;
+    height: 2rem;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
 }
