@@ -6,7 +6,11 @@ import { getAI, getGenerativeModel, GoogleAIBackend } from "https://www.gstatic.
 const ai = getAI(app, { backend: new GoogleAIBackend() });
 
 // Model for text generation
-const model = getGenerativeModel(ai, { model: "gemini-2.5-flash" });
+const model = getGenerativeModel(ai, { model: "gemini-3-flash-preview" });
+
+//gemini-3-flash-preview
+//gemini-2.5-flash
+//gemini-2.5-flash-lite
 
 const generateTimestamps = [];
 const requestWindowMs = 20 * 60 * 1000; // 20 perc
