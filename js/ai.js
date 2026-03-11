@@ -8,7 +8,28 @@ const ai = getAI(app, { backend: new GoogleAIBackend() });
 // Model for text generation
 const model = getGenerativeModel(ai, { model: "gemini-2.5-flash" });
 
+const generateTimestamps = [];
+const requestWindowMs = 20 * 60 * 1000; // 20 perc
+const maxRequestsPerWindow = 3;
+
 async function generateLinuxSuggestion() {
+  const now = Date.now();
+
+
+  while (generateTimestamps.length > 0 && now - generateTimestamps[0] > requestWindowMs) {
+    generateTimestamps.shift();
+  }
+
+  if (generateTimestamps.length >= maxRequestsPerWindow) {
+    const outputEl = document.getElementById("ai-story");
+    if (outputEl) {
+      outputEl.innerText = "Rate limit exceeded.";
+    }
+    return;
+  }
+
+  generateTimestamps.push(now);
+
   const outputEl = document.getElementById("ai-story");
   const inputEl = document.getElementById("ai-input");
 
