@@ -14,8 +14,8 @@ const model = getGenerativeModel(ai, { model: "gemini-3-flash-preview" });
 //gemini-2.5-flash-lite
 
 const generateTimestamps = [];
-const requestWindowMs = 30 * 60 * 1000; // 30 minutes
-const maxRequestsPerWindow = 3;
+const requestWindowMs = 5 * 60 * 1000; // 5 minutes
+const maxRequestsPerWindow = 2; // max 2 requests per 5 minutes per user
 
 async function generateLinuxSuggestion() {
   // require user presence in localStorage
@@ -27,21 +27,37 @@ async function generateLinuxSuggestion() {
     return;
   }
 
-  const now = Date.now();
-
-  while (generateTimestamps.length > 0 && now - generateTimestamps[0] > requestWindowMs) {
-    generateTimestamps.shift();
-  }
-
-  if (generateTimestamps.length >= maxRequestsPerWindow) {
+  const userId = localStorage.getItem('last_uid');
+  if (!userId) {
     const outputEl = document.getElementById("ai-story");
     if (outputEl) {
-      outputEl.innerText = "Rate limit exceeded.";
+      outputEl.innerText = "User ID not found.";
     }
     return;
   }
 
-  generateTimestamps.push(now);
+  const storageKey = `ai_requests_${userId}`;
+  let requestData = JSON.parse(localStorage.getItem(storageKey)) || { count: 0, lastReset: 0 };
+
+  const now = Date.now();
+
+  // Reset count if window has passed
+  if (now - requestData.lastReset > requestWindowMs) {
+    requestData.count = 0;
+    requestData.lastReset = now;
+  }
+
+  if (requestData.count >= maxRequestsPerWindow) {
+    const outputEl = document.getElementById("ai-story");
+    if (outputEl) {
+      outputEl.innerText = "Rate limit exceeded ⚠️ Wait 5 minutes before trying again!";
+    }
+    return;
+  }
+
+  // Increment count
+  requestData.count++;
+  localStorage.setItem(storageKey, JSON.stringify(requestData));
 
   const outputEl = document.getElementById("ai-story");
   const inputEl = document.getElementById("ai-input");
