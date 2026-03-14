@@ -5,7 +5,7 @@
     "about": "About",
     "search_input": "Search",
     "search_btn": "Search",
-    "lang_select": "<option value='en'>English</option> <option value='hu'>Magyar</option>"
+    "lang": "<a onclick='changeLanguage(`hu`)'><img src='./pictures/hungary-96.png' alt='hu' height='40'></a>"
   },
   "welcome_title": "Welcome to LinuxAtlas",
   "index": {
@@ -31,7 +31,8 @@
     "description": "Choosing the right Linux distro can transform your computing experience, whether you're after stability, cutting-edge features, or gaming prowess. Below is a curated list of popular options we've discussed—select one from the dropdown menu, and I'll dive deeper with installation guides, pros/cons, hardware compatibility, and customization tips tailored to your needs.",
     "label": "Choose a distro:",
     "defa_select": "Choose one...",
-    "button": "Reveal"
+    "button": "Reveal",
+    "suggest_placeholder": "Can't find your favorite distro on the site? Log in and suggest it with a description!"
   },
   "login": {
     "title": "Login",

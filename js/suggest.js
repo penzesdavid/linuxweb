@@ -18,6 +18,7 @@ const auth = firebase.auth();
 const db = firebase.firestore();
 
 const contentEl = document.getElementById("suggest-div");
+// contentEl.innerHTML = `<p>${translations.finder.suggest_placeholder}</p>`;
 
 // --- When user state changes, show suggestion form if logged in ---
 auth.onAuthStateChanged(user => {
@@ -27,7 +28,7 @@ if (user) {
     <h2 style='text-align: center; color: var(--glow-magenta);'>Submit a suggestion</h2>
     <form id='suggestion-form'>
         <input type='text' id='title' placeholder='Title' required /><br />
-        <textarea id='long-text' placeholder='Your long suggestion text...' rows='6' required></textarea><br />
+        <textarea id='desc' placeholder='Your long suggestion text...' rows='6' required></textarea><br />
         <button type='submit' class='button-style'>Send</button>
     </form>
     <div id='status'></div>
@@ -41,12 +42,12 @@ if (user) {
     e.preventDefault();
 
     const title = document.getElementById("title").value.trim();
-    const longText = document.getElementById("long-text").value.trim();
+    const desc = document.getElementById("desc").value.trim();
 
     try {
         await db.collection("suggestions").add({
         title: title,
-        longText: longText,
+        description: desc,
         userEmail: user.email,           // attach user email
         userId: user.uid,
         createdAt: firebase.firestore.FieldValue.serverTimestamp()
@@ -60,6 +61,6 @@ if (user) {
     });
 } else {
     // If not logged in, keep "Hello world" (or arbitrary text)
-    contentEl.innerHTML = translations.finder.suggest_placeholder;
+    contentEl.innerHTML = `<p data-key='finder.suggest_placeholder'></p>`;
 }
 });
