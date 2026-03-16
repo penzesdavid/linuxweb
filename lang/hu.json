@@ -5,7 +5,8 @@
     "about": "Névjegy",
     "search_input": "Keresés",
     "search_btn": "Keresés",
-    "lang": "<a onclick='changeLanguage(`en`)'><img src='./pictures/usa-96.png' alt='en' height='40'></a>"
+    "lang_en": "Angol",
+    "lang_hu": "Magyar"
   },
   "welcome_title": "Üdvözöljük a LinuxAtlas-on",
   "index": {

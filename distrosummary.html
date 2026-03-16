@@ -20,7 +20,10 @@
         </a>
         <a class="navbar-brand" href="./index.html">LinuxAtlas</a>
          
-        <div data-key="nav.lang"><a onclick='changeLanguage(`hu`)'><img src='./pictures/hungary-96.png' alt='hu' height='40'></a></div>
+        <button class="lang-switcher" id="lang-switcher-btn" onclick="toggleLanguage()">
+            <img id="lang-flag-img" src="./pictures/english.png" alt="English">
+            <span id="lang-flag-text">EN</span>
+        </button>
          
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>

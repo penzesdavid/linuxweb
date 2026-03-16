@@ -5,7 +5,8 @@
     "about": "About",
     "search_input": "Search",
     "search_btn": "Search",
-    "lang": "<a onclick='changeLanguage(`hu`)'><img src='./pictures/hungary-96.png' alt='hu' height='40'></a>"
+    "lang_en": "English",
+    "lang_hu": "Hungarian"
   },
   "welcome_title": "Welcome to LinuxAtlas",
   "index": {

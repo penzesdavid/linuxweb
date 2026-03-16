@@ -579,6 +579,54 @@ select {
 }
 
 /* Active state triggered by JavaScript */
+
+/* Language Switcher Styles */
+.lang-switcher {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	background: transparent;
+	border: none;
+	border-radius: 8px;
+	padding: 0;
+	cursor: pointer;
+	margin-left: auto;
+	margin-right: 12px;
+}
+
+.lang-switcher {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(255, 255, 255, 0.05);
+	border: 2px solid var(--glass-border);
+	border-radius: 8px;
+	padding: 6px 10px;
+	backdrop-filter: blur(10px);
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.lang-switcher:hover {
+	border-color: var(--primary);
+	background: rgba(0, 240, 255, 0.1);
+	box-shadow: 0 0 12px var(--glow-cyan);
+	transform: scale(1.05);
+}
+
+.lang-switcher img {
+	width: 32px;
+	height: 32px;
+	object-fit: contain;
+}
+
+.lang-switcher span {
+	font-size: 14px;
+	font-weight: 600;
+	color: #ffffff;
+	letter-spacing: 1px;
+}
 #hyde.show {
     opacity: 1;
     visibility: visible;

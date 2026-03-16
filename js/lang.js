@@ -8,6 +8,7 @@ async function loadTranslations(lang) {
 	document.documentElement.lang = lang;
 	currentLang = lang;
 	localStorage.setItem('lang', lang);
+	updateLanguageSwitcher();
 }
 
 function applyTranslations() {
@@ -25,6 +26,31 @@ function applyTranslations() {
 			console.warn(`Translation missing for key: ${key}`);
 		}
   });
+}
+
+function updateLanguageSwitcher() {
+	const langImg = document.getElementById('lang-flag-img');
+	const langText = document.getElementById('lang-flag-text');
+	const langBtn = document.getElementById('lang-switcher-btn');
+	
+	if (langImg) {
+		if (currentLang === 'en') {
+			langImg.src = './pictures/english.png';
+			langImg.alt = 'English';
+			langBtn.title = 'Click to switch to Hungarian';
+			if (langText) langText.textContent = 'EN';
+		} else {
+			langImg.src = './pictures/hungary.png';
+			langImg.alt = 'Hungarian';
+			langBtn.title = 'Click to switch to English';
+			if (langText) langText.textContent = 'HU';
+		}
+	}
+}
+
+function toggleLanguage() {
+	const nextLang = currentLang === 'en' ? 'hu' : 'en';
+	changeLanguage(nextLang);
 }
 
 async function changeLanguage(lang) {
