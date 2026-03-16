@@ -26,7 +26,21 @@
     "why_text4": "A beépített biztonsági funkciók, mint az SELinux és a gyors javítások, sokkal hatékonyabban minimalizálják a sebezhetőségeket, mint a zárt rendszerek.",
     "why_text5": "Tökéletes fejlesztőknek a szkriptelés, konténerek és virtualizáció natív támogatásával, könnyű és hatékony környezetben.",
     "summary_title": "Linux összefoglaló  <span class='badge text-bg-secondary'>Új</span>",
-    "summary_subtitle": "Találja meg az Önnek megfelelő disztribúciót:"
+    "summary_subtitle": "Találja meg az Önnek megfelelő disztribúciót:",
+    "ai_title": "Okos ajánló",
+    "ai_placeholder": "Írd le az igényeid (játék, régi gép, kezdő, adatvédelem stb.)",
+    "ai_generate": "Ajánlás generálása",
+    "ai_desc": "Add meg, mire van szükséged, majd kattints a Generálásra egy rövid Linux disztribúció tippért.",
+    "battery_title": "Linux laptopokon",
+    "battery_text1": "A Linux jelentősen javíthatja a laptopok akkumulátoros üzemidejét az erőforrás-használat optimalizálásával és a könnyű disztribúciók választásával.",
+    "battery_text2": "DE az optimális eredmények eléréséhez szükség van némi konfigurációra.",
+    "battery_text3": "A TLP egy népszerű eszköz a Linuxos akkumulátor-üzemidő kezeléséhez.",
+    "battery_text4": "Akkumulátor-üzemidő maximalizálása Linuxon a TLP segítségével"
+  },
+  "footer": {
+    "contact_title": "Kapcsolat",
+    "contact_text": "Kérdésed vagy visszajelzésed van? Keress minket a <a href='mailto:contact@linuxatlas.com'>contact@linuxatlas.com</a> címen.",
+    "rights": "© 2026 LinuxAtlas. Minden jog fenntartva."
   },
   "finder": {
     "description": "A megfelelő Linux disztribúció kiválasztása átalakítheti a számítógépes élményt. Válasszon egyet a legördülő menüből, és részletes útmutatót kap a telepítésről, előnyökről/hátrányokról és hardverkompatibilitásról.",

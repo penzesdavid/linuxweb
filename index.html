@@ -143,7 +143,7 @@
         </div>
 
         <div id="SmartSuggestion" class="anim-y" style="animation-delay: 0.7s; text-align: center;">
-            <h2>Smart Suggestion <img src="./pictures/ai.png" width="40" height="40" alt="ai"
+            <h2><span data-key="index.ai_title">Smart Suggestion</span> <img src="./pictures/ai.png" width="40" height="40" alt="ai"
                     style="border-radius: 20px;"></h2>
 
             <div class="container" style="max-width: 700px; margin: 1.5rem auto 0;">
@@ -151,18 +151,18 @@
                     <div class="ai-input-wrapper">
                         <input id="ai-input" type="text" class="form-control"
                             placeholder="Tell us your needs (gaming, old PC, beginner, privacy, etc.)"
-                            aria-label="Linux distro preferences" />
+                            aria-label="Linux distro preferences" data-key="index.ai_placeholder" />
                         <button class="ai-clear-btn" type="button" id="ai-clear-btn" aria-label="Clear input">
                             &times;
                         </button>
                     </div>
-                    <button class="ai-generate-btn" id="ai-generate-btn" type="button">
+                    <button class="ai-generate-btn" id="ai-generate-btn" type="button" data-key="index.ai_generate">
                         Generate suggestion
                     </button>
                 </div>
             </div>
 
-            <p id="ai-story" style="max-width: 600px; margin: 0 auto 1.5rem; color: var(--glow-magenta);">
+            <p id="ai-story" style="max-width: 600px; margin: 0 auto 1.5rem; color: var(--glow-magenta);" data-key="index.ai_desc">
                 Enter what you need and click Generate to get a short Linux distro suggestion.
             </p>
         </div>
@@ -201,18 +201,18 @@
                 resource usage and allowing users to choose lightweight distributions.</p>
             <p data-key="index.battery_text2">BUT it requires some configuration to achieve optimal results.</p>
             <p data-key="index.battery_text3">TLP is a popular tool for managing laptop battery life on Linux.</p>
-            <p data-key="index.battery_text4"><a href="https://linrunner.de/tlp/index.html" target="_blank">Maximizing Battery Life on Linux with TLP</a></p>
+            <p><a href="https://linrunner.de/tlp/index.html" target="_blank" data-key="index.battery_text4">Maximizing Battery Life on Linux with TLP</a></p>
         </div>
 
     </div>
 
     <footer>
         <div class="footer-content">
-            <h2 style="text-align: center; color: var(--glow-magenta);" data-key="index.contact_title">Contact Us</h2>
-            <p style="text-align: center;" data-key="index.contact_text">Have questions or feedback? Reach out to us at
+            <h2 style="text-align: center; color: var(--glow-magenta);" data-key="footer.contact_title">Contact Us</h2>
+            <p style="text-align: center;" data-key="footer.contact_text">Have questions or feedback? Reach out to us at
                 <a href="mailto:contact@linuxatlas.com">contact@linuxatlas.com</a></p>
 
-            <p style="text-align: center;">© 2026 LinuxAtlas. All rights reserved.</p>
+            <p style="text-align: center;" data-key="footer.rights">© 2026 LinuxAtlas. All rights reserved.</p>
         </div>
     </footer>
 
