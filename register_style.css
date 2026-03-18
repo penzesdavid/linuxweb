@@ -136,3 +136,53 @@ a:hover {
     }
 }
 
+.plan-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+#freeplan {
+    width: min(92%, 25rem);
+    margin: 1rem;
+    text-align: center;
+    border-radius: 18px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    padding: 1rem;
+
+
+    /* Match SmartSuggestion glass background */
+    background: linear-gradient(135deg,
+            rgba(255, 255, 255, 0.07),
+            rgba(255, 255, 255, 0.03));
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    box-shadow:
+        0 18px 55px rgba(0, 0, 0, 0.45),
+        0 0 0 1px rgba(255, 255, 255, 0.03) inset;
+
+}
+
+#proplan {
+    width: min(92%, 25rem);
+    margin: 1rem;
+    text-align: center;
+    border-radius: 18px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    padding: 1rem;
+
+    /* Match SmartSuggestion glass background */
+    background: linear-gradient(135deg,
+            rgba(255, 156, 6, 0.07),
+            rgba(230, 189, 10, 0.03));
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 218, 10, 0.842);
+    box-shadow:
+        0 18px 55px rgba(214, 218, 9, 0.45),
+        0 0 0 1px rgba(255, 208, 0, 0.932) inset;
+}
