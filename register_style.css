@@ -117,3 +117,22 @@ a:hover {
     margin: 250px;
     text-align: right;
 }
+
+#planstatus {
+    width: 90%;
+    background-color: var(--glow-magenta);
+    margin: 2rem auto 2rem auto;
+    padding: 1rem;
+    border-radius: 18px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    .btn {
+        display: block;
+        border-radius: 20px;
+    }
+    .btn:hover {
+        color: white; 
+    }
+}
+

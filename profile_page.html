@@ -99,13 +99,25 @@
         <!-- Grid Overlay -->
         <div class="grid-overlay"></div>
 
+        <div id="planstatus">
+            <p>Your current plan: Trial <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                    fill="currentColor" class="bi bi-lock-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M8 0a4 4 0 0 1 4 4v2.05a2.5 2.5 0 0 1 2 2.45v5a2.5 2.5 0 0 1-2.5 2.5h-7A2.5 2.5 0 0 1 2 13.5v-5a2.5 2.5 0 0 1 2-2.45V4a4 4 0 0 1 4-4m0 1a3 3 0 0 0-3 3v2h6V4a3 3 0 0 0-3-3" />
+                </svg>
+                </svg><br>(Not full access and limited features)</p>
+
+            <a href="./proplan.html"><button class="btn btn-warning" id="upgradebutton">Upgrade Plan</button></a>
+        </div>
+
         <div class="container">
             <div class="row gx-0">
                 <div class="col-md-4">
                     <div id="profilestatus">
                         <h4>Status</h4>
                         <p>Your email: <span id="profilepageemail"></span></p>
-                        <button onclick="window.logout()" class="btn btn-danger" style="border-radius: 50px;" id="logout-show">Logout</button>
+                        <button onclick="window.logout()" class="btn btn-danger" style="border-radius: 50px;"
+                            id="logout-show">Logout</button>
                     </div>
                 </div>
 
@@ -121,8 +133,8 @@
                             <button class="ai-generate-btn" onclick="newRandomAvatar()">New Random Avatar</button>
                         </div>
 
-                        <input class="input-style" type="text" id="usernameInput" placeholder="Enter a new name" readonly
-                            onfocus="this.removeAttribute('readonly');">
+                        <input class="input-style" type="text" id="usernameInput" placeholder="Enter a new name"
+                            readonly onfocus="this.removeAttribute('readonly');">
                         <button class="button-style" onclick="saveAvatar()">Save</button>
                     </div>
                 </div>
