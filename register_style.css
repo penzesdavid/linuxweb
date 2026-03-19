@@ -144,9 +144,8 @@ a:hover {
 }
 
 #freeplan {
-    width: min(92%, 25rem);
-    margin: 1rem;
-    text-align: left;
+    width: min(92%, 30rem);
+    margin: 0.5rem;
     border-radius: 18px;
     position: relative;
     z-index: 2;
@@ -166,9 +165,8 @@ a:hover {
 }
 
 #proplan {
-    width: min(92%, 25rem);
-    margin: 1rem;
-    text-align: left;
+    width: min(92%, 30rem);
+    margin: 0.5rem;
     border-radius: 18px;
     position: relative;
     z-index: 2;
@@ -184,4 +182,8 @@ a:hover {
     box-shadow:
         0 18px 55px rgba(214, 218, 9, 0.45),
         0 0 0 1px rgba(255, 208, 0, 0.932) inset;
+
+    h1 {
+        color: rgba(255, 218, 10, 0.842);
+    }
 }
