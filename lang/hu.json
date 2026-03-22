@@ -47,8 +47,10 @@
     "label": "Válasszon disztribúciót:",
     "defa_select": "Válasszon egyet...",
     "button": "Megjelenítés",
-    "suggest_placeholder": "Nem találod a kedvenc disztribúciódat? Jelentkezz be és küldj egy ajánlást leírással!"
-
+    "suggest_placeholder": "Nem találod a kedvenc disztribúciódat? Jelentkezz be és küldj egy ajánlást leírással!",
+    "suggest_title": "Javaslat beküldése",
+    "suggest_short": "Disztribúció neve",
+    "suggest_long": "Részletes leírása a disztribúciónak..."
   },
 	"login": {
     "title": "Bejelentkezés",

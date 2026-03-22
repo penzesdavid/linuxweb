@@ -18,18 +18,18 @@ const auth = firebase.auth();
 const db = firebase.firestore();
 
 const contentEl = document.getElementById("suggest-div");
-// contentEl.innerHTML = `<p>${translations.finder.suggest_placeholder}</p>`;
+contentEl.innerHTML = `<p data-key="finder.suggest_placeholder"></p>`;
 
 // --- When user state changes, show suggestion form if logged in ---
 auth.onAuthStateChanged(user => {
 if (user) {
     // Show suggestion form instead of "Hello world"
     contentEl.innerHTML = `
-    <h2 style='text-align: center; color: var(--glow-magenta);'>Submit a suggestion</h2>
+    <h2 style='text-align: center; color: var(--glow-magenta);' data-key='finder.suggest_title'>Submit a suggestion</h2>
     <form id='suggestion-form'>
-        <input type='text' id='title' placeholder='Title' required /><br />
-        <textarea id='desc' placeholder='Your long suggestion text...' rows='6' required></textarea><br />
-        <button type='submit' class='button-style'>Send</button>
+        <input type='text' id='title' placeholder='Distro name' required data-key='finder.suggest_short' /><br />
+        <textarea id='desc' placeholder='Detailed description of the distro...' rows='6' required data-key='finder.suggest_long'></textarea><br />
+        <button type='submit' class='button-style' data-key='finder.suggest_send'>Send</button>
     </form>
     <div id='status'></div>
     `;

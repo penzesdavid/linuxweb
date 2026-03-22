@@ -47,7 +47,10 @@
     "label": "Choose a distro:",
     "defa_select": "Choose one...",
     "button": "Reveal",
-    "suggest_placeholder": "Can't find your favorite distro on the site? Log in and suggest it with a description!"
+    "suggest_placeholder": "Can't find your favorite distro on the site? Log in and suggest it with a description!",
+    "suggest_title": "Submit a suggestion",
+    "suggest_short": "Distro name",
+    "suggest_long": "Detailed description of the distro..."
   },
   "login": {
     "title": "Login",
