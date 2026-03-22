@@ -123,6 +123,7 @@ document.addEventListener('DOMContentLoaded', fastLoadFromCache);
 window.logout = async () => {
     try {
         await signOut(auth);
+        localStorage.clear();
         alert("Successfully logged out!");
         window.location.href = "./index.html";
     } catch (e) {
