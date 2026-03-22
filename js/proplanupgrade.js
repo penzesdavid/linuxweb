@@ -45,12 +45,14 @@ auth.onAuthStateChanged((user) => {
 // Ellenőrizzük a helyi tárhelyet a pro plan státuszához
 const currentPlanforSite = localStorage.getItem('user_plan');
 if (currentPlanforSite === 'pro') {
-    document.getElementById('currentPlan').textContent = "Pro Plan ✅";
+    document.getElementById('currentPlan').textContent = "Pro Plan ✨";
+    document.getElementById('currentPlaninstatus').textContent = "Pro ✔️";
     document.getElementById('upgradebutton').style.display = 'none'; // Elrejtjük a gombot, ha már Pro plan van
     document.getElementById('plantextunder').innerHTML = "ENJOY the pro version!";
     document.getElementById('forplanpicture').style.display = 'none';
 } else {
     document.getElementById('currentPlan').textContent = "Free Plan - Limited Access and Advertisements";
+    document.getElementById('currentPlaninstatus').textContent = "Free";
     document.getElementById('upgradebutton').style.display = 'block'; // Megjelenítjük a gombot, ha nem Pro plan van
     document.getElementById('plantextunder').style.display = 'block'; // Megjelenítjük a figyelmeztető szöveget, ha nem Pro plan van
 }
