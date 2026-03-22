@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-app.js";
 import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-auth.js";
-import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-analytics.js";
+import { getFirestore, doc, setDoc } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-firestore.js";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -16,8 +16,8 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
 const auth = getAuth();
+const db = getFirestore(app);
 
 
 //submit registration
@@ -29,9 +29,20 @@ if (register_button) {
         const email_reg = document.getElementById('email_register').value;
         const password_reg = document.getElementById('password_register').value;
         createUserWithEmailAndPassword(auth, email_reg, password_reg)
-            .then((userCredential) => {
+            .then(async (userCredential) => {
                 // Signed up 
                 const user = userCredential.user;
+
+                try {
+                    await setDoc(doc(db, "users", user.uid), {
+                        email: email_reg,
+                        createdAt: new Date(),
+                        plan: "free",
+                    });
+
+                } catch (error) {
+                    console.error("Error adding document: ", error);
+                }
                 alert("User registered successfully");
                 window.location.href = "./success_page.html";
             })
