@@ -85,6 +85,7 @@
     <script type="module" src="./js/database.js" defer></script>
     <script src="./js/lang.js"></script>
     <script type="module" src="./js/ai.js" defer></script>
+    <script src="./js/ads.js"></script>
 
     <div class="content">
         <!-- Ambient Background -->
@@ -96,6 +97,15 @@
 
         <!-- Grid Overlay -->
         <div class="grid-overlay"></div>
+
+        <!-- A háttér (overlay), ami elsötétíti az oldalt -->
+        <div id="myPopup" class="popup-overlay">
+            <!-- Maga az ablak -->
+            <div class="popup-content">
+                <span class="close-btn" onclick="closePopup()">&times;</span>
+                <a href="https://danivagyok482.github.io/Notium/" target="_blank"><img src="./pictures/Notium-ad.png" alt="notium ad" style="width: 100%; height: auto; border-radius: 10px;"></a>
+            </div>
+        </div>
 
         <div class="welcome anim">
             <h1 id="custom_name" data-key="index.welcome_title">Welcome to LinuxAtlas</h1>
@@ -143,8 +153,8 @@
         </div>
 
         <div id="SmartSuggestion" class="anim-y" style="animation-delay: 0.7s; text-align: center;">
-            <h2><span data-key="index.ai_title">Smart Suggestion</span> <img src="./pictures/ai.png" width="40" height="40" alt="ai"
-                    style="border-radius: 20px;"></h2>
+            <h2><span data-key="index.ai_title">Smart Suggestion</span> <img src="./pictures/ai.png" width="40"
+                    height="40" alt="ai" style="border-radius: 20px;"></h2>
 
             <div class="container" style="max-width: 700px; margin: 1.5rem auto 0;">
                 <div class="smart-input-wrap">
@@ -162,7 +172,8 @@
                 </div>
             </div>
 
-            <p id="ai-story" style="max-width: 600px; margin: 0 auto 1.5rem; color: var(--glow-magenta);" data-key="index.ai_desc">
+            <p id="ai-story" style="max-width: 600px; margin: 0 auto 1.5rem; color: var(--glow-magenta);"
+                data-key="index.ai_desc">
                 Enter what you need and click Generate to get a short Linux distro suggestion.
             </p>
         </div>
@@ -190,18 +201,21 @@
                 </ul>
             </div>
 
-            <h4 data-key="index.summary_title" style="text-align: center;">Linux summary <span class="badge text-bg-secondary">New</span></h4>
+            <h4 data-key="index.summary_title" style="text-align: center;">Linux summary <span
+                    class="badge text-bg-secondary">New</span></h4>
             <h2 data-key="index.summary_subtitle" style="text-align: center;">Find the right distro for you:</h2>
             <a href="./distrosummary.html"><img src="./pictures/logo2.png" alt="linuxfinder"></a>
         </div>
 
         <div id="laptopbatterylife" class="drk-bg">
-            <h2 style="text-align: center; color: var(--glow-magenta); font-family:'Lexend Giga', sans-serif;" data-key="index.battery_title">Linux on Laptops</h2>
+            <h2 style="text-align: center; color: var(--glow-magenta); font-family:'Lexend Giga', sans-serif;"
+                data-key="index.battery_title">Linux on Laptops</h2>
             <p data-key="index.battery_text1">Linux can significantly improve battery life on laptops by optimizing
                 resource usage and allowing users to choose lightweight distributions.</p>
             <p data-key="index.battery_text2">BUT it requires some configuration to achieve optimal results.</p>
             <p data-key="index.battery_text3">TLP is a popular tool for managing laptop battery life on Linux.</p>
-            <p><a href="https://linrunner.de/tlp/index.html" target="_blank" data-key="index.battery_text4">Maximizing Battery Life on Linux with TLP</a></p>
+            <p><a href="https://linrunner.de/tlp/index.html" target="_blank" data-key="index.battery_text4">Maximizing
+                    Battery Life on Linux with TLP</a></p>
         </div>
 
     </div>
@@ -210,7 +224,8 @@
         <div class="footer-content">
             <h2 style="text-align: center; color: var(--glow-magenta);" data-key="footer.contact_title">Contact Us</h2>
             <p style="text-align: center;" data-key="footer.contact_text">Have questions or feedback? Reach out to us at
-                <a href="mailto:contact@linuxatlas.com">contact@linuxatlas.com</a></p>
+                <a href="mailto:contact@linuxatlas.com">contact@linuxatlas.com</a>
+            </p>
 
             <p style="text-align: center;" data-key="footer.rights">© 2026 LinuxAtlas. All rights reserved.</p>
         </div>
