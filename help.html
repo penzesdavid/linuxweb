@@ -101,62 +101,12 @@
         <!-- Grid Overlay -->
         <div class="grid-overlay"></div>
 
-        <div id="planstatus">
-            <p>Your current plan: <span id="currentPlan"></span><br><p id="plantextunder">(Not full access and limited features)</p></p>
-
-            <a href="./proplan.html"><button class="btn btn-warning" id="upgradebutton">Upgrade Plan</button></a>
+        <div id="helpbox">
+            <h2>Support page</h2>
+            <ul>
+                <li><a href="./proplan.html">Switch back to Free plan -></a></li>
+            </ul>
         </div>
-
-        <div class="container">
-            <div class="row gx-0">
-                <div class="col-md-4">
-                    <div id="profilestatus">
-                        <h4>Status</h4>
-                        <p>Your email: <span id="profilepageemail"></span></p>
-
-                        <p>Your current plan:<br> <span id="currentPlaninstatus"></span></p>
-
-                        <button onclick="window.logout()" class="btn btn-danger" style="border-radius: 50px;"
-                            id="logout-show">Logout</button>
-
-                        <a href="./help.html"><p style="font-size: small; text-align: right; margin: 0; padding: 0;">Help -></p></a>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div id="profile-settings-style">
-                        <h4>Profil settings</h4>
-
-                        <div id="avatar-container">
-                            <p id="CheckAvatarSaving" style="color: greenyellow;"></p>
-                            <img id="avatar" src="https://api.dicebear.com/7.x/avataaars/svg?seed=start" width="200"
-                                height="200">
-                            <br>
-                            <button class="ai-generate-btn" onclick="newRandomAvatar()">New Random Avatar</button>
-                        </div>
-
-                        <input class="input-style" type="text" id="usernameInput" placeholder="Enter a new name"
-                            readonly onfocus="this.removeAttribute('readonly');">
-                        <button class="button-style" onclick="saveAvatar()">Save</button>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div id="profiledatas">
-                        <h4>Profile Data</h4>
-                        <p>Your suggestions will appear here.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div style="width: 85%; margin: auto;" class="alert alert-info" role="alert">
-        A info alert—check it out!
-
-        If you have any suggestions or feedback, please let us know! Your input helps us improve and provide a better experience for all users. Feel free to share your thoughts and ideas with us.
-        </div>
-
 
 
     </div>

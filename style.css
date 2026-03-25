@@ -762,3 +762,11 @@ ul.card-text {
         opacity: 1;
     }
 }
+
+#helpbox {
+	margin: 2rem;
+}
+
+#helpbox li {
+	padding: 1rem;
+}
