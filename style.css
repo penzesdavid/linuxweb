@@ -129,10 +129,11 @@ body {
 	cursor: pointer;
 
 	transition:
-	background-color 0.25s ease,
-    transform 0.25s ease,
-    box-shadow 0.25s ease ;
+		background-color 0.25s ease,
+		transform 0.25s ease,
+		box-shadow 0.25s ease;
 }
+
 .button-style:hover {
 	background-color: var(--glow-magenta);
 	box-shadow: 0 0 15px var(--glow-magenta);
@@ -164,49 +165,58 @@ body {
 }
 
 .ability-box {
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    width: 300px;
-    padding: 20px;
-    text-align: center;
-    margin: 15px; /* Increased margin for the "float" room */
-    backdrop-filter: blur(5px);
-    position: relative;
-    overflow: hidden;
-    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+	background-color: rgba(255, 255, 255, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 10px;
+	width: 300px;
+	padding: 20px;
+	text-align: center;
+	margin: 15px;
+	/* Increased margin for the "float" room */
+	backdrop-filter: blur(5px);
+	position: relative;
+	overflow: hidden;
+	transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 
-    /* --- THE ALWAYS-ON ANIMATION --- */
-    /* This makes the box slowly bob up and down */
-    animation: floating 4s ease-in-out infinite;
+	/* --- THE ALWAYS-ON ANIMATION --- */
+	/* This makes the box slowly bob up and down */
+	animation: floating 4s ease-in-out infinite;
 }
 
 /* Offset the animation for every second box so they don't move in perfect sync */
 .ability-box:nth-child(even) {
-    animation-delay: 1s;
+	animation-delay: 1s;
 }
 
 .ability-box h3 {
-    color: var(--glow-magenta);
-    /* Subtle neon pulse for the text */
-    animation: textPulse 7s ease-in-out infinite;
+	color: var(--glow-magenta);
+	/* Subtle neon pulse for the text */
+	animation: textPulse 7s ease-in-out infinite;
 }
 
 /* 2. The Magenta Glow Pulse */
 @keyframes textPulse {
-    10%, 100% { text-shadow: 0 0 5px rgba(255, 0, 255, 0.2); }
-    50% { text-shadow: 0 0 15px rgba(238, 148, 13, 0.8), 0 0 20px rgba(255, 0, 255, 0.4); }
+
+	10%,
+	100% {
+		text-shadow: 0 0 5px rgba(255, 0, 255, 0.2);
+	}
+
+	50% {
+		text-shadow: 0 0 15px rgba(238, 148, 13, 0.8), 0 0 20px rgba(255, 0, 255, 0.4);
+	}
 }
 
 /* --- HOVER OVERRIDE --- */
 /* We pause the float animation on hover so it doesn't fight the user's mouse */
 .ability-box:hover {
-    animation-play-state: paused; 
-    transform: translateY(-15px) scale(1.05); /* Slightly stronger lift on hover */
-    border-color: var(--glow-magenta);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 
-                0 0 20px rgba(255, 166, 0, 0.4);
-    background-color: rgba(255, 255, 255, 0.15);
+	animation-play-state: paused;
+	transform: translateY(-15px) scale(1.05);
+	/* Slightly stronger lift on hover */
+	border-color: var(--glow-magenta);
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4),
+		0 0 20px rgba(255, 166, 0, 0.4);
+	background-color: rgba(255, 255, 255, 0.15);
 }
 
 #SmartSuggestion {
@@ -219,11 +229,9 @@ body {
 	overflow: hidden;
 
 	/* Glass card */
-	background: linear-gradient(
-		135deg,
-		rgba(255, 255, 255, 0.07),
-		rgba(255, 255, 255, 0.03)
-	);
+	background: linear-gradient(135deg,
+			rgba(255, 255, 255, 0.07),
+			rgba(255, 255, 255, 0.03));
 	backdrop-filter: blur(12px);
 	border: 1px solid rgba(255, 255, 255, 0.09);
 	box-shadow:
@@ -236,22 +244,18 @@ body {
 	content: "";
 	position: absolute;
 	inset: -2px;
-	background: radial-gradient(
-		circle at 20% 10%,
-		rgba(0, 240, 255, 0.16),
-		transparent 55%
-	),
-	radial-gradient(
-		circle at 80% 70%,
-		rgba(216, 169, 82, 0.18),
-		transparent 60%
-	);
+	background: radial-gradient(circle at 20% 10%,
+			rgba(0, 240, 255, 0.16),
+			transparent 55%),
+		radial-gradient(circle at 80% 70%,
+			rgba(216, 169, 82, 0.18),
+			transparent 60%);
 	filter: blur(14px);
 	opacity: 0.9;
 	pointer-events: none;
 }
 
-#SmartSuggestion > * {
+#SmartSuggestion>* {
 	position: relative;
 }
 
@@ -292,7 +296,8 @@ body {
 	color: #fff;
 	border: 1px solid rgba(255, 255, 255, 0.10);
 	border-radius: 999px;
-	padding: 1.1rem 2.6rem 1.1rem 1.25rem; /* space for X button */
+	padding: 1.1rem 2.6rem 1.1rem 1.25rem;
+	/* space for X button */
 	font-size: 1.05rem;
 }
 
@@ -340,20 +345,16 @@ body {
 	border-radius: 999px;
 	align-self: center;
 	min-width: 190px;
-	background: linear-gradient(
-		135deg,
-		rgba(216, 169, 82, 0.25),
-		rgba(157, 78, 221, 0.18)
-	);
+	background: linear-gradient(135deg,
+			rgba(216, 169, 82, 0.25),
+			rgba(157, 78, 221, 0.18));
 }
 
 .ai-generate-btn:hover {
 	border-color: rgba(216, 169, 82, 0.8);
-	background: linear-gradient(
-		135deg,
-		rgba(216, 169, 82, 0.38),
-		rgba(157, 78, 221, 0.22)
-	);
+	background: linear-gradient(135deg,
+			rgba(216, 169, 82, 0.38),
+			rgba(157, 78, 221, 0.22));
 	box-shadow: 0 0 20px rgba(216, 169, 82, 0.18);
 }
 
@@ -365,7 +366,7 @@ body {
 #ai-story {
 	position: relative;
 	background: radial-gradient(circle at 0 0, rgba(216, 169, 82, 0.22), transparent 55%),
-	            rgba(10, 10, 18, 0.52);
+		rgba(10, 10, 18, 0.52);
 	border: 1px solid rgba(255, 255, 255, 0.12);
 	border-radius: 18px;
 	padding: 18px 18px 18px 60px;
@@ -373,8 +374,10 @@ body {
 	color: rgba(255, 255, 255, 0.94) !important;
 	box-shadow: 0 14px 32px rgba(0, 0, 0, 0.35);
 	text-align: left;
-	min-height: 110px; /* make it look like a high AI box */
-	margin: 1.1rem auto 2rem !important; /* extra spacing around suggested text */
+	min-height: 110px;
+	/* make it look like a high AI box */
+	margin: 1.1rem auto 2rem !important;
+	/* extra spacing around suggested text */
 	display: flex;
 	align-items: center;
 }
@@ -407,6 +410,7 @@ body {
 		margin-bottom: 3.5%;
 		transition: all 0.5s;
 	}
+
 	img:hover {
 		width: 70%;
 		margin-bottom: 1%;
@@ -418,6 +422,7 @@ body {
 	font-size: 1.2rem;
 	text-align: left;
 	padding: 15px;
+
 	li {
 		margin: 15px 0;
 	}
@@ -475,34 +480,36 @@ body {
 }
 
 @keyframes open {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
 .highlight-box {
-  position: fixed;
-  top: 80px; /* navbar alatt */
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #cce5ff; /* világos kék */
-  color: #000;
-  padding: 15px 25px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  z-index: 9999;
-  max-width: 80%;
-  font-size: 16px;
+	position: fixed;
+	top: 80px;
+	/* navbar alatt */
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: #cce5ff;
+	/* világos kék */
+	color: #000;
+	padding: 15px 25px;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+	z-index: 9999;
+	max-width: 80%;
+	font-size: 16px;
 }
 
 .highlight-box .close-btn {
-  position: absolute;
-  top: 5px;
-  right: 10px;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 18px;
+	position: absolute;
+	top: 5px;
+	right: 10px;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: 18px;
 }
 
 .card-title {
@@ -545,12 +552,13 @@ a {
 	cursor: pointer;
 
 	transition:
-	background-color 0.25s ease,
-    transform 0.25s ease,
-    box-shadow 0.25s ease ;
+		background-color 0.25s ease,
+		transform 0.25s ease,
+		box-shadow 0.25s ease;
 
 	margin-top: 10px;
 }
+
 #reveal-button:hover {
 	background-color: var(--glow-magenta);
 	box-shadow: 0 0 15px var(--glow-magenta);
@@ -570,12 +578,12 @@ select {
 
 /* Default state for the display area */
 #hyde {
-    opacity: 0;
-    visibility: hidden;
-    /* A slight downward shift for a nice reveal effect */
-    transform: translateX(10px); 
-    /* Transition opacity, visibility, and transform smoothly */
-    transition: opacity 0.5s ease-out, visibility 0.3s ease-out, transform 0.5s ease-out;
+	opacity: 0;
+	visibility: hidden;
+	/* A slight downward shift for a nice reveal effect */
+	transform: translateX(10px);
+	/* Transition opacity, visibility, and transform smoothly */
+	transition: opacity 0.5s ease-out, visibility 0.3s ease-out, transform 0.5s ease-out;
 }
 
 /* Active state triggered by JavaScript */
@@ -627,10 +635,12 @@ select {
 	color: #ffffff;
 	letter-spacing: 1px;
 }
+
 #hyde.show {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0); /* Moves it back to its original position */
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0);
+	/* Moves it back to its original position */
 }
 
 /* 
@@ -659,11 +669,9 @@ ul.card-text {
 	overflow: hidden;
 
 	/* Match SmartSuggestion glass background */
-	background: linear-gradient(
-		135deg,
-		rgba(255, 255, 255, 0.07),
-		rgba(255, 255, 255, 0.03)
-	);
+	background: linear-gradient(135deg,
+			rgba(255, 255, 255, 0.07),
+			rgba(255, 255, 255, 0.03));
 	backdrop-filter: blur(12px);
 	border: 1px solid rgba(255, 255, 255, 0.09);
 	box-shadow:
@@ -672,33 +680,33 @@ ul.card-text {
 }
 
 .input-style {
-    margin: auto;
-    display: block;
-    margin-top: 3.5rem;
-    width: 15rem;
-    height: 2rem;
-    border: none;
-    border-radius: 10px;
-    text-align: center;
+	margin: auto;
+	display: block;
+	margin-top: 3.5rem;
+	width: 15rem;
+	height: 2rem;
+	border: none;
+	border-radius: 10px;
+	text-align: center;
 }
 
-#suggestion-form input{
+#suggestion-form input {
 	display: block;
 	margin-top: 1.5rem;
 	/* margin-bottom: 1rem; */
 	width: 20rem;
-    max-width: 100%;
-    height: 2rem;
-    border: none;
-    border-radius: 10px;
+	max-width: 100%;
+	height: 2rem;
+	border: none;
+	border-radius: 10px;
 	padding: 0.5rem;
 }
 
 #suggestion-form textarea {
 	display: block;
 	width: 100%;
-    border: none;
-    border-radius: 10px;
+	border: none;
+	border-radius: 10px;
 	padding: 0.5rem;
 }
 
@@ -709,58 +717,61 @@ ul.card-text {
 
 /*ads*/
 .popup-overlay {
-	display: none; /* Alapból rejtve */
-    position: fixed;
-    z-index: 999;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.7); /* Félátlátszó fekete */
+	display: none;
+	/* Alapból rejtve */
+	position: fixed;
+	z-index: 999;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+	/* Félátlátszó fekete */
 }
 
 .popup-content {
-    background-color: white;
-    margin: 15% auto;
-    padding: 20px;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 400px;
-    text-align: center;
-    position: relative;
+	background-color: white;
+	margin: 15% auto;
+	padding: 20px;
+	border-radius: 10px;
+	width: 90%;
+	max-width: 400px;
+	text-align: center;
+	position: relative;
 
 	/* ANIMÁCIÓ HOZZÁADÁSA: */
-    /* Név: zoomIn, Időtartam: 0.4s, Típus: ease-out (lassuló) */
-    animation-name: zoomIn;
-    animation-duration: 0.8s;
-    animation-timing-function: ease-out;
+	/* Név: zoomIn, Időtartam: 0.4s, Típus: ease-out (lassuló) */
+	animation-name: zoomIn;
+	animation-duration: 0.8s;
+	animation-timing-function: ease-out;
 }
 
 .close-btn {
 	color: black;
-    position: absolute;
-    right: 15px;
-    top: 10px;
-    font-size: 28px;
+	position: absolute;
+	right: 15px;
+	top: 10px;
+	font-size: 28px;
 	background-color: white;
 	border: 1px solid black;
 	border-radius: 50px;
 	width: 32px;
-    cursor: pointer;
+	cursor: pointer;
 }
 
 /* --- ÚJ: Az animáció definíciója --- */
 @keyframes zoomIn {
-    from {
-        /* Kezdőállapot: teljesen kicsi (0) és átlátszó (0) */
-        transform: scale(0);
-        opacity: 0;
-    }
-    to {
-        /* Végállapot: teljes méret (1) és látható (1) */
-        transform: scale(1);
-        opacity: 1;
-    }
+	from {
+		/* Kezdőállapot: teljesen kicsi (0) és átlátszó (0) */
+		transform: scale(0);
+		opacity: 0;
+	}
+
+	to {
+		/* Végállapot: teljes méret (1) és látható (1) */
+		transform: scale(1);
+		opacity: 1;
+	}
 }
 
 #helpbox {
@@ -769,4 +780,15 @@ ul.card-text {
 
 #helpbox li {
 	padding: 1rem;
+}
+
+#Notiumbanner {
+	img {
+		width: 100%;
+		display: block;
+		max-width: 650px;
+		height: auto;
+		margin: 1.5em auto;
+		border-radius: 25px;
+	}
 }

@@ -14,4 +14,10 @@ if (planstatus === "pro") {
     }
 }
 
+if(planstatus === "pro") {
+    document.getElementById("Notiumbanner").style.display = "none";
+} else {
+    document.getElementById("Notiumbanner").style.display = "block";
+}
+
 
