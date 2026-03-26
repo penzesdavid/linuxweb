@@ -42,6 +42,36 @@ auth.onAuthStateChanged((user) => {
     }
 });
 
+
+const switchtobasicbtn = document.getElementById('switchtobasic');
+if (switchtobasicbtn) {
+    switchtobasicbtn.addEventListener('click', backToBasic);
+}
+
+async function backToBasic() {
+    const user = auth.currentUser;
+    const lastUserUid = user ? user.uid : localStorage.getItem('last_uid');
+
+    if (!lastUserUid) {
+        alert("Please login to upgrade to Pro Plan.");
+        return;
+    }
+
+    try {
+        await updateDoc(doc(db, "users", lastUserUid), {
+            plan: "basic",
+        });
+
+        localStorage.setItem('user_plan', 'basic');
+
+        alert("Switch back to Basic plan is succesfully!");
+        window.location.href = "./profile_page.html";
+    } catch (error) {
+        console.error("Error:", error);
+        alert("Error: " + error.message);
+    }
+}
+
 // Ellenőrizzük a helyi tárhelyet a pro plan státuszához
 const currentPlanforSite = localStorage.getItem('user_plan');
 if (currentPlanforSite === 'pro') {
