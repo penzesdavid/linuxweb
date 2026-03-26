@@ -291,6 +291,29 @@ body {
 	position: relative;
 }
 
+#SmartSuggestion .led-bar {
+	 position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px; /* A csík vastagsága */
+    background: linear-gradient(90deg, 
+        #00f0ff, /* Cián (a kódodból) */
+        #d8a952, /* Arany (a kódodból) */
+        #00f0ff,
+		#f64544  /* Zárás ugyanazzal a színnel a folyamatosságért */
+    );
+    background-size: 300% 100%;
+    z-index: 10;
+    animation: led-travel 4s linear infinite;
+}
+
+@keyframes led-travel {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 0%; }
+}
+
+
 #ai-input.form-control {
 	background: rgba(10, 10, 18, 0.55);
 	color: #fff;
