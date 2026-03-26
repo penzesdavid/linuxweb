@@ -37,7 +37,7 @@ if (register_button) {
                     await setDoc(doc(db, "users", user.uid), {
                         email: email_reg,
                         createdAt: new Date(),
-                        plan: "free",
+                        plan: "basic",
                     });
 
                 } catch (error) {

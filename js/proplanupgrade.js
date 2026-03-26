@@ -51,8 +51,8 @@ if (currentPlanforSite === 'pro') {
     document.getElementById('plantextunder').innerHTML = "ENJOY the pro version!";
     document.getElementById('forplanpicture').style.display = 'none';
 } else {
-    document.getElementById('currentPlan').textContent = "Free Plan - Limited Access and Advertisements";
-    document.getElementById('currentPlaninstatus').textContent = "Free";
+    document.getElementById('currentPlan').textContent = "Basic Plan - Limited Access and Advertisements";
+    document.getElementById('currentPlaninstatus').textContent = "Basic";
     document.getElementById('upgradebutton').style.display = 'block'; // Megjelenítjük a gombot, ha nem Pro plan van
     document.getElementById('plantextunder').style.display = 'block'; // Megjelenítjük a figyelmeztető szöveget, ha nem Pro plan van
 }

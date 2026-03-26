@@ -38,10 +38,10 @@ if (login_button) {
                     
                     if (userDoc.exists()) {
                         const userData = userDoc.data();
-                        localStorage.setItem('user_plan', userData.plan || 'free');
+                        localStorage.setItem('user_plan', userData.plan || 'basic');
                     } else {
-                        // Ha valamiért nincs dokumentum, alapértelmezett free
-                        localStorage.setItem('user_plan', 'free');
+                        // Ha valamiért nincs dokumentum, alapértelmezett basic
+                        localStorage.setItem('user_plan', 'basic');
                     }
                     
                     // UID mentése a biztonság kedvéért
@@ -52,8 +52,8 @@ if (login_button) {
 
                 } catch (dbError) {
                     console.error("Error fetching user data:", dbError);
-                    // Még ha a DB hiba is, engedjük be, de legyen free a helyi státusza
-                    localStorage.setItem('user_plan', 'free');
+                    // Még ha a DB hiba is, engedjük be, de legyen basic a helyi státusza
+                    localStorage.setItem('user_plan', 'basic');
                     window.location.href = "./success_page.html";
                 }
             })
