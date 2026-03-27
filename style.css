@@ -713,6 +713,10 @@ ul.card-text {
 	text-align: center;
 }
 
+#suggest-div p{
+	margin-bottom: 6px;
+}
+
 #suggestion-form input {
 	display: block;
 	margin-top: 1.5rem;

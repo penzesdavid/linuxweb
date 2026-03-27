@@ -61,6 +61,6 @@ if (user) {
     });
 } else {
     // If not logged in, keep "Hello world" (or arbitrary text)
-    contentEl.innerHTML = `<p data-key='finder.suggest_placeholder'></p>`;
+    contentEl.innerHTML = `<p data-key='finder.suggest_placeholder'>Can't find your favorite distro on the site? Log in and suggest it with a description!</p>`;
 }
 });
