@@ -11,7 +11,7 @@ if (searchForm) {
 function searchText() {
   const searchInput = document.getElementById("search");
   if (!searchInput) return;
-  
+
   const input = searchInput.value.trim();
   if (!input) {
     // If search is cleared, also clear previous results
@@ -115,3 +115,19 @@ function searchText() {
 
   document.body.appendChild(box);
 }
+
+const secretqrcode = document.getElementById('secretqrcode').style.display = 'none';
+
+const secretlink = document.getElementById('secretlink');
+if (secretlink) {
+  secretlink.addEventListener('click', () => {
+    const qrcode = document.getElementById('secretqrcode');
+    if (qrcode.style.display === 'none') {
+      qrcode.style.display = 'block';
+    } else {
+      qrcode.style.display = 'none';
+    }
+  });
+}
+
+
