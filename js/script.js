@@ -116,18 +116,4 @@ function searchText() {
   document.body.appendChild(box);
 }
 
-const secretqrcode = document.getElementById('secretqrcode').style.display = 'none';
-
-const secretlink = document.getElementById('secretlink');
-if (secretlink) {
-  secretlink.addEventListener('click', () => {
-    const qrcode = document.getElementById('secretqrcode');
-    if (qrcode.style.display === 'none') {
-      qrcode.style.display = 'block';
-    } else {
-      qrcode.style.display = 'none';
-    }
-  });
-}
-
 
